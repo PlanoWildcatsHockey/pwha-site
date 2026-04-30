@@ -1,6 +1,6 @@
 {
   "title": "Colors",
-  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print. neutral and vibrant colors are converted to color palettes, fixed colors are kept as they are",
+  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print. Neutrals and vibrant colors are converted to 9-step OKLCH palettes; light_dark colors get a primary + Subdued variant. Brand maroon (#641529) sourced from logos/planohockeylogo2026.pdf. Run `npm run colors` after editing to regenerate colors.json.",
   "items": [
     {
       "name": "Gray 100",
@@ -39,28 +39,48 @@
       "value": "#161616"
     },
     {
-      "name": "Pink",
-      "value": "#dd4462"
+      "name": "Maroon 100",
+      "value": "#ffecee"
     },
     {
-      "name": "Pink Subdued",
-      "value": "#ce5769"
+      "name": "Maroon 200",
+      "value": "#ffdee3"
     },
     {
-      "name": "Blue",
-      "value": "#4467dd"
+      "name": "Maroon 300",
+      "value": "#ffbac3"
     },
     {
-      "name": "Blue Subdued",
-      "value": "#4d6cc8"
+      "name": "Maroon 400",
+      "value": "#e6939e"
     },
     {
-      "name": "Gold",
-      "value": "#fbbe25"
+      "name": "Maroon 500",
+      "value": "#bf6875"
     },
     {
-      "name": "Gold Subdued",
-      "value": "#f1c15b"
+      "name": "Maroon 600",
+      "value": "#974553"
+    },
+    {
+      "name": "Maroon 700",
+      "value": "#7e2e3e"
+    },
+    {
+      "name": "Maroon 800",
+      "value": "#652331"
+    },
+    {
+      "name": "Maroon 900",
+      "value": "#2c070f"
+    },
+    {
+      "name": "Accent",
+      "value": "#c9a96a"
+    },
+    {
+      "name": "Accent Subdued",
+      "value": "#c4aa79"
     }
   ]
 }

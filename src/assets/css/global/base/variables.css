@@ -36,9 +36,11 @@
   --color-text: var(--color-gray-800);
   --color-bg: var(--color-gray-100);
 
-  --color-primary: var(--color-pink);
-  --color-secondary: var(--color-blue);
-  --color-tertiary: var(--color-gold);
+  /* Plano Wildcats brand: maroon-800 ≈ logo brand maroon (#641529), with
+     maroon-500 as a lighter sibling and the gold accent for highlights. */
+  --color-primary: var(--color-maroon-800);
+  --color-secondary: var(--color-maroon-500);
+  --color-tertiary: var(--color-accent);
 
   --color-text-accent: var(--color-gray-700);
   --color-bg-accent: var(--color-gray-200);
@@ -51,9 +53,10 @@
     --color-text: var(--color-gray-100);
     --color-bg: var(--color-gray-800);
 
-    --color-primary: var(--color-pink-subdued);
-    --color-secondary: var(--color-blue-subdued);
-    --color-tertiary: var(--color-gold-subdued);
+    /* Lighter maroon steps so the brand reads on a dark background. */
+    --color-primary: var(--color-maroon-300);
+    --color-secondary: var(--color-maroon-500);
+    --color-tertiary: var(--color-accent-subdued);
 
     --color-text-accent: var(--color-gray-300);
     --color-bg-accent: var(--color-gray-700);
@@ -64,9 +67,9 @@
   --color-text: var(--color-gray-100);
   --color-bg: var(--color-gray-800);
 
-  --color-primary: var(--color-pink-subdued);
-  --color-secondary: var(--color-blue-subdued);
-  --color-tertiary: var(--color-gold-subdued);
+  --color-primary: var(--color-maroon-300);
+  --color-secondary: var(--color-maroon-500);
+  --color-tertiary: var(--color-accent-subdued);
 
   --color-text-accent: var(--color-gray-300);
   --color-bg-accent: var(--color-gray-700);
