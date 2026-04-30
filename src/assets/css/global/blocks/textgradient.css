@@ -1,15 +1,23 @@
+/* While the rebrand keeps --gradient-conic and --gradient-rainbow set to
+   `none`, these blocks fall back to a flat --color-primary so headlines
+   stay readable. When you reintroduce a real gradient in variables.css,
+   also flip `color` here back to `transparent` so the gradient shows
+   through the text-shaped clip. */
+
 .gradient-text {
-  color: transparent;
+  color: var(--color-primary);
   background-image: var(--gradient-conic);
+  background-clip: text;
+  -webkit-background-clip: text;
   padding: 0.6rem 0;
   background-size: 50%;
-  background-clip: text;
 }
 
 .gradient-text-linear {
-  color: transparent;
+  color: var(--color-primary);
   background-image: var(--gradient-rainbow);
+  background-clip: text;
+  -webkit-background-clip: text;
   background-size: 100%;
   background-repeat: repeat;
-  background-clip: text;
 }

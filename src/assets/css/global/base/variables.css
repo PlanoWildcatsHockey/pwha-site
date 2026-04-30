@@ -11,19 +11,15 @@
   --tracking-wide: 0.04ch;
   --stroke: 1px solid var(--color-bg-accent);
 
-  --gradient-rainbow: linear-gradient(90deg, #cf4662 10%, #fbbe25 30%, #62c95c 50%, #08bccb 75%, #a977d5 90%);
-  --gradient-conic: conic-gradient(
-    var(--color-primary) 0 28%,
-    var(--color-secondary) 0 67%,
-    var(--color-tertiary) 0 100%
-  );
-  --gradient-stripes: linear-gradient(
-    45deg,
-    var(--color-gray-900) 0 75%,
-    var(--color-primary) 0 85%,
-    var(--color-secondary) 0 92%,
-    var(--color-tertiary) 0 100%
-  );
+  /* Gradients disabled for the rebrand. The original rainbow + 3-color
+     stripe + conic gradients didn't fit the monochromatic Plano Wildcats
+     palette. Set to `none` so any references (textgradient block,
+     site-footer rainbow strip, gallery placeholder) render flat. Restore
+     by replacing these with new gradient definitions when the brand
+     direction calls for them. */
+  --gradient-rainbow: none;
+  --gradient-conic: none;
+  --gradient-stripes: none;
 
   --color-light: var(--color-gray-100);
   --color-dark: var(--color-gray-900);
