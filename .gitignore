@@ -11,5 +11,14 @@ src/_includes/scripts
 
 # secret data
 .env
+
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
 # Local-only AI skill reference (not part of the project)
 skill.md.txt
+
+# Working assets we don't want to commit (large source files for logos, etc.)
+# Move final, optimized versions into src/assets/images/ and commit those instead.
+logos/
