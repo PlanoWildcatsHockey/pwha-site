@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Sample Player One",
+    "team": "varsity",
+    "status": "current",
+    "number": 21,
+    "position": "C",
+    "year": 2026,
+    "comment": "Phase 1 placeholder — replace with real data."
+  },
+  {
+    "name": "Sample Player Two",
+    "team": "varsity",
+    "status": "current",
+    "number": 9,
+    "position": "LW",
+    "year": 2027,
+    "comment": "Phase 1 placeholder."
+  },
+  {
+    "name": "Sample Player Three",
+    "team": "junior-varsity",
+    "status": "current",
+    "number": 14,
+    "position": "D",
+    "year": 2028,
+    "comment": "Phase 1 placeholder."
+  },
+  {
+    "name": "Sample Alumnus One",
+    "team": "varsity",
+    "status": "alumni",
+    "number": 7,
+    "position": "G",
+    "year": 2018,
+    "comment": "Phase 1 placeholder."
+  },
+  {
+    "name": "Sample Alumnus Two",
+    "team": "varsity",
+    "status": "alumni",
+    "number": 23,
+    "position": "RW",
+    "year": 2015,
+    "comment": "Phase 1 placeholder."
+  }
+]

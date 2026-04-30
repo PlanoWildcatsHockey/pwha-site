@@ -1,0 +1,49 @@
+---
+title: Player Database
+permalink: /history/players/index.html
+description: The full Plano Wildcats player database — current rosters and historical entries across all seasons.
+layout: page
+---
+
+<h1>Player Database</h1>
+
+<p>
+  The complete record of Plano Wildcats players, current and past. Use the
+  filters to narrow by season, team, or status. Alumni entries link to
+  additional history.
+</p>
+
+{# Sourced from src/_data/players.json #}
+{% if players.length %}
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Pos</th>
+        <th>Year</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in players %}
+        <tr>
+          <td>{{ p.number }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.team }}</td>
+          <td>{{ p.position }}</td>
+          <td>{{ p.year }}</td>
+          <td>{{ p.status }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p><em>Phase 1 placeholder — table will populate from <code>src/_data/players.json</code>.</em></p>
+{% endif %}
+
+<p><small>
+  In Phase 2 we'll add: client-side filtering by season/team/status, sortable
+  columns, individual player detail pages, and a search box.
+</small></p>

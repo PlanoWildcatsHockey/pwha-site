@@ -1,0 +1,30 @@
+---
+title: Alumni
+permalink: /history/alumni/index.html
+description: Plano Wildcats hockey alumni — players who built the program and those who carry it forward.
+layout: page
+---
+
+<h1>Alumni</h1>
+
+<p>
+  Plano Wildcats hockey alumni — players whose seasons are behind them,
+  but whose contributions live on in the program.
+</p>
+
+{% set alums = players | filterStatus("alumni") %}
+
+{% if alums.length %}
+  {# groupByYear returns an array of { year, players } objects sorted desc #}
+  {% set byYear = alums | groupByYear %}
+  {% for entry in byYear %}
+    <h2>Class of {{ entry.year }}</h2>
+    <ul>
+      {% for p in entry.players %}
+        <li>{{ p.name }} — {{ p.position }} ({{ p.team }})</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% else %}
+  <p><em>No alumni entries yet. Add entries to <code>src/_data/players.json</code> with <code>status: "alumni"</code> and they'll appear here grouped by graduation year.</em></p>
+{% endif %}

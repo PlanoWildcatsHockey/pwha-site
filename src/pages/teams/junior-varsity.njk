@@ -1,0 +1,44 @@
+---
+title: Junior Varsity
+permalink: /teams/junior-varsity/index.html
+description: The Plano Wildcats Junior Varsity hockey roster and coaching staff.
+layout: page
+---
+
+<h1>Junior Varsity</h1>
+
+<p>
+  The Plano Wildcats Junior Varsity team is where developing players gain
+  experience and earn a path to the Varsity squad.
+</p>
+
+{% set roster = players | filterCurrentTeam("junior-varsity") %}
+
+{% if roster.length %}
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Pos</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in roster %}
+        <tr>
+          <td>{{ p.number }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.position }}</td>
+          <td>{{ p.year }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p><em>Phase 1 placeholder — roster will populate from <code>src/_data/players.json</code> in Phase 2.</em></p>
+{% endif %}
+
+<h2>Coaching staff</h2>
+
+<p><em>Phase 1 placeholder.</em> Add head coach, assistants, and managers.</p>

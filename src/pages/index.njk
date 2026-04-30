@@ -1,52 +1,62 @@
 ---
 layout: base
 permalink: /index.html
-title: 'Eleventy Excellent'
-description: 'Eleventy starter using modern CSS, fluid type, fluid spacing, flexible layout and progressive enhancement.'
-blog:
-  title: 'Blog'
-  intro: "I'm showing the last 4 blog posts, but there might be more!"
+title: 'Plano Wildcats Hockey Association'
+description: 'The official site of the Plano Wildcats Hockey Association — supporting Plano Senior High School hockey.'
+news:
+  title: 'Latest news'
+  intro: 'Recent posts and announcements from PWHA.'
 ---
 
 <div class="wrapper">
   <header class="full | section" style="--spot-color: var(--color-primary)">
     <div class="section__inner flow region">
-      <h1 class="text-center" style="color: var(--color-light);">{{ title }}</h1>
+      <h1 class="text-center" style="color: var(--color-light);">Plano Wildcats Hockey Association</h1>
+      <p class="text-center" style="color: var(--color-light); font-size: var(--size-step-1);">
+        Supporting Plano Senior High School hockey — Varsity, Junior Varsity, players, families, and alumni.
+      </p>
     </div>
     {% svg "divider/waves", null, "divider" %}
   </header>
 
   <article class="full | region">
     <div class="prose wrapper flow">
-      <h2 id="an-eleventy-starter">An Eleventy starter</h2>
+      <h2>Welcome</h2>
       <p>
-        Built around a CSS workflow that emphasizes guiding browser styling rather than micromanaging it. It
-        incorporates progressive enhancement, fluid type and spacing, and utilizes modern CSS features for
-        layout. The goal is to develop frontends that provide a great experience across all devices,
-        connection speeds, and usage contexts.
+        <em>Phase 1 placeholder.</em> Replace this with the homepage hero copy.
+        A typical hockey association homepage surfaces the next game, recent
+        results, latest news, and ways to get involved or support the program.
       </p>
       <p>
-        <strong>This is <a href="https://github.com/madrilene/eleventy-excellent/">version {{ pkg.version }}</a>.</strong> I keep a
-        <a href="https://github.com/madrilene/eleventy-excellent/tree/v1">branch of v1</a>,
-        <a href="https://github.com/madrilene/eleventy-excellent/tree/v2">v2</a> and <a href="https://github.com/madrilene/eleventy-excellent/tree/v3">v3</a>. I  tried to <a href="/get-started/#docs-lol">document most features and methodologies</a>.
+        While we build that out, here's where to find what you're looking for:
       </p>
-      <p><strong>Have fun</strong> and let me know if you find any issues or have ideas for improvements!</p>
+      <ul>
+        <li><a href="/schedule/">Schedule</a> — upcoming games and recent results</li>
+        <li><a href="/teams/">Teams</a> — Varsity and Junior Varsity rosters</li>
+        <li><a href="/history/">History</a> — program record, player database, alumni</li>
+        <li><a href="/support/">Support PWHA</a> — donations, sponsorships</li>
+        <li><a href="/about/">About Us</a> — officers, membership, by-laws</li>
+      </ul>
     </div>
   </article>
 
   <section class="full | region">
     <div class="prose wrapper flow">
-      <h2>{{ blog.title }}</h2>
-      {% if blog.intro %}
-        <p>{{ blog.intro }}</p>
+      <h2>{{ news.title }}</h2>
+      {% if news.intro %}
+        <p>{{ news.intro }}</p>
       {% endif %}
       <div class="feature |  region region-space-l">
         <custom-masonry layout="50-50">
           {% set itemList = collections.allPosts %}
-					{% asyncEach item in itemList.slice(0, 4) %}
-            {% set headingLevel = "h3" %}
-						{% include "partials/card-blog.njk" %}
-					{% endeach %}
+          {% if itemList.length %}
+            {% asyncEach item in itemList.slice(0, 4) %}
+              {% set headingLevel = "h3" %}
+              {% include "partials/card-blog.njk" %}
+            {% endeach %}
+          {% else %}
+            <p><em>No news posts yet — once the demo content is removed and a real post lands here, this section will fill in.</em></p>
+          {% endif %}
         </custom-masonry>
       </div>
     </div>

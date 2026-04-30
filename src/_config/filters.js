@@ -5,6 +5,7 @@ import {sortAlphabetically} from './filters/sort-alphabetic.js';
 import {splitlines} from './filters/splitlines.js';
 import {striptags} from './filters/striptags.js';
 import {slugifyString} from './filters/slugify.js';
+import {filterCurrentTeam, filterStatus, groupByYear} from './filters/players.js';
 
 export default {
   toISOString,
@@ -14,5 +15,8 @@ export default {
   striptags,
   shuffleArray,
   sortAlphabetically,
-  slugifyString
+  slugifyString,
+  filterCurrentTeam,
+  filterStatus,
+  groupByYear
 };

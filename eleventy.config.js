@@ -84,6 +84,10 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('shuffle', filters.shuffleArray);
   eleventyConfig.addFilter('alphabetic', filters.sortAlphabetically);
   eleventyConfig.addFilter('slugify', filters.slugifyString);
+  // Player-data filters used by Teams and History pages
+  eleventyConfig.addFilter('filterCurrentTeam', filters.filterCurrentTeam);
+  eleventyConfig.addFilter('filterStatus', filters.filterStatus);
+  eleventyConfig.addFilter('groupByYear', filters.groupByYear);
 
   // --------------------- Shortcodes
   eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);

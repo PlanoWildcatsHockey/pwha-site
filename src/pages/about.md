@@ -1,22 +1,20 @@
 ---
-title: About
+title: About Us
 permalink: /about/index.html
-description: 'Eleventy Excellent is inspired bythe companion website of Andy Bell’s talk "Be the browser’s mentor, not its micromanager".'
+description: The Plano Wildcats Hockey Association supports the Plano Senior High School hockey program — Varsity, Junior Varsity, players, families, and alumni.
 layout: page
 ---
 
-This starter uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template.
+# About PWHA
 
-It is built around the CSS boilerplate by Andy Bell and inspired by Andy's talk **'Be the browser’s mentor, not its micromanager'**.
+The Plano Wildcats Hockey Association (PWHA) is the booster organization that supports Plano Senior High School's hockey program — Varsity and Junior Varsity teams, players, families, and alumni.
 
-If you want to know exactly how it all works, [read this article on piccalil.li](https://piccalil.li/blog/a-css-project-boilerplate/).
+This site is the home for everything we do — schedules, rosters, news, and ways to support the program.
 
-The aim is to spread the idea and use of this _excellent_ workflow. To work with it efficiently you should be familiar with [cube.fyi](https://cube.fyi/), [utopia.fyi](https://utopia.fyi/) and [every-layout.dev](https://every-layout.dev/).
+## Find your way around
 
-- buildexcellentwebsit.es
-- Study the [original CSS boilerplate](https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main)
+- [PWHA Officers](/about/officers/) — who runs the association
+- [Membership](/about/membership/) — joining and member benefits
+- [By-Laws](/about/bylaws/) — governing document
 
-## Watch the talk
-
-<div><custom-youtube @slug="JqnMI1AXl6w" @label="Andy Bell – Be the browser’s mentor, not its micromanager"> </custom-youtube></div>
-
+> **Phase 1 placeholder.** Replace this body with real association copy: history, mission, scope, current season notes.
