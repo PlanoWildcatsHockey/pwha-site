@@ -11,3 +11,5 @@ src/_includes/scripts
 
 # secret data
 .env
+# Local-only AI skill reference (not part of the project)
+skill.md.txt
