@@ -1,0 +1,92 @@
+/* Alumni / player profile pages */
+
+.player-profile__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-m-l);
+  border-block-end: 2px solid var(--color-primary);
+  padding-block-end: var(--space-m-l);
+}
+
+.player-profile__number {
+  font-family: var(--font-display);
+  font-size: var(--size-step-6);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  line-height: 1;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  min-inline-size: 2ch;
+}
+
+.player-profile__name {
+  font-size: var(--size-step-3);
+  margin-block-end: var(--space-xs);
+}
+
+.player-profile__meta {
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-accent);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.player-profile__meta-item::after {
+  content: '·';
+  margin-inline-start: var(--space-xs);
+}
+
+.player-profile__meta-item:last-child::after {
+  content: none;
+}
+
+/* Social links cluster on member profiles */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.profile-links a {
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-bold);
+}
+
+/* Memorial banner */
+.memorial-banner {
+  border-inline-start: 4px solid var(--color-primary);
+  padding: var(--space-s) var(--space-m);
+  background: var(--color-bg-accent);
+  font-style: italic;
+}
+
+/* Captain / Alternate Captain badge */
+.captain-badge {
+  display: inline-block;
+  font-size: var(--size-step-min-2);
+  font-family: var(--font-display);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  color: var(--color-light);
+  background: var(--color-primary);
+  padding: 0 var(--space-2xs);
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+/* Member badge */
+.member-badge {
+  display: inline-block;
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--font-bold);
+  color: var(--color-light);
+  background: var(--color-primary);
+  padding: var(--space-3xs) var(--space-xs);
+}

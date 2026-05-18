@@ -32,8 +32,19 @@ h2,
 h3 {
   font-family: var(--font-display);
   font-weight: var(--font-extra-bold);
+  font-style: italic;
+  text-transform: uppercase;
   line-height: var(--leading-fine);
   letter-spacing: var(--tracking-s);
+}
+
+/* Sticky site header with primary bottom border */
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
+  border-block-end: 2px solid var(--color-primary);
 }
 
 h1 {

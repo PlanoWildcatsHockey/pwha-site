@@ -4,13 +4,13 @@
   "items": [
     {
       "name": "Display",
-      "description": "Display font stack for headings and large text. Redhat Display is made for headlines and big statements, are low contrast and spaced tightly, with a large x-height and open counters.",
-      "value": ["Redhat", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+      "description": "Display font stack for headings and large text. Inter is a variable sans-serif optimised for screen readability at all sizes, with tight tracking and a high x-height that suits bold, uppercase athletic display text.",
+      "value": ["Inter", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"]
     },
     {
       "name": "Base",
-      "description": "Base font stack for body text. Atkinson Hyperlegible, named after the founder of the Braille Institute, has been developed specifically to increase legibility for readers with low vision, and to improve comprehension.",
-      "value": ["Atkinson Hyperlegible", "system-ui", "sans-serif"]
+      "description": "Base font stack for body text. Lexend is designed for reading proficiency with a wider character stance that feels active and clear — suits the parent-audience of a hockey association site.",
+      "value": ["Lexend", "system-ui", "sans-serif"]
     },
     {
       "name": "Mono",

@@ -1,0 +1,8 @@
+id,name,active,sort_order,league_name,league_short,division,att_league_id,varsity_team_id,jv_team_id
+2024-summer,Summer 2024,FALSE,10,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2024-2025,2024-2025 Season,FALSE,20,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2025-summer,Summer 2025,FALSE,30,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2025-leveling-festival,2025 Leveling Festival,FALSE,40,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2025-2026,2025-2026 Season,FALSE,50,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2026-texas-cup,2026 Texas Cup,FALSE,60,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
+2026-summer,Summer 2026,TRUE,70,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,667004,667037

@@ -1,0 +1,13 @@
+PRESIDENT - Matthew Perez
+
+VICE PRESIDENT - Clay Hansard
+
+TREASURER - MICHELLE PETERSON 
+
+FUNDRAISING - REBECCA HARSILA 
+
+WAYS & MEANS - JIN MUN & Terri Childress
+
+VARSITY MANAGER - John Wolfe
+
+JV MANAGER - Eric Wallace

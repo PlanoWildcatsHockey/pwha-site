@@ -23,6 +23,27 @@ export const filterCurrentTeam = (players, teamSlug) => {
 };
 
 /**
+ * Coaching staff currently assigned to a given team.
+ * @param {Array} coaches - the full coaches list (Eleventy's `coaches` global)
+ * @param {string} teamSlug - "varsity" or "junior-varsity"
+ * @returns {Array}
+ */
+/**
+ * Players who have passed away — used for the In Memoriam section.
+ * @param {Array} players
+ * @returns {Array}
+ */
+export const filterDeceased = players => {
+  if (!Array.isArray(players)) return [];
+  return players.filter(p => p.dateOfDeath);
+};
+
+export const filterCurrentStaff = (coaches, teamSlug) => {
+  if (!Array.isArray(coaches)) return [];
+  return coaches.filter(c => c.status === 'current' && c.team === teamSlug);
+};
+
+/**
  * Players matching a given status.
  * @param {Array} players
  * @param {string} status - "current" or "alumni"

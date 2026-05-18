@@ -28,9 +28,10 @@ export default async function (eleventyConfig) {
     await events.buildAllJs();
   });
 
-  // --------------------- custom wtach targets
+  // --------------------- custom watch targets
   eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
   eleventyConfig.addWatchTarget('./src/_includes/**/*.{webc}');
+  eleventyConfig.addWatchTarget('./sources/*.csv');
 
   // --------------------- layout aliases
   eleventyConfig.addLayoutAlias('base', 'base.njk');
@@ -86,6 +87,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('slugify', filters.slugifyString);
   // Player-data filters used by Teams and History pages
   eleventyConfig.addFilter('filterCurrentTeam', filters.filterCurrentTeam);
+  eleventyConfig.addFilter('filterCurrentStaff', filters.filterCurrentStaff);
+  eleventyConfig.addFilter('filterDeceased', filters.filterDeceased);
   eleventyConfig.addFilter('filterStatus', filters.filterStatus);
   eleventyConfig.addFilter('groupByYear', filters.groupByYear);
 

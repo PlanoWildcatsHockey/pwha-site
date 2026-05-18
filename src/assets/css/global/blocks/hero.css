@@ -1,0 +1,101 @@
+/* Hero section — homepage / section-header variant */
+
+.hero-section .section__inner {
+  padding-block: var(--space-xl-2xl);
+}
+
+.hero-content {
+  max-inline-size: 52ch;
+}
+
+.hero-lead {
+  font-size: var(--size-step-1);
+  color: var(--color-light);
+  opacity: 0.9;
+  max-inline-size: 44ch;
+}
+
+/* Primary hero button: white bg, maroon text, brutalist offset shadow */
+.hero-btn-primary {
+  --button-bg: var(--color-light);
+  --button-color: var(--color-primary);
+  --button-hover-bg: var(--color-light);
+  --button-hover-color: var(--color-primary);
+  --button-border-color: var(--color-light);
+  --button-radius: 0;
+  --button-font-weight: var(--font-extra-bold);
+  --button-text-transform: uppercase;
+  --button-tracking: 0.1em;
+  --button-padding: var(--space-s) var(--space-m-l);
+  box-shadow: 5px 5px 0 var(--color-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--color-dark);
+}
+
+/* Ghost hero button: transparent, white border */
+.hero-btn-ghost {
+  --button-bg: transparent;
+  --button-hover-bg: transparent;
+  --button-border-color: rgba(255, 255, 255, 0.6);
+  --button-color: var(--color-light);
+  --button-hover-color: var(--color-light);
+  --button-radius: 0;
+  --button-font-weight: var(--font-bold);
+  --button-text-transform: uppercase;
+  --button-tracking: 0.1em;
+  --button-padding: var(--space-s) var(--space-m-l);
+  border-width: 2px;
+}
+
+.hero-btn-ghost:hover {
+  --button-border-color: var(--color-light);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Stat bar — dark band below the hero */
+.stat-bar {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: var(--space-m-l);
+  list-style: none;
+  margin: 0;
+  padding: var(--space-s-m) 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  padding-inline-start: var(--space-s);
+  border-inline-start: 2px solid var(--color-primary);
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: var(--size-step-3);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-400);
+}
+
+/* News section heading with thick left accent border */
+.section-heading-accent {
+  border-inline-start: 6px solid var(--color-primary);
+  padding-inline-start: var(--space-s);
+}

@@ -1,0 +1,16 @@
+id,season,role,first_name,last_name,email,listed
+1,2025-2026,President,Clay,Hansard,president@planowildcatshockey.com,TRUE
+2,2025-2026,Vice President,Eric,Wallace,vp@planowildcatshockey.com,TRUE
+3,2025-2026,Treasurer,Michelle,Peterson,treasurer@planowildcatshockey.com,TRUE
+4,2025-2026,Fundraising,Rebecca,Harsila,fundraising@planowildcatshockey.com,TRUE
+5,2025-2026,Ways & Means,Jin,Mun,ways.means1@planowildcatshockey.com,TRUE
+6,2025-2026,Varsity Manager,Michael,Peterson,varsitymanager@planowildcatshockey.com,TRUE
+7,2025-2026,JV Manager,Terri,Childress,jvmanager@planowildcatshockey.com,TRUE
+8,2024-2025,President,Matthew,Perez,,TRUE
+9,2024-2025,Vice President,Clay,Hansard,,TRUE
+10,2024-2025,Treasurer,Michelle,Peterson,,TRUE
+11,2024-2025,Fundraising,Rebecca,Harsila,,TRUE
+12,2024-2025,Ways & Means,Jin,Mun,,TRUE
+13,2024-2025,Ways & Means,Terri,Childress,,TRUE
+14,2024-2025,Varsity Manager,John,Wolfe,,TRUE
+15,2024-2025,JV Manager,Eric,Wallace,,TRUE

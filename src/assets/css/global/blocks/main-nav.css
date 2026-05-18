@@ -108,7 +108,7 @@ body:has([data-drawer-toggle][aria-expanded='true']) {
   --nav-item-text-color: var(--color-text);
   --nav-item-padding: var(--space-xs) var(--space-2xs);
   --nav-item-decoration-color: transparent;
-  --nav-item-font-size: var(--size-step-0);
+  --nav-item-font-size: var(--size-step-min-1);
   --nav-item-font-weight: var(--font-bold);
 
   background: var(--nav-item-background);
@@ -117,10 +117,12 @@ body:has([data-drawer-toggle][aria-expanded='true']) {
   padding: var(--nav-item-padding);
   display: block;
   border-radius: var(--border-radius-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   text-decoration-line: underline;
   text-decoration-color: var(--nav-item-decoration-color);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 0.25em;
 }
 
 .mainnav:has(.nav-sublist) :is(a, [data-submenu-toggle]) {

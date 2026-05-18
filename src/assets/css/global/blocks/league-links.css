@@ -1,0 +1,16 @@
+/* League links aside — appears on team pages to surface official ATT MHSHL links */
+
+.league-links {
+  border-inline-start: 4px solid var(--color-primary);
+  padding-inline-start: var(--space-s);
+  padding-block: var(--space-xs);
+  background: var(--color-bg-accent);
+}
+
+.league-links__label {
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-bold);
+  color: var(--color-text-accent);
+}
