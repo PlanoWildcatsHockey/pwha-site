@@ -5,26 +5,56 @@ description: Plano Wildcats hockey alumni — players who built the program and 
 layout: page
 ---
 
-<h1>Alumni</h1>
+<div class="flow" style="--flow-space: var(--space-l)">
 
-<p>
-  Plano Wildcats hockey alumni — players whose seasons are behind them,
-  but whose contributions live on in the program.
-</p>
+  <p>
+    Plano Wildcats hockey alumni — players whose seasons are behind them,
+    but whose contributions live on in the program. PWHA members receive
+    an individual profile page to share their story, college, and social links.
+  </p>
 
-{% set alums = players | filterStatus("alumni") %}
+  {% set alums = players | filterStatus("alumni") %}
 
-{% if alums.length %}
-  {# groupByYear returns an array of { year, players } objects sorted desc #}
-  {% set byYear = alums | groupByYear %}
-  {% for entry in byYear %}
-    <h2>Class of {{ entry.year }}</h2>
-    <ul>
-      {% for p in entry.players %}
-        <li>{{ p.name }} — {{ p.position }} ({{ p.team }})</li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-{% else %}
-  <p><em>No alumni entries yet. Add entries to <code>src/_data/players.json</code> with <code>status: "alumni"</code> and they'll appear here grouped by graduation year.</em></p>
-{% endif %}
+  {% if alums.length %}
+    {% set byYear = alums | groupByYear %}
+    {# Memorial section — players who have passed away, shown first #}
+    {% set inMemoriam = alums | filterDeceased %}
+    {% if inMemoriam.length %}
+      <section>
+        <h2 class="section-heading-accent">In Memoriam</h2>
+        <ul class="flow" role="list" style="--flow-space: var(--space-2xs); list-style: none; padding: 0;">
+          {% for p in inMemoriam %}
+            <li>
+              <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+              {% if p.position and p.position != "P" %} — {{ p.position }}{% endif %}
+              <span style="color: var(--color-text-accent); font-size: var(--size-step-min-1);">{{ p.dateOfDeath | formatDate("MMMM D, YYYY") }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    {# Alumni by graduation year — only graduated classes #}
+    {% for entry in byYear %}
+      {% if entry.year and entry.year != "Unknown" and entry.year <= 2026 %}
+      <section>
+        <h2 class="section-heading-accent">Class of {{ entry.year }}</h2>
+        <ul class="flow" role="list" style="--flow-space: var(--space-2xs); list-style: none; padding: 0;">
+          {% for p in entry.players %}
+            {% if not p.dateOfDeath %}{# deceased shown in In Memoriam above #}
+            <li>
+              <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+              {% if p.position and p.position != "P" %} — {{ p.position }}{% endif %}
+              {% if p.member %}<span class="member-badge" style="margin-inline-start: var(--space-xs)">Member</span>{% endif %}
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p><em>No alumni yet — they'll appear here once players graduate from the program.</em></p>
+  {% endif %}
+
+</div>

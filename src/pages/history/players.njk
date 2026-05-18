@@ -5,45 +5,60 @@ description: The full Plano Wildcats player database — current rosters and his
 layout: page
 ---
 
-<h1>Player Database</h1>
+<div class="flow" style="--flow-space: var(--space-l)">
 
-<p>
-  The complete record of Plano Wildcats players, current and past. Use the
-  filters to narrow by season, team, or status. Alumni entries link to
-  additional history.
-</p>
+  <p>
+    Every player who has worn the maroon, current and past.
+    Alumni entries link to individual profile pages.
+  </p>
 
-{# Sourced from src/_data/players.json #}
-{% if players.length %}
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Team</th>
-        <th>Pos</th>
-        <th>Year</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for p in players %}
-        <tr>
-          <td>{{ p.number }}</td>
-          <td>{{ p.name }}</td>
-          <td>{{ p.team }}</td>
-          <td>{{ p.position }}</td>
-          <td>{{ p.year }}</td>
-          <td>{{ p.status }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-{% else %}
-  <p><em>Phase 1 placeholder — table will populate from <code>src/_data/players.json</code>.</em></p>
-{% endif %}
+  {% if players.length %}
+    {% set sorted = players | sort(false, false, "lastName") %}
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Pos</th>
+            <th scope="col">School</th>
+            <th scope="col">Grad</th>
+            <th scope="col">Team</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in sorted %}
+            <tr>
+              <td>{{ p.number if p.number else "—" }}</td>
+              <td>
+                {% if p.dateOfDeath %}
+                  <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+                {% elif p.status == "alumni" and p.gradYear and p.gradYear <= 2026 %}
+                  <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+                {% elif p.status == "current" %}
+                  <a href="/history/players/{{ p.slug }}/">{{ p.name }}</a>
+                {% else %}
+                  {{ p.name }}
+                {% endif %}
+              </td>
+              <td>{{ p.position if p.position and p.position != "P" else "—" }}</td>
+              <td>{{ p.school if p.school else "—" }}</td>
+              <td>{{ p.gradYear if p.gradYear else "—" }}</td>
+              <td>
+                {% if p.team == "varsity" %}Varsity
+                {% elif p.team == "junior-varsity" %}JV
+                {% else %}—{% endif %}
+              </td>
+              <td>{{ "Current" if p.status == "current" else "Alumni" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p><small>{{ players.length }} players total — {{ players | filterStatus("current") | length }} current, {{ players | filterStatus("alumni") | length }} alumni.</small></p>
+  {% else %}
+    <p><em>No players found.</em></p>
+  {% endif %}
 
-<p><small>
-  In Phase 2 we'll add: client-side filtering by season/team/status, sortable
-  columns, individual player detail pages, and a search box.
-</small></p>
+</div>

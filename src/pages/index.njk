@@ -4,49 +4,66 @@ permalink: /index.html
 title: 'Plano Wildcats Hockey Association'
 description: 'The official site of the Plano Wildcats Hockey Association — supporting Plano Senior High School hockey.'
 news:
-  title: 'Latest news'
+  title: 'Latest News'
   intro: 'Recent posts and announcements from PWHA.'
 ---
 
 <div class="wrapper">
-  <header class="full | section" style="--spot-color: var(--color-primary)">
-    <div class="section__inner flow region">
-      <h1 class="text-center" style="color: var(--color-light);">Plano Wildcats Hockey Association</h1>
-      <p class="text-center" style="color: var(--color-light); font-size: var(--size-step-1);">
-        Supporting Plano Senior High School hockey — Varsity, Junior Varsity, players, families, and alumni.
-      </p>
+
+  {# ── Hero ── #}
+  <header class="full | section hero-section" style="--spot-color: var(--color-primary)">
+    <div class="section__inner">
+      <div class="wrapper">
+        <div class="hero-content flow" style="--flow-space: var(--space-m-l)">
+          <h1 style="color: var(--color-light);">Plano Senior<br>Wildcats Hockey</h1>
+          <p class="hero-lead">
+            Supporting Plano Senior High School hockey — Varsity, Junior Varsity, players, families, and alumni.
+          </p>
+          <div class="cluster" style="--gutter: var(--space-s)">
+            <a href="/support/" class="button hero-btn-primary">Join the Club</a>
+            <a href="/schedule/" class="button hero-btn-ghost">Team Schedule</a>
+          </div>
+        </div>
+      </div>
     </div>
     {% svg "divider/waves", null, "divider" %}
   </header>
 
-  <article class="full | region">
-    <div class="prose wrapper flow">
-      <h2>Welcome</h2>
-      <p>
-        <em>Phase 1 placeholder.</em> Replace this with the homepage hero copy.
-        A typical hockey association homepage surfaces the next game, recent
-        results, latest news, and ways to get involved or support the program.
-      </p>
-      <p>
-        While we build that out, here's where to find what you're looking for:
-      </p>
-      <ul>
-        <li><a href="/schedule/">Schedule</a> — upcoming games and recent results</li>
-        <li><a href="/teams/">Teams</a> — Varsity and Junior Varsity rosters</li>
-        <li><a href="/history/">History</a> — program record, player database, alumni</li>
-        <li><a href="/support/">Support PWHA</a> — donations, sponsorships</li>
-        <li><a href="/about/">About Us</a> — officers, membership, by-laws</li>
+  {# ── Stat bar ── #}
+  <section class="full | stat-bar">
+    <div class="wrapper">
+      <ul class="stats-grid" role="list">
+        <li class="stat-item">
+          <span class="stat-number">{{ season.name }}</span>
+          <span class="stat-label">Active Season</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-number">2 Teams</span>
+          <span class="stat-label">Varsity &amp; JV</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-number">{{ season.league.division }}</span>
+          <span class="stat-label">{{ season.league.shortName }} Division</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-number">DFW</span>
+          <span class="stat-label">Rinks &amp; Tournaments</span>
+        </li>
       </ul>
     </div>
-  </article>
+  </section>
 
+  {# ── Latest news ── #}
   <section class="full | region">
-    <div class="prose wrapper flow">
-      <h2>{{ news.title }}</h2>
+    <div class="wrapper flow">
+      <div class="repel">
+        <h2 class="section-heading-accent">{{ news.title }}</h2>
+        <a href="/blog/" class="button" data-small-button data-button-variant="primary">View All</a>
+      </div>
       {% if news.intro %}
         <p>{{ news.intro }}</p>
       {% endif %}
-      <div class="feature |  region region-space-l">
+      <div class="region region-space-l">
         <custom-masonry layout="50-50">
           {% set itemList = collections.allPosts %}
           {% if itemList.length %}
@@ -55,10 +72,11 @@ news:
               {% include "partials/card-blog.njk" %}
             {% endeach %}
           {% else %}
-            <p><em>No news posts yet — once the demo content is removed and a real post lands here, this section will fill in.</em></p>
+            <p><em>No news posts yet — once real posts are published, they'll appear here.</em></p>
           {% endif %}
         </custom-masonry>
       </div>
     </div>
   </section>
+
 </div>

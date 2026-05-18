@@ -1,45 +1,97 @@
 ---
 title: Varsity
 permalink: /teams/varsity/index.html
-description: The Plano Wildcats Varsity hockey roster and coaching staff.
+description: The Plano Wildcats Varsity hockey roster and coaching staff — Summer 2026.
 layout: page
 ---
 
-<h1>Varsity</h1>
+<div class="flow" style="--flow-space: var(--space-l)">
 
-<p>
-  The Plano Wildcats Varsity team competes at the highest level of the
-  program. Below is the current roster, drawn from our player database.
-</p>
+  <p>
+    The Plano Wildcats Varsity team competes in the <strong>{{ season.league.division }}</strong>
+    division of the {{ season.league.name }} during the {{ season.name }} season.
+  </p>
 
-{# Roster filtered from src/_data/players.json #}
-{% set roster = players | filterCurrentTeam("varsity") %}
+  <aside class="league-links flow" style="--flow-space: var(--space-xs)">
+    <p class="league-links__label">Official {{ season.name }} stats on ATT MHSHL</p>
+    <div class="cluster" style="--gutter: var(--space-xs)">
+      <a href="{{ season.varsity.rosterUrl }}" class="button" data-small-button target="_blank" rel="noopener">Roster</a>
+      <a href="{{ season.varsity.scheduleUrl }}" class="button" data-small-button target="_blank" rel="noopener">Schedule</a>
+      <a href="{{ season.varsity.scoresUrl }}" class="button" data-small-button target="_blank" rel="noopener">Results</a>
+      <a href="{{ season.varsity.statsUrl }}" class="button" data-small-button target="_blank" rel="noopener">Stats</a>
+    </div>
+  </aside>
 
-{% if roster.length %}
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Pos</th>
-        <th>Year</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for p in roster %}
-        <tr>
-          <td>{{ p.number }}</td>
-          <td>{{ p.name }}</td>
-          <td>{{ p.position }}</td>
-          <td>{{ p.year }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-{% else %}
-  <p><em>Phase 1 placeholder — roster will populate from <code>src/_data/players.json</code> once player data is added and the <code>filterCurrentTeam</code> filter is wired up.</em></p>
-{% endif %}
+  {# ── Roster ── #}
+  {% set roster = players | filterCurrentTeam("varsity") | sort(false, false, "number") %}
+  <section>
+    <h2 class="section-heading-accent">Roster</h2>
+    {% if roster.length %}
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Pos</th>
+              <th scope="col">Shoots</th>
+              <th scope="col">School</th>
+              <th scope="col">Grad</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in roster %}
+              <tr>
+                <td>{{ p.number }}</td>
+                <td>
+                  <a href="/history/players/{{ p.slug }}/">{{ p.name }}</a>
+                  {% if p.captain %}<span class="captain-badge" title="{{ 'Captain' if p.captain == 'C' else 'Alternate Captain' }}">{{ p.captain }}</span>{% endif %}
+                </td>
+                <td>{{ p.position if p.position and p.position != "P" else "—" }}</td>
+                <td>{{ p.shoots if p.shoots else "—" }}</td>
+                <td>{{ p.school if p.school else "—" }}</td>
+                <td>{{ p.gradYear if p.gradYear else "—" }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p><em>No Varsity players found for the current season.</em></p>
+    {% endif %}
+  </section>
 
-<h2>Coaching staff</h2>
+  {# ── Coaching Staff ── #}
+  {% set staff = coaches | filterCurrentStaff("varsity") %}
+  <section>
+    <h2 class="section-heading-accent">Coaching Staff</h2>
+    {% if staff.length %}
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in staff %}
+              <tr>
+                <td>{{ c.role }}</td>
+                <td>
+                  {{ c.name }}
+                  {% if c.email %}
+                    <a href="mailto:{{ c.email }}" aria-label="Email {{ c.name }}" style="margin-inline-start: var(--space-xs)">✉</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p><em>Coaching staff not yet entered.</em></p>
+    {% endif %}
+  </section>
 
-<p><em>Phase 1 placeholder.</em> Add head coach, assistants, and managers.</p>
+</div>

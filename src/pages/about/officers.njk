@@ -1,0 +1,49 @@
+---
+title: PWHA Officers
+permalink: /about/officers/index.html
+description: The current officers of the Plano Wildcats Hockey Association.
+layout: page
+---
+
+<div class="flow" style="--flow-space: var(--space-l)">
+
+  <p>
+    The Plano Wildcats Hockey Association is a parent-run organization.
+    Officers serve on a volunteer basis and are elected each season.
+  </p>
+
+  {% if officers.current.length %}
+    <section>
+      <h2 class="section-heading-accent">{{ officers.currentSeason }} Officers</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">Officer</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for o in officers.current %}
+              <tr>
+                <td>{{ o.role }}</td>
+                <td>{{ o.name }}</td>
+                <td>
+                  {% if o.email %}
+                    <a href="mailto:{{ o.email }}">Email</a>
+                  {% else %}
+                    —
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% endif %}
+
+  <p>For general inquiries, use the <a href="/contact/">Contact Us</a> page.</p>
+
+</div>

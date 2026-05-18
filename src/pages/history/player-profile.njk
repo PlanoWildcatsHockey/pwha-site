@@ -1,0 +1,79 @@
+---
+layout: base
+pagination:
+  data: currentPlayers
+  size: 1
+  alias: player
+permalink: "history/players/{{ player.slug }}/index.html"
+eleventyComputed:
+  title: "{{ player.name }} — Plano Wildcats"
+  description: "{{ player.name }}, Plano Wildcats {{ player.team }} — #{{ player.number }}."
+---
+
+<div class="wrapper">
+  <article class="flow region" style="--flow-space: var(--space-l)">
+
+    <header class="player-profile__header">
+      <div class="player-profile__number" aria-label="Jersey number {{ player.number }}">
+        {{ player.number if player.number else "#" }}
+      </div>
+      <div>
+        <h1 class="player-profile__name">{{ player.name }}</h1>
+        <ul class="player-profile__meta" role="list">
+          {% if player.position and player.position != "P" %}
+            <li class="player-profile__meta-item">{{ player.position }}</li>
+          {% endif %}
+          {% if player.shoots %}
+            <li class="player-profile__meta-item">Shoots {{ player.shoots }}</li>
+          {% endif %}
+          {% if player.school %}
+            <li class="player-profile__meta-item">{{ player.school }}</li>
+          {% endif %}
+          {% if player.gradYear %}
+            <li class="player-profile__meta-item">Class of {{ player.gradYear }}</li>
+          {% endif %}
+          <li class="player-profile__meta-item">
+            {{ "Varsity" if player.team == "varsity" else "Junior Varsity" }}
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {% if player.seasons.length > 1 %}
+      <section class="flow" style="--flow-space: var(--space-s)">
+        <h2 class="section-heading-accent">Seasons</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Season</th>
+                <th scope="col">Team</th>
+                <th scope="col">#</th>
+                <th scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in player.seasons | sort(true, false, "sortOrder") %}
+                <tr>
+                  <td>{{ s.seasonName }}</td>
+                  <td>{{ "Varsity" if s.team == "varsity" else "Junior Varsity" }}</td>
+                  <td>{{ s.number if s.number else "—" }}</td>
+                  <td>
+                    {% if s.captain == "C" %}<span class="captain-badge">C</span> Captain
+                    {% elif s.captain == "A" %}<span class="captain-badge">A</span> Alternate
+                    {% else %}—{% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {% endif %}
+
+    <p>
+      <a href="/teams/{{ player.team }}/">&larr; Back to {{ "Varsity" if player.team == "varsity" else "Junior Varsity" }} roster</a>
+    </p>
+
+  </article>
+</div>

@@ -1,0 +1,1 @@
+Student-initiated, non-curricular club. Not affiliated with Plano ISD or Plano Senior high school. Not monitored, approved or promoted by any Plano ISD employee.

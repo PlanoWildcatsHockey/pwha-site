@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PLANO WILDCATS HOCKEY ASSOCIATION | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Lexend:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#570000",
+                        "on-primary": "#ffffff",
+                        "secondary": "#50606f",
+                        "background": "#f9f9f9",
+                        "surface": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "outline": "#8e706c",
+                    },
+                }
+            }
+        }
+    </script>
+<style>
+        /* CUBE CSS: Composition / Utilities / Block / Exception */
+        
+        :root {
+            /* Fluid Typography Scale (using clamp) */
+            --step-0: clamp(1rem, 0.96rem + 0.22vw, 1.125rem); /* Body */
+            --step-1: clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem); /* Headline MD */
+            --step-2: clamp(2rem, 1.74rem + 1.3vw, 2.75rem);   /* Headline LG */
+            --step-3: clamp(3rem, 2.04rem + 4.78vw, 6rem);    /* Display XL */
+            
+            /* Fluid Spacing Scale */
+            --space-sm: clamp(0.5rem, 0.46rem + 0.22vw, 0.625rem);
+            --space-md: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+            --space-lg: clamp(1.5rem, 1.33rem + 0.87vw, 2rem);
+            --space-xl: clamp(3rem, 2.65rem + 1.74vw, 4rem);
+
+            --sidebar-width: 260px;
+            --primary-maroon: #570000;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            font-size: var(--step-0);
+            background-color: var(--background);
+            color: #1a1c1c;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, .font-bold-athletic {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: -0.02em;
+        }
+
+        /* Composition: Sidebar + Main Layout */
+        .l-page-layout {
+            display: grid;
+            grid-template-columns: var(--sidebar-width) 1fr;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 1024px) {
+            .l-page-layout {
+                grid-template-columns: 1fr;
+            }
+            .c-sidebar {
+                display: none;
+            }
+        }
+
+        /* Block: Sidebar */
+        .c-sidebar {
+            background: white;
+            border-right: 4px solid var(--primary-maroon);
+            padding: var(--space-lg);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            z-index: 40;
+        }
+
+        /* Block: Hero */
+        .c-hero {
+            position: relative;
+            min-height: 80vh;
+            display: grid;
+            align-items: center;
+            padding: var(--space-xl) var(--space-lg);
+            background: var(--primary-maroon);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            overflow: hidden;
+        }
+
+        .c-hero__image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+        }
+
+        /* Block: News Card */
+        .c-news-grid {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        }
+
+        .c-news-card {
+            background: white;
+            border: 1px solid #e2e2e2;
+            box-shadow: 6px 6px 0px var(--primary-maroon);
+            transition: transform 0.2s ease;
+        }
+
+        .c-news-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--primary-maroon);
+        }
+
+        .c-news-card[data-featured="true"] {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .c-news-card[data-featured="true"] {
+                grid-column: span 1;
+            }
+        }
+
+        /* Block: Nav */
+        .c-top-nav {
+            height: 80px;
+            background: white;
+            border-bottom: 2px solid var(--primary-maroon);
+            display: flex;
+            align-items: center;
+            padding: 0 var(--space-lg);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        /* Utility classes for fluid sizing */
+        .u-text-step-0 { font-size: var(--step-0); }
+        .u-text-step-1 { font-size: var(--step-1); }
+        .u-text-step-2 { font-size: var(--step-2); }
+        .u-text-step-3 { font-size: var(--step-3); }
+        .u-gap-fluid { gap: var(--space-lg); }
+        .u-py-fluid { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+        
+        /* Interactive states with Data Attributes */
+        [data-state='active'] {
+            border-bottom: 4px solid var(--primary-maroon);
+            color: var(--primary-maroon);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="l-page-layout">
+<!-- Sidebar Block -->
+<aside class="c-sidebar">
+<div class="mb-xl">
+<div class="flex items-center gap-sm mb-xs text-primary">
+<span class="material-symbols-outlined text-3xl">sports_hockey</span>
+<span class="font-bold-athletic u-text-step-1">PLANO WILDCATS</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-bold">Season 2024-25</p>
+</div>
+<nav class="flex flex-col gap-sm flex-grow">
+<a class="flex items-center gap-md py-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-bold text-[14px] uppercase">Varsity Team</span>
+</a>
+<a class="flex items-center gap-md py-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">sports_hockey</span>
+<span class="font-bold text-[14px] uppercase">JV Team</span>
+</a>
+<a class="flex items-center gap-md py-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-bold text-[14px] uppercase">Alumni</span>
+</a>
+<a class="flex items-center gap-md py-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-bold text-[14px] uppercase">Scout Portal</span>
+</a>
+</nav>
+<button class="w-full bg-primary text-white font-bold uppercase py-md hover:bg-black transition-colors text-[14px]">
+            View Standings
+        </button>
+</aside>
+<!-- Main Content Composition -->
+<div class="l-main-flow">
+<!-- Top Nav Block -->
+<header class="c-top-nav">
+<div class="flex justify-between items-center w-full max-w-[1400px] mx-auto">
+<div class="font-bold-athletic u-text-step-1 text-primary">PLANO WILDCATS HOCKEY ASSOCIATION</div>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="font-bold uppercase tracking-tighter text-[14px]" data-state="active" href="#">Home</a>
+<a class="font-bold uppercase tracking-tighter text-[14px] text-secondary hover:text-primary" href="#">Schedule</a>
+<a class="font-bold uppercase tracking-tighter text-[14px] text-secondary hover:text-primary" href="#">Rosters</a>
+<a class="font-bold uppercase tracking-tighter text-[14px] text-secondary hover:text-primary" href="#">Registration</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="bg-primary text-white font-bold text-[12px] uppercase px-lg py-sm hover:opacity-90">
+                        JOIN THE CLUB
+                    </button>
+<span class="material-symbols-outlined text-primary text-3xl cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Block -->
+<section class="c-hero">
+<img alt="Action Hockey Shot" class="c-hero__image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYdFdfj7DlPYmoOWOHNZO360YXBD6TjHcY_v-Ph1-gs9gVy62iXIaVIrDKqI6FCdI7Xyd0OS-CDqEHJatpNAYfZ-eLqd136AU7Ma3JG6XaS9WtRMFWhFLsnPrxkj-It6umawv7KWrHaEo2jrW_MytoK42o730oSnqj6iNxS74AA_oWr7-0CGk_xRYULeeoZbqGgPcZmoA6Z1tketSxOWECOwf4hG1OiEA9DDTH3A7ifBnyPqNUfQ5-ar18K4ZzkpPXe99SWCoFNv7"/>
+<div class="relative z-10 max-w-[1200px] mx-auto w-full">
+<h1 class="u-text-step-3 leading-[0.9] mb-lg">PLANO SENIOR<br/>WILDCATS</h1>
+<p class="max-w-xl u-text-step-0 mb-xl opacity-90">Elite training, unmatched competition, and the pursuit of excellence. Join the premier Plano Senior Wildcats development program in the region.</p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-white text-primary font-black uppercase px-xl py-md u-text-step-0 border-b-8 border-r-8 border-black hover:translate-y-1 hover:translate-x-1 hover:border-b-4 hover:border-r-4 transition-all">
+                            JOIN THE CLUB
+                        </button>
+<button class="border-4 border-white text-white font-black uppercase px-xl py-md u-text-step-0 hover:bg-white/10 transition-colors">
+                            WATCH HIGHLIGHTS
+                        </button>
+</div>
+</div>
+<!-- Countdown Widget -->
+<div class="absolute bottom-32 right-12 hidden xl:block bg-white text-black p-lg border-l-8 border-primary">
+<p class="font-bold text-[12px] text-primary uppercase mb-xs">Next Game: Rivalry Night</p>
+<div class="flex gap-md items-center font-black u-text-step-2 italic">
+<span>02</span><span class="text-primary text-xl">:</span>
+<span>14</span><span class="text-primary text-xl">:</span>
+<span>38</span>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase mt-xs text-secondary">
+<span>Days</span><span>Hrs</span><span>Min</span>
+</div>
+</div>
+</section>
+<!-- News Grid Section -->
+<section class="max-w-[1400px] mx-auto px-lg u-py-fluid">
+<div class="flex justify-between items-end mb-xl border-b-8 border-primary pb-sm">
+<h2 class="u-text-step-2">Latest News</h2>
+<a class="font-bold text-primary hover:underline flex items-center gap-xs uppercase text-[14px]" href="#">
+                        View All News <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+<div class="c-news-grid">
+<!-- Featured News Block -->
+<article class="c-news-card relative overflow-hidden group" data-featured="true">
+<div class="aspect-video md:h-[500px]">
+<img alt="Victory Scene" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGRE2ZRzFaKihCgLwactA5W5Z_MWgdfzbYqiSE6dHJ146mqiPmGQRIJ6V2NMKgblrTwTid4lAprSIXvH1XJO_qd1kVtLh5_b4Ra39M8tSiYp5e5lzUQVVQcrzGz2bih0FMbgnUcdVTsX016NKVHysyJOuXA5RFBrT2maBQX_mxxcUMmIHdClQhexjVuE0q9iEMQwrGgY18Y9xIhSC6lbEf_6GBG1D71-YTfV4Ah0T4SkXIGhz2rx05ozJpy73WSGzSiwABn6Owu660"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-xl text-white">
+<span class="bg-primary px-md py-xs text-[12px] font-bold uppercase mb-md inline-block">Championship Recap</span>
+<h3 class="u-text-step-2 leading-tight">VARSITY CLAIMS STATE TITLE IN OVERTIME THRILLER</h3>
+<p class="opacity-80 mt-md u-text-step-0 max-w-2xl font-normal">A historic night at the arena as the Plano Senior Wildcats secure their third consecutive regional championship.</p>
+</div>
+</div>
+</article>
+<!-- Standard News Block -->
+<article class="c-news-card p-lg flex flex-col justify-between border-t-8 border-primary">
+<div>
+<p class="font-bold text-primary text-[12px] uppercase mb-sm">Recruiting</p>
+<h3 class="u-text-step-1 mb-md">Scout Portal Now Open for 2025 Prospects</h3>
+<p class="text-secondary u-text-step-0 mb-lg font-normal">Registration for our annual summer combine is officially open. Show your skills in front of top NCAA scouts.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">visibility</span>
+</article>
+<article class="c-news-card p-lg flex flex-col justify-between bg-primary text-white">
+<div>
+<p class="font-bold opacity-70 text-[12px] uppercase mb-sm">Alumni</p>
+<h3 class="u-text-step-1 mb-md">Coach Miller Inducted into Hall of Fame</h3>
+<p class="opacity-80 u-text-step-0 mb-lg font-normal">A tribute to the legend who built the foundation of Plano Wildcats excellence over two decades.</p>
+</div>
+<span class="material-symbols-outlined text-4xl">military_tech</span>
+</article>
+</div>
+</section>
+<!-- Stats Block -->
+<section class="bg-primary text-white border-y-8 border-black">
+<div class="max-w-[1400px] mx-auto px-lg py-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-xl text-center">
+<div>
+<div class="u-text-step-3 italic font-black">12</div>
+<div class="font-bold uppercase tracking-widest text-[12px] opacity-70">State Titles</div>
+</div>
+<div>
+<div class="u-text-step-3 italic font-black">85%</div>
+<div class="font-bold uppercase tracking-widest text-[12px] opacity-70">College Placement</div>
+</div>
+<div>
+<div class="u-text-step-3 italic font-black">42</div>
+<div class="font-bold uppercase tracking-widest text-[12px] opacity-70">Active Scouts</div>
+</div>
+<div>
+<div class="u-text-step-3 italic font-black">250+</div>
+<div class="font-bold uppercase tracking-widest text-[12px] opacity-70">Elite Athletes</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-white py-xl px-lg">
+<div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-xl">
+<div class="font-bold-athletic u-text-step-1 italic">PLANO WILDCATS HOCKEY ASSOCIATION</div>
+<div class="flex flex-wrap justify-center gap-lg text-[12px] font-bold uppercase tracking-widest text-secondary">
+<a class="hover:text-white transition-colors" href="#">Contact Us</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Sponsorships</a>
+</div>
+<div class="text-[10px] font-bold uppercase tracking-widest opacity-40">© 2024 PLANO WILDCATS HOCKEY ASSOCIATION. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
