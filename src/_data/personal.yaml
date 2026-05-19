@@ -1,11 +1,7 @@
-email: hola@somemail.com
+email: president@planowildcatshockey.com
 address: |-
-  Organization name
-  Your street
-  12345, city
-  Tel: +34 928231911
+  Plano Wildcats Hockey Association
+  PO Box 867512
+  Plano, TX 75086-7512
 platforms:
-  github: 'https://github.com/madrilene/eleventy-excellent'
-  mastodon: 'https://front-end.social/@lene'
-  bluesky: 'https://bsky.app/profile/lenesaile.com'
-  kofi: 'https://ko-fi.com/lenesaile'
+  instagram: 'https://www.instagram.com/PlanoWildcatsHockey/'

@@ -46,4 +46,38 @@ layout: page
 
   <p>For general inquiries, use the <a href="/contact/">Contact Us</a> page.</p>
 
+  {# Past boards — all seasons except the current one #}
+  {% if officers.bySeason.length > 1 %}
+    <section>
+      <h2 class="section-heading-accent">Past Boards</h2>
+      <div class="flow" style="--flow-space: var(--space-m)">
+        {% for entry in officers.bySeason %}
+          {% if entry.season != officers.currentSeason %}
+            <details>
+              <summary style="font-weight: var(--font-bold); cursor: pointer;">{{ entry.season }}</summary>
+              <div class="table-wrap" style="margin-block-start: var(--space-xs)">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Role</th>
+                      <th scope="col">Officer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for o in entry.officers %}
+                      <tr>
+                        <td>{{ o.role }}</td>
+                        <td>{{ o.name }}</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
 </div>

@@ -12,9 +12,9 @@ export const skipContent = 'Skip to content';
 export const author = {
   name: 'Plano Wildcats Hockey Association',
   avatar: '/icon-512x512.png', // the favicon (paw mark) doubles as the org avatar
-  email: '', // TODO: set a public contact (e.g. info@planowildcatshockey.com)
+  email: 'president@planowildcatshockey.com',
   website: 'https://planowildcatshockey.com',
-  fediverse: '' // optional Mastodon/Threads/etc. handle if the org joins one
+  fediverse: ''
 };
 export const creator = {
   name: 'Plano Wildcats Hockey Association',

@@ -1,0 +1,86 @@
+---
+title: Coaches & Staff
+permalink: /coaches/index.html
+description: Plano Wildcats Hockey coaching staff and team managers for the current season.
+layout: page
+---
+
+<div class="flow" style="--flow-space: var(--space-l)">
+
+  <p>
+    The Plano Wildcats are coached and managed by experienced volunteers dedicated
+    to developing players on and off the ice.
+  </p>
+
+  {% set varsityStaff = coaches | filterCurrentStaff("varsity") %}
+  {% set jvStaff = coaches | filterCurrentStaff("junior-varsity") %}
+
+  {% if varsityStaff.length %}
+    <section>
+      <h2 class="section-heading-accent">Varsity</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in varsityStaff %}
+              {% if c.role != "Team Manager" %}
+                <tr>
+                  <td>{{ c.name }}</td>
+                  <td>{{ c.role }}</td>
+                  <td>
+                    {% if c.email %}
+                      <a href="mailto:{{ c.email }}">Email</a>
+                    {% else %}
+                      —
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if jvStaff.length %}
+    <section>
+      <h2 class="section-heading-accent">Junior Varsity</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in jvStaff %}
+              <tr>
+                <td>{{ c.name }}</td>
+                <td>{{ c.role }}</td>
+                <td>
+                  {% if c.email %}
+                    <a href="mailto:{{ c.email }}">Email</a>
+                  {% else %}
+                    —
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% endif %}
+
+  <p>For general inquiries, use the <a href="/contact/">Contact Us</a> page.</p>
+
+</div>
