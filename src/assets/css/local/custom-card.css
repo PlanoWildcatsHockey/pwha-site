@@ -99,7 +99,7 @@ custom-card[clickable]:focus-within a:focus {
   outline: none;
 }
 
-custom-card[clickable] a:after {
+custom-card[clickable] a:before {
   bottom: 0;
   content: '';
   left: 0;
