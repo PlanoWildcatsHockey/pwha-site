@@ -1,6 +1,6 @@
 ---
 title: Code of Conduct
-permalink: /about/conduct/index.html
+permalink: /resources/conduct/index.html
 description: Conduct standards for Plano Wildcats players, coaches, parents, and spectators — as required by USA Hockey, TAHA, and StarCenters.
 layout: page
 ---
@@ -37,3 +37,5 @@ Our shared responsibility is to provide a safe, respectful, and development-focu
 ---
 
 *This notice was issued February 16, 2026 by Cosmo Clarke, High School Section President, Texas Amateur Hockey Association.*
+
+[← Back to Resources](/resources/)

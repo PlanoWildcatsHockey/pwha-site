@@ -20,6 +20,14 @@ export default {
       url: '/coaches/'
     },
     {
+      text: 'About',
+      url: '/about/'
+    },
+    {
+      text: 'Resources',
+      url: '/resources/'
+    },
+    {
       text: 'History',
       url: '/history/'
     },
