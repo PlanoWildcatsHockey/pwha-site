@@ -7,6 +7,9 @@
  * Read files with { encoding: 'latin1' } so bytes are preserved before fixing.
  */
 
+import {existsSync} from 'node:fs';
+import path from 'node:path';
+
 export const fixEncoding = str =>
   str
     .replace(/\xd5/g, "'")   // Mac Roman left single quote (O'Neill)
@@ -51,3 +54,16 @@ export const orNull = v => (v && v.trim()) ? v.trim() : null;
 
 export const orBool = (v, defaultVal = false) =>
   v == null ? defaultVal : v.toLowerCase() === 'true';
+
+/**
+ * Normalizes a CSV image filename (or already-absolute web path) to an
+ * absolute /assets/images/... path, and confirms the file actually exists
+ * on disk — a filename entered in a CSV before the file is uploaded
+ * shouldn't break the whole site build.
+ */
+export const imagePath = filename => {
+  const file = orNull(filename);
+  if (!file) return null;
+  const webPath = file.startsWith('/') ? file : `/assets/images/${file}`;
+  return existsSync(path.join('./src', webPath)) ? webPath : null;
+};

@@ -91,6 +91,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('filterDeceased', filters.filterDeceased);
   eleventyConfig.addFilter('filterStatus', filters.filterStatus);
   eleventyConfig.addFilter('groupByYear', filters.groupByYear);
+  eleventyConfig.addFilter('playersInSeason', filters.playersInSeason);
 
   // --------------------- Shortcodes
   eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);
@@ -106,13 +107,21 @@ export default async function (eleventyConfig) {
   // --------------------- Passthrough File Copy
 
   // -- same path
-  ['src/assets/fonts/', 'src/assets/images/template', 'src/assets/og-images'].forEach(path =>
+  ['src/assets/fonts/', 'src/assets/images/template', 'src/assets/og-images', 'src/assets/downloads'].forEach(path =>
     eleventyConfig.addPassthroughCopy(path)
   );
 
   eleventyConfig.addPassthroughCopy({
     // -- to root
     'src/assets/images/favicon/*': '/',
+
+    // -- header logo (referenced as a raw <img>, not inlined via {% svg %}:
+    // SVGO's class-merging corrupts this file's fill-rule and collapses
+    // the mark to a sliver, so it's served untouched instead)
+    'logos/planohockeylogo.svg': 'logos/planohockeylogo.svg',
+
+    // -- footer watermark (crest above the footer)
+    'logos/original4logo.svg': 'logos/original4logo.svg',
 
     // -- node_modules
     'node_modules/lite-youtube-embed/src/lite-yt-embed.{css,js}': `assets/components/`

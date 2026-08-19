@@ -1,0 +1,48 @@
+sortable-table {
+  display: block;
+}
+
+.sortable-table__filter {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 24rem;
+  margin-block-end: var(--space-s);
+  padding: var(--space-2xs) var(--space-s);
+  border: var(--stroke);
+  border-radius: var(--border-radius-small);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--size-step-0);
+}
+
+.sortable-table__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sortable-table__sort svg {
+  opacity: 0.35;
+  transition: transform 0.15s ease;
+}
+
+th[aria-sort='ascending'] .sortable-table__sort svg {
+  opacity: 1;
+}
+
+th[aria-sort='descending'] .sortable-table__sort svg {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+sortable-table tr[hidden] {
+  display: none;
+}

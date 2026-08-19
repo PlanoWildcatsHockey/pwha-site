@@ -1,65 +1,91 @@
 <footer class="site-footer mt-l-xl p-s-m">
-  <div class="wrapper">
-    <div class="cluster gutter-xs">
-      <nav class="cluster text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
-        &copy; {% year %}
-        <a href="/" {{ indicateActiveHome }}
-          ><span class="font-display">{{ meta.siteName }}</span> <small>{{ pkg.version }}</small>
-        </a>
+  <div class="wrapper flow" style="--flow-space: var(--space-l)">
 
-        {% for item in navigation.bottom %}
-          <a
-            href="{{ item.url }}"
-            {{
-              helpers.getLinkActiveState(item.url,
-              page.url)
-              |
-              safe
-            }}
-            >{{ item.text }}</a
-          >
-        {% endfor %}
-      </nav>
+    {# ── Nav columns, crest bookends the row ── #}
+    <div class="grid footer-grid" style="--grid-min-item-size: 10rem; --grid-placement: auto-fit; --gutter: var(--space-l)">
+      {% for column in navigation.footer %}
+        <nav class="flow" style="--flow-space: var(--space-2xs)" aria-label="{{ column.heading }}">
+          <p class="footer-nav-heading">{{ column.heading }}</p>
+          {% for item in column.links %}
+            <a
+              href="{{ item.url }}"
+              class="footer-nav-link"
+              {{
+                helpers.getLinkActiveState(item.url,
+                page.url)
+                |
+                safe
+              }}
+              >{{ item.text }}</a
+            >
+          {% endfor %}
+        </nav>
+      {% endfor %}
 
-      <nav class="cluster" aria-label="{{ meta.navigation.ariaPlatforms }}">
-        <!-- gets the first item from the feed loop set in meta -->
-        <a
-          href="{{ meta.blog.feedLinks[0].url }}"
-          rel="alternate"
-          type="{{ meta.blog.feedLinks[0].type }}"
-          class="button"
-          data-icon
-        >
-          <span class="visually-hidden">{{ meta.blog.feedLinks[0].title }}</span>
-          {% svg "misc/rss" %}
-        </a>
-
-        {% for key, value in personal.platforms %}
-          {% if value != "" %}
-            <!-- regular platforms -->
-            <a class="no-indicator button" data-icon href="{{ value }}" rel="me">
-              <span class="visually-hidden">{{ key | capitalize }}</span>
-              {% svg 'platform/' + key %}
-            </a>
-          {% endif %}
-        {% endfor %}
-      </nav>
+      <div class="footer-crest">
+        <img
+          src="/logos/original4logo.svg"
+          alt=""
+          width="289"
+          height="289"
+          loading="lazy"
+          decoding="async"
+          eleventy:ignore
+        />
+      </div>
     </div>
 
-    {% include 'partials/theme-switch.njk' %}
+    {# ── Bottom bar — legal/copyright gets the full row so it wraps as
+         little as possible; platforms + theme sit on their own row below ── #}
+    <div class="flow" style="--flow-space: var(--space-s)">
+      <p class="text-step-min-1 footer-legal">
+        <span class="cluster gutter-xs">
+          <span>&copy; {% year %} {{ meta.siteName }}</span>
+          {% for item in navigation.bottom %}
+            <a
+              href="{{ item.url }}"
+              {{
+                helpers.getLinkActiveState(item.url,
+                page.url)
+                |
+                safe
+              }}
+              >{{ item.text }}</a
+            >
+          {% endfor %}
+        </span>
+        <br>
+        Student-initiated, non-curricular club. Not affiliated with Plano ISD or Plano Senior High School.
+      </p>
 
-    <p class="text-step-min-1 mt-s" style="color: var(--color-text-accent);">
-      Student-initiated, non-curricular club. Not affiliated with Plano ISD or Plano Senior High School.
-    </p>
+      <div class="repel" aria-label="{{ meta.navigation.ariaBottom }}">
+        <nav class="cluster" aria-label="{{ meta.navigation.ariaPlatforms }}">
+          <!-- gets the first item from the feed loop set in meta -->
+          <a
+            href="{{ meta.news.feedLinks[0].url }}"
+            rel="alternate"
+            type="{{ meta.news.feedLinks[0].type }}"
+            class="button"
+            data-icon
+          >
+            <span class="visually-hidden">{{ meta.news.feedLinks[0].title }}</span>
+            {% svg "misc/rss" %}
+          </a>
 
-    <aside class="creator | cluster gutter-2xs text-step-min-1 mt-s">
-      Made with <span class="visually-hidden">love</span> <span>{% svg "misc/heart" %}</span> and
-      <a class="no-indicator" href="https://www.11ty.dev/">
-        <span class="visually-hidden">Eleventy</span>
-        {% svg "misc/11ty" %}
-      </a>
-      by
-      <a href="{{ meta.creator.website }}">{{ meta.creator.name }}</a>
-    </aside>
+          {% set platformLabels = {"youtube": "YouTube"} %}
+          {% for key, value in personal.platforms %}
+            {% if value != "" %}
+              <!-- regular platforms -->
+              <a class="no-indicator button" data-icon href="{{ value }}" rel="me">
+                <span class="visually-hidden">{{ platformLabels[key] or (key | capitalize) }}</span>
+                {% svg 'platform/' + key %}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+
+        {% include 'partials/theme-switch.njk' %}
+      </div>
+    </div>
   </div>
 </footer>

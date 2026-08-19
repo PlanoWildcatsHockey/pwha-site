@@ -1,0 +1,60 @@
+/* Sponsors page — mission pull-quote, tier pricing cards, and the
+   sponsorship level comparison table's in-kind footer note. */
+
+.sponsor-why {
+  margin: 0;
+  border-inline-start: 4px solid var(--color-primary);
+  padding: var(--space-s) var(--space-m);
+  background: var(--color-bg-accent);
+  font-style: italic;
+}
+
+.sponsor-tier {
+  border: var(--stroke);
+  padding: var(--space-m);
+  text-align: center;
+}
+
+.sponsor-tier__available {
+  display: inline-block;
+  margin-block-end: var(--space-xs);
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+  background: var(--color-tertiary);
+  padding: var(--space-3xs) var(--space-xs);
+}
+
+.sponsor-tier__price {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--size-step-4);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.sponsor-tier__name {
+  margin-block-start: var(--space-2xs);
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-accent);
+}
+
+.sponsor-tier__footnote {
+  margin-block-start: var(--space-xs);
+  font-size: var(--size-step-min-2);
+  font-style: italic;
+  color: var(--color-text-accent);
+}
+
+.sponsor-in-kind {
+  border-inline-start: 4px solid var(--color-primary);
+  padding-inline-start: var(--space-s);
+  padding-block: var(--space-xs);
+  background: var(--color-bg-accent);
+}

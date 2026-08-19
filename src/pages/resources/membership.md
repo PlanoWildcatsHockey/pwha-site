@@ -5,8 +5,6 @@ description: How to join the Plano Wildcats Hockey Association — eligibility, 
 layout: page
 ---
 
-# Membership
-
 > **Placeholder.** Replace with: who is eligible, how to join, dues structure, what membership includes (voting rights, communication channels, events), and how the season cycle works.
 
 [← Back to Resources](/resources/)

@@ -4,7 +4,7 @@
  * The single players.json feeds three template surfaces:
  *   - /teams/varsity/         current Varsity roster
  *   - /teams/junior-varsity/  current JV roster
- *   - /history/players/       full database (no filtering needed; renders all)
+ *   - /players/               full database (no filtering needed; renders all)
  *   - /history/alumni/        former players grouped by graduation year
  *
  * These filters keep template logic minimal — Nunjucks calls them as
@@ -41,6 +41,27 @@ export const filterDeceased = players => {
 export const filterCurrentStaff = (coaches, teamSlug) => {
   if (!Array.isArray(coaches)) return [];
   return coaches.filter(c => c.status === 'current' && c.team === teamSlug);
+};
+
+/**
+ * Players rostered for a given season, optionally restricted to one team.
+ * Each returned player carries a `seasonEntry` field — that season's own
+ * jersey number/team/captain designation, since those can differ from the
+ * player's current-season values on historical season pages.
+ * @param {Array} players
+ * @param {string} seasonId - season id, e.g. "2025-2026"
+ * @param {string} [teamSlug] - "varsity" or "junior-varsity"
+ * @returns {Array} players sorted by that season's jersey number
+ */
+export const playersInSeason = (players, seasonId, teamSlug) => {
+  if (!Array.isArray(players)) return [];
+  return players
+    .map(p => {
+      const seasonEntry = p.seasons.find(s => s.season === seasonId && (!teamSlug || s.team === teamSlug));
+      return seasonEntry ? {...p, seasonEntry} : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => (a.seasonEntry.number ?? Infinity) - (b.seasonEntry.number ?? Infinity));
 };
 
 /**

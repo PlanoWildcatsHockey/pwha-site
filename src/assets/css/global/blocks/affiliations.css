@@ -1,0 +1,33 @@
+/* League affiliation badges (TSHL, TAHA, USA Hockey) — homepage only.
+   Full-color logos sit on a fixed light chip so they read consistently
+   in both themes. */
+.affiliations-label {
+  display: block;
+  text-align: center;
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-bold);
+  color: var(--color-text-accent);
+  margin-block-end: var(--space-s);
+}
+
+.affiliation-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-s) var(--space-m-l);
+  background: var(--color-light);
+  border: var(--stroke);
+  border-radius: var(--border-radius-small);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.affiliation-badge:hover {
+  transform: translateY(-2px);
+}
+
+.affiliation-badge__logo {
+  block-size: 5rem;
+  inline-size: auto;
+}

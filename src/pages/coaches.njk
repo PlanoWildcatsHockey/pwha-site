@@ -31,9 +31,9 @@ layout: page
             {% for c in varsityStaff %}
               {% if c.role != "Team Manager" %}
                 <tr>
-                  <td>{{ c.name }}</td>
-                  <td>{{ c.role }}</td>
-                  <td>
+                  <td data-label="Name">{{ c.name }}</td>
+                  <td data-label="Role">{{ c.role }}</td>
+                  <td data-label="Contact">
                     {% if c.email %}
                       <a href="mailto:{{ c.email }}">Email</a>
                     {% else %}
@@ -51,7 +51,7 @@ layout: page
 
   {% if jvStaff.length %}
     <section>
-      <h2 class="section-heading-accent">Junior Varsity</h2>
+      <h2 class="section-heading-accent">Scholastic Division</h2>
       <div class="table-wrap">
         <table>
           <thead>
@@ -64,9 +64,9 @@ layout: page
           <tbody>
             {% for c in jvStaff %}
               <tr>
-                <td>{{ c.name }}</td>
-                <td>{{ c.role }}</td>
-                <td>
+                <td data-label="Name">{{ c.name }}</td>
+                <td data-label="Role">{{ c.role }}</td>
+                <td data-label="Contact">
                   {% if c.email %}
                     <a href="mailto:{{ c.email }}">Email</a>
                   {% else %}

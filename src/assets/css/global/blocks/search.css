@@ -1,0 +1,15 @@
+/* Pagefind Component UI, themed to the site's design tokens.
+   https://pagefind.app/docs/search-ui/ */
+.pagefind-search {
+  --pf-text: var(--color-text);
+  --pf-text-secondary: var(--color-text-accent);
+  --pf-text-muted: var(--color-mid);
+  --pf-background: var(--color-bg);
+  --pf-border: var(--color-bg-accent-2);
+  --pf-border-focus: var(--color-primary);
+  --pf-hover: var(--color-bg-accent);
+  --pf-mark: var(--color-tertiary);
+  --pf-font: var(--font-base);
+  --pf-border-radius: var(--border-radius-small);
+  margin-block-start: var(--space-m-l);
+}

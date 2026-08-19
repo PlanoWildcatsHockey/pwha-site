@@ -1,68 +1,70 @@
-id,first_name,last_name,grad_year,position,shoots,school,college,college_hockey,college_hockey_level,post_hs_hockey,facebook,instagram,twitter,linkedin,website,member,listed,notes,date_of_death
-1,Raudeen,Roodgarmi,2027,G,,,,,,,,,,,,FALSE,TRUE,,
-2,Carter,Doyle,2029,P,R,Clark HS,,,,,,,,,,FALSE,TRUE,,
-3,Brett,Riska,2028,F,R,,,,,,,,,,,FALSE,TRUE,,
-5,William,Wallace,2029,F,R,Clark HS,,,,,,,,,,FALSE,TRUE,,
-6,Kai,Hu,2027,F,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-7,Tyler,Downum,2028,F,L,Clark HS,,,,,,,,,,FALSE,TRUE,,
-4,Kamren,Jupillo,2028,P,R,,,,,,,,,,,FALSE,TRUE,,
-8,Peyton,Smith,2027,F,R,,,,,,,,,,,FALSE,TRUE,,
-9,Braeden,Ysasaga,2027,P,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-10,David,Yu,2027,D,L,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-11,Hudson,Mun,2027,P,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-12,Connor,Clarke,2028,P,,,,,,,,,,,,FALSE,TRUE,,
-13,Andrew,Drake,2027,G,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-14,Isiah,Fowler,2027,F,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-15,Spencer,Kelley,2028,D,R,Clark HS,,,,,,,,,,FALSE,TRUE,,
-16,Michael,McGee,2028,D,L,,,,,,,,,,,FALSE,TRUE,,
-17,Ethan,Barton,2027,D,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-18,Iverson,Herr,2029,P,R,,,,,,,,,,,FALSE,TRUE,,
-19,Gavin,Pace,2029,P,,,,,,,,,,,,FALSE,TRUE,,
-20,Ayden,Shobe,2029,G,,John Paul II HS,,,,,,,,,,FALSE,TRUE,,
-21,Mykhailo ,Paziuk,,P,R,,,,,,,,,,,FALSE,TRUE,,
-22,Dominic ,Martinez,,P,,,,,,,,,,,,FALSE,TRUE,,
-23,Gianni ,Kelly,,P,,,,,,,,,,,,FALSE,TRUE,,
-24,Miranda ,Reiff,,D,R,,,,,,,,,,,FALSE,TRUE,,
-25,Isaac ,Bywater,,G,R,,,,,,,,,,,FALSE,TRUE,,
-26,Logan ,Weed,,P,,,,,,,,,,,,FALSE,TRUE,,
-27,Matthew ,McGee,,P,,,,,,,,,,,,FALSE,TRUE,,
-28,Luciano ,Rodriguez,,G,,,,,,,,,,,,FALSE,TRUE,,
-29,Flynn ,Plate,,P,,,,,,,,,,,,FALSE,TRUE,,
-30,Maxton ,Brandt,,D,,,,,,,,,,,,FALSE,TRUE,,
-31,Jacqueline ,Vesel,,P,,,,,,,,,,,,FALSE,TRUE,,
-32,Martin ,Zavala-Dzhyoyeva,,P,,,,,,,,,,,,FALSE,TRUE,,
-33,Abel ,Peperis,,P,,,,,,,,,,,,FALSE,TRUE,,
-34,Nolan ,O'Neill,,F,R,,,,,,,,,,,FALSE,TRUE,,
-35,Gram ,Gatewood,,P,,,,,,,,,,,,FALSE,TRUE,,
-36,Ulysse ,Veyan,,F,R,,,,,,,,,,,FALSE,TRUE,,
-37,Cole,Thomas,2026,F,L,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,
-38,Ford,Hansard,2026,F,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,
-39,Felix,Rivest,2026,G,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,
-40,Brooks,Harsila,2026,G,,,,,,,,,,,,TRUE,TRUE,,
-41,Ben,Wolfe,2026,D,R,John Paul II HS,,,,,https://www.facebook.com/profile.php?id=61554822091317,,,,,TRUE,TRUE,,
-42,Rex,Birch,2026,D,R,Plano Senior HS,,,,,https://www.facebook.com/rex.birch.3,,,,,TRUE,TRUE,,
-43,Kien,Matson,2026,F,R,,,,,,,,,,,TRUE,TRUE,,
-44,Zachary,Litaker,2026,F,,,,,,,,,,,,TRUE,TRUE,,
-45,Jackson,Perez,2025,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-46,Sasha,Morel,2025,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-47,Gage,Hageman,2026,,,,,,,,,,,,,FALSE,TRUE,,
-48,Stephen,Lee,2025,F,,,,,,,,,,,,FALSE,TRUE,,
-49,Sergey,Medushevski,2027,,,,,,,,,,,,,FALSE,TRUE,,
-50,Luke,McMahon,2025,,,,,,,,,,,,,FALSE,TRUE,,
-51,Remi,Rivest,2024,,,Plano Senior HS,,,,,https://www.facebook.com/profile.php?id=61577661314179,,,,,FALSE,TRUE,,
-52,Michael,Wanigasekera,1997,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,
-53,Michael,Hunting,2023,,,,Dallas Baptist University,,,,,,,,,FALSE,TRUE,,
-54,Sergi,Figuerola,2027,D,,,,,,,,,,,,FALSE,TRUE,,
-55,Derrick,Deraleau,2016,G,,Plano Senior HS,,,,,,,,,,TRUE,TRUE,verify grad year — now Head Coach Varsity,
-56,Cody,Trainer,2027,F,R,Plano East HS,,,,,,,,,,FALSE,TRUE,,
-57,Charlie,Kennington,,,,,,,,,,,,,,FALSE,TRUE,,
-58,Tanner,Thomas,2029,,,Clark HS,,,,,,,,,,FALSE,TRUE,,
-59,Julian,Cox,2028,,R,,,,,,,,,,,FALSE,TRUE,,
-60,Ryder,Rivett,,D,L,,,,,,,,,,,FALSE,TRUE,,
-61,Noah,Johnston,,,,,,,,,,,,,,FALSE,TRUE,,
-62,Yehuda,Markowitz,,,,,,,,,,,,,,FALSE,TRUE,,
-63,Jackson,Perry,,,,,,,,,,,,,,FALSE,TRUE,,
-64,Jacob,Ahn,,,,,,,,,,,,,,FALSE,TRUE,,
-65,Anthony,Miyamoto,,,,,,,,,,,,,,FALSE,TRUE,,
-66,Carter,Heise,2029,F,L,,,,,,,,,,,FALSE,TRUE,Returned to Plano East program,3/2/26
-67,Aidan,Dalton,2022,,,Plano Senior HS,,,,,,,,,,,,,
+id,first_name,last_name,grad_year,position,shoots,school,college,college_hockey,college_hockey_level,post_hs_hockey,facebook,instagram,twitter,linkedin,website,member,listed,notes,date_of_death,headshot
+1,Raudeen,Roodgarmi,2027,G,,John Paul II HS,,,,,,,,,,FALSE,TRUE,,,
+2,Carter,Doyle,2029,P,R,Clark HS,,,,,,,,,,FALSE,TRUE,,,
+3,Brett,Riska,2028,F,R,Hebron HS,,,,,,,,,,FALSE,TRUE,,,
+4,Kamren,Jupillo,2028,P,R,,,,,,,,,,,FALSE,TRUE,,,26-Kamren-Jupillo.jpg
+5,William,Wallace,2029,F,R,Clark HS,,,,,,,,,,FALSE,TRUE,,,26-William-Wallace.jpg
+6,Kai,Hu,2027,F,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26_Ka_Hu.jpeg
+7,Tyler,Downum,2028,F,L,Clark HS,,,,,,,,,,FALSE,TRUE,,,26-Tyler-Downum.jp
+8,Peyton,Smith,2027,F,R,Plano West Senior HS,,,,,,,,,,FALSE,TRUE,,,
+9,Braeden,Ysasaga,2027,P,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-Braeden-Ysasaga.jpg
+10,David,Yu,2027,D,L,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-David-Yu.jpg
+11,Hudson,Mun,2027,P,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-Hudson-Mun.jpg
+12,Connor,Clarke,2028,P,L,Trinity Christian Academy,,,,,,,,,,FALSE,TRUE,,,
+13,Andrew,Drake,2027,G,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
+14,Isiah,Fowler,2027,F,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-Isiah-Fowler.jpg
+15,Spencer,Kelley,2028,D,R,Clark HS,,,,,,,,,,FALSE,TRUE,,,26-Spencer-Kelley.jpg
+16,Michael,McGee,2028,D,L,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-Michael-McGee.jpg
+17,Ethan,Barton,2027,D,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,26-Ehthan-Barton.jpg
+18,Iverson,Herr,2029,P,R,,,,,,,,,,,FALSE,TRUE,,,26-Iverson-Herr.jpg
+19,Gavin,Pace,2029,P,,,,,,,,,,,,FALSE,TRUE,,,26_Gavin_Pace.jpg
+20,Ayden,Shobe,2029,G,,John Paul II HS,,,,,,,,,,FALSE,TRUE,,,26-Ayden-Shobe.jpg
+21,Mykhailo ,Paziuk,,P,R,Vines HS,,,,,,,,,,FALSE,TRUE,,,26-Mykhailo-Paziuk.jp
+22,Dominic ,Martinez,2030,P,,,,,,,,,,,,FALSE,TRUE,,,
+23,Gianni ,Kelly,,P,,,,,,,,,,,,FALSE,TRUE,,,
+24,Miranda ,Reiff,,D,R,,,,,,,,,,,FALSE,TRUE,,,26-Miranda_Reiff.jpg
+25,Isaac ,Bywater,,G,R,,,,,,,,,,,FALSE,TRUE,,,26-Isaac-Bywater.jpg
+26,Logan ,Weed,,P,,,,,,,,,,,,FALSE,TRUE,,,
+27,Matthew ,McGee,,P,R,Vines HS,,,,,,,,,,FALSE,TRUE,,,26-Matthew-McGee.jpg
+28,Luciano ,Rodriguez,,G,,,,,,,,,,,,FALSE,TRUE,,,
+29,Flynn ,Plate,,P,,,,,,,,,,,,FALSE,TRUE,,,
+30,Maxton ,Brandt,,D,,,,,,,,,,,,FALSE,TRUE,,,
+31,Jacqueline ,Vesel,,P,,,,,,,,,,,,FALSE,TRUE,,,
+32,Martin ,Zavala-Dzhyoyeva,,P,,John Paul II HS,,,,,,,,,,FALSE,TRUE,,,
+33,Abel ,Peperis,,P,,,,,,,,,,,,FALSE,TRUE,,,
+34,Nolan ,O'Neill,,F,R,Clark HS,,,,,,,,,,FALSE,TRUE,,,26-Nolan-Oneill.jpg
+35,Gram ,Gatewood,,P,,Hendrick MS,,,,,,,,,,FALSE,TRUE,,,
+36,Ulysse ,Veyan,,F,R,,,,,,,,,,,FALSE,TRUE,,,26-Ulysse-Veyan.jpg
+37,Cole,Thomas,2026,F,L,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26-Cole-Thomas.jpg
+38,Ford,Hansard,2026,F,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26_Ford_Hansard.jpeg
+39,Felix,Rivest,2026,G,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26_Felix_Rivest.jpeg
+40,Brooks,Harsila,2026,G,,Fairhill School,East Texas Baptist University,East Texas Baptist University,,,,,,,,TRUE,TRUE,,,26-Brooks-Harsila.jpg
+41,Ben,Wolfe,2026,D,R,John Paul II HS,,,,,https://www.facebook.com/profile.php?id=61554822091317,,,,,TRUE,TRUE,,,26-Ben-Wofle.jpg
+42,Rex,Birch,2026,D,R,Plano Senior HS,,,,,https://www.facebook.com/rex.birch.3,,,,,TRUE,TRUE,,,26-Rix-Birch.jpg
+43,Kien,Matson,2026,F,R,,,,,,,,,,,TRUE,TRUE,,,26-Kien-Matson.jpg
+44,Zachary,Litaker,2026,F,,Celina HS,Dallas Baptist University,Dallas Baptist University,,,,,,,,TRUE,TRUE,,,26-Zachary-Litaker.jpg
+45,Jackson,Perez,2025,,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
+46,Sasha,Morel,2025,,,Plano Senior HS,Florida,,,,,,,,,FALSE,TRUE,,,
+47,Gage,Hageman,2026,,,,,,,,,,,,,FALSE,TRUE,,,
+48,Stephen,Lee,2025,F,,,UT Austin,,,,,,,,,FALSE,TRUE,,,
+49,Sergey,Medushevski,2027,,,,,,,,,,,,,FALSE,TRUE,,,26-Sergey-Medushevski.jpg
+50,Luke,McMahon,2025,,R,,,,,,,,,,,FALSE,TRUE,,,
+51,Remi,Rivest,2024,,,Plano Senior HS,,,,,https://www.facebook.com/profile.php?id=61577661314179,,,,,FALSE,TRUE,,,
+52,Michael,Wanigasekera,1997,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
+53,Michael,Hunting,2023,,R,,Dallas Baptist University,,,,,,,,,FALSE,TRUE,,,
+54,Sergi,Figuerola,2027,D,,,,,,,,,,,,FALSE,TRUE,,,26-Sergi-Figuerola.jpg
+55,Derrick,Deraleau,2016,G,,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,
+56,Cody,Trainer,2027,F,R,Plano East HS,,,,,,,,,,FALSE,TRUE,,,
+57,Charlie,Kennington,,,,,,,,,,,,,,FALSE,TRUE,,,
+58,Tanner,Thomas,2029,,,Clark HS,,,,,,,,,,FALSE,TRUE,,,
+59,Julian,Cox,2028,,R,,,,,,,,,,,FALSE,TRUE,,,
+60,Ryder,Rivett,2029,D,L,,,,,,,,,,,FALSE,TRUE,,,
+61,Noah,Johnston,,,,,,,,,,,,,,FALSE,TRUE,,,
+62,Yehuda,Markowitz,,,,,,,,,,,,,,FALSE,TRUE,,,
+63,Jackson,Perry,,,,,,,,,,,,,,FALSE,TRUE,,,
+64,Jacob,Ahn,,,,,,,,,,,,,,FALSE,TRUE,,,
+65,Anthony,Miyamoto,,,,,,,,,,,,,,FALSE,TRUE,,,
+66,Carter,Heise,2029,F,L,,,,,,,,,,,FALSE,TRUE,Returned to Plano East program,3/2/26,
+67,Aidan,Dalton,2022,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
+68,Ain,Rubio,2028,,,The IB World School at Plano East Senior HS,,,,,,,,,,FALSE,TRUE,,,
+69,Cyle,Pannell,,P,R,,,,,,,,,,,FALSE,TRUE,,,26-Cyle-Pannell.jpg

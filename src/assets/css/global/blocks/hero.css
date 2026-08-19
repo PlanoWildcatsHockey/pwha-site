@@ -1,11 +1,51 @@
 /* Hero section — homepage / section-header variant */
 
 .hero-section .section__inner {
+  position: relative;
+  overflow: hidden;
   padding-block: var(--space-xl-2xl);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Maroon wash over the photo so it reads as texture, not a competing
+   focal point — keeps the white kicker/heading legible everywhere. */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: color-mix(in oklab, var(--spot-color) 80%, transparent);
+}
+
+.hero-section .section__inner > .wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
   max-inline-size: 52ch;
+}
+
+.hero-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--size-step-0);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-tertiary);
 }
 
 .hero-lead {
@@ -18,9 +58,9 @@
 /* Primary hero button: white bg, maroon text, brutalist offset shadow */
 .hero-btn-primary {
   --button-bg: var(--color-light);
-  --button-color: var(--color-primary);
+  --button-color: var(--color-primary-surface);
   --button-hover-bg: var(--color-light);
-  --button-hover-color: var(--color-primary);
+  --button-hover-color: var(--color-primary-surface);
   --button-border-color: var(--color-light);
   --button-radius: 0;
   --button-font-weight: var(--font-extra-bold);
@@ -80,7 +120,7 @@
 }
 
 .stat-number {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: var(--size-step-3);
   font-weight: var(--font-extra-bold);
   font-style: italic;

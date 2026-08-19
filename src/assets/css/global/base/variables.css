@@ -24,6 +24,13 @@
   --color-light: var(--color-gray-100);
   --color-dark: var(--color-gray-900);
   --color-mid: var(--color-gray-400);
+
+  /* Brand maroon for large fills (hero/section spot-color backgrounds).
+     Unlike --color-primary, this does NOT lighten in dark mode — it's a
+     background with white text on top in both themes, not foreground
+     text needing extra contrast, so it should stay a rich dark maroon
+     rather than washing out to a pale pink. */
+  --color-primary-surface: var(--color-maroon-800);
 }
 
 /* Light theme */

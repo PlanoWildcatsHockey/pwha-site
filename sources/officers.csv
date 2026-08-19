@@ -21,4 +21,5 @@ id,season,role,first_name,last_name,email,listed
 20,2026-2027,President,Eric,Wallace,president@planowildcatshockey.com,TRUE
 21,2026-2027,Vice President,Terri,Childress,vp@planowildcatshockey.com,TRUE
 22,2026-2027,Treasurer,Jefferson,Yu,treasurer@planowildcatshockey.com,TRUE
-23,2026-2027,Fundraising,Shane,"O'Neil",fundraising@planowildcatshockey.com,TRUE
+23,2026-2027,Fundraising,Shane,O'Neil,fundraising@planowildcatshockey.com,TRUE
+24,2026-2027,Secretary,Meghan,Gatewood,,TRUE

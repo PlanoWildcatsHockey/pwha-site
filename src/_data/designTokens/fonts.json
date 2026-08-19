@@ -14,8 +14,9 @@
     },
     {
       "name": "Mono",
-      "description": "Monospace font for code and preformatted text.",
+      "description": "Monospace font for code, preformatted text, and technical/tabular accents (stat numbers, jersey numbers, scores) — Fira Code's tabular figures suit the brutalist athletic-display treatment.",
       "value": [
+        "Fira Code",
         "ui-monospace",
         "Cascadia Code",
         "Source Code Pro",

@@ -5,8 +5,6 @@ description: Conduct standards for Plano Wildcats players, coaches, parents, and
 layout: page
 ---
 
-# Code of Conduct
-
 All Plano Wildcats players, coaches, team officials, parents, spectators, and fans are required to adhere to the conduct standards established by USA Hockey, the Texas Amateur Hockey Association (TAHA), StarCenters, and PWHA. These standards apply during games, practices, tournaments, and any activities at StarCenters facilities or under USA Hockey sanctioning.
 
 ## Standards

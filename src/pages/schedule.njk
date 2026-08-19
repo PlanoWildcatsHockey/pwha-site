@@ -1,15 +1,14 @@
 ---
 title: Schedule
 permalink: /schedule/index.html
-description: Plano Wildcats hockey schedule — Summer 2026 games, results, and stats.
+description: Plano Wildcats hockey schedule — games, results, and stats.
 layout: page
 ---
 
-<h1>Schedule</h1>
-
 <p>
-  Both Wildcats teams compete in the <strong>{{ season.league.division }}</strong>
-  division of the {{ season.league.name }} during {{ season.name }}.
+  Varsity competes in the <strong>{{ season.league.division }}</strong> division and the Scholastic
+  Division competes in the <strong>{{ season.league.jvDivision }}</strong> division of the
+  {{ season.league.name }} during {{ season.name }}.
   Live schedules, results, and standings are maintained on the official league site.
 </p>
 
@@ -26,15 +25,17 @@ layout: page
       <a href="{{ season.varsity.scheduleUrl }}" class="button" data-button-variant="primary" target="_blank" rel="noopener">Season Schedule</a>
       <a href="{{ season.varsity.scoresUrl }}" class="button" target="_blank" rel="noopener">Results</a>
       <a href="{{ season.varsity.statsUrl }}" class="button" target="_blank" rel="noopener">Stats</a>
+      <a href="/teams/varsity/" class="button">Roster</a>
     </div>
   </section>
 
   <section>
-    <h2>Junior Varsity</h2>
+    <h2>Scholastic Division</h2>
     <div class="cluster" style="--gutter: var(--space-xs)">
       <a href="{{ season.juniorVarsity.scheduleUrl }}" class="button" data-button-variant="primary" target="_blank" rel="noopener">Season Schedule</a>
       <a href="{{ season.juniorVarsity.scoresUrl }}" class="button" target="_blank" rel="noopener">Results</a>
       <a href="{{ season.juniorVarsity.statsUrl }}" class="button" target="_blank" rel="noopener">Stats</a>
+      <a href="/teams/junior-varsity/" class="button">Roster</a>
     </div>
   </section>
 

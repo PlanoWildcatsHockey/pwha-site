@@ -1,0 +1,69 @@
+/*
+  Ice-rink background for top-level pages: a subtle aerial view of the rink
+  behind page content — center-ice logo bisected by the header seam, a
+  faint ice sheet spanning the height of <main>, and an end line + goal
+  crease at the transition into the footer. Blog posts (layout: post) keep
+  their own hero/post treatment and opt out.
+*/
+
+body:not(.post) #main {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: var(--color-bg);
+  background-image:
+    /* header-side vignette */
+    radial-gradient(ellipse 120% 55% at 50% 0%, var(--color-bg-accent) 0%, transparent 65%),
+    /* diagonal ice sheen */
+    linear-gradient(115deg, transparent 35%, var(--color-bg-accent) 50%, transparent 65%),
+    /* long resurfacer streaks */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.004 0.09' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='480' height='480' filter='url(%23s)' opacity='0.07'/%3E%3C/svg%3E"),
+    /* fine grain */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat, repeat;
+}
+
+/* Center-ice logo, bisected by the header/main boundary: the circle's
+   centre sits exactly on main's top edge, so only its lower half shows. */
+body:not(.post) #main::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  width: clamp(11rem, 28vw, 22rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background-image: url('/logos/original4logo.svg');
+  background-repeat: no-repeat;
+  /* Crops to the circular badge within the source artwork's canvas
+     (measured: badge centre sits at 50%/45.3% of the file, diameter is
+     ~44.6%/34.5% of the file's width/height). */
+  background-position: 50% 42.8%;
+  background-size: 224% 290%;
+  opacity: 0.55;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Defensive-zone markings (faceoff circles + hash marks, goal crease, end
+   line), pinned to the bottom of main. The container's aspect-ratio is
+   locked to the SVG's own viewBox (1440:640) so the artwork always scales
+   uniformly — otherwise an independently-clamped height stretches the
+   circles into ellipses as the viewport width changes. Capped at the
+   site's wrapper width so it doesn't grow absurdly tall on ultra-wide
+   screens. */
+.rink-endline {
+  display: block;
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--wrapper-width, 85rem);
+  aspect-ratio: 9 / 4;
+  height: auto;
+  margin: 0;
+  z-index: -1;
+  opacity: 0.8;
+  pointer-events: none;
+}

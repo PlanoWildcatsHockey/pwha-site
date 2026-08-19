@@ -11,13 +11,26 @@ news:
 <div class="wrapper">
 
   {# ── Hero ── #}
-  <header class="full | section hero-section" style="--spot-color: var(--color-primary)">
+  <header class="full | section hero-section" style="--spot-color: var(--color-primary-surface)">
     <div class="section__inner">
+      {%
+        imageKeys {
+          "src": "/assets/images/IMG_9055.jpeg",
+          "alt": "",
+          "loading": "eager",
+          "containerClass": "hero-bg",
+          "imageClass": "hero-bg__img",
+          "widths": [650, 960, 1400, 1920, 2560],
+          "sizes": "100vw"
+        }
+      %}
       <div class="wrapper">
         <div class="hero-content flow" style="--flow-space: var(--space-m-l)">
-          <h1 style="color: var(--color-light);">Plano Senior<br>Wildcats Hockey</h1>
+          {# Season mark — retires after the 2026-27 30th-anniversary season. The h1 below is the standing identity line and stays. #}
+          <p class="hero-kicker">Thirty Years. One Original.</p>
+          <h1 style="color: var(--color-light); --flow-space: var(--space-3xs)">Tradition. Pride. Plano.</h1>
           <p class="hero-lead">
-            Supporting Plano Senior High School hockey — Varsity, Junior Varsity, players, families, and alumni.
+            Supporting Plano Senior High School hockey — Varsity, Scholastic, players, families, and alumni.
           </p>
           <div class="cluster" style="--gutter: var(--space-s)">
             <a href="/support/" class="button hero-btn-primary">Join the Club</a>
@@ -26,7 +39,6 @@ news:
         </div>
       </div>
     </div>
-    {% svg "divider/waves", null, "divider" %}
   </header>
 
   {# ── Stat bar ── #}
@@ -39,15 +51,15 @@ news:
         </li>
         <li class="stat-item">
           <span class="stat-number">2 Teams</span>
-          <span class="stat-label">Varsity &amp; JV</span>
+          <span class="stat-label">Varsity &amp; Scholastic</span>
         </li>
         <li class="stat-item">
-          <span class="stat-number">{{ season.league.division }}</span>
-          <span class="stat-label">{{ season.league.shortName }} Division</span>
+          <span class="stat-number">{{ season.league.shortName }}</span>
+          <span class="stat-label">Member League</span>
         </li>
         <li class="stat-item">
-          <span class="stat-number">DFW</span>
-          <span class="stat-label">Rinks &amp; Tournaments</span>
+          <span class="stat-number">30</span>
+          <span class="stat-label">Seasons</span>
         </li>
       </ul>
     </div>
@@ -58,7 +70,7 @@ news:
     <div class="wrapper flow">
       <div class="repel">
         <h2 class="section-heading-accent">{{ news.title }}</h2>
-        <a href="/blog/" class="button" data-small-button data-button-variant="primary">View All</a>
+        <a href="/news/" class="button" data-small-button data-button-variant="primary">View All</a>
       </div>
       {% if news.intro %}
         <p>{{ news.intro }}</p>
@@ -75,6 +87,35 @@ news:
             <p><em>No news posts yet — once real posts are published, they'll appear here.</em></p>
           {% endif %}
         </custom-masonry>
+      </div>
+    </div>
+  </section>
+
+  {# ── League affiliations ── #}
+  <section class="full | region" aria-label="{{ meta.navigation.ariaAffiliations }}">
+    <div class="wrapper">
+      <p class="affiliations-label">Proud Member Of</p>
+      <div class="cluster" style="--cluster-horizontal-alignment: center; --gutter: var(--space-m)">
+        {% set affiliations = [
+          {"name": "Texas Scholastic Hockey League", "url": "https://www.texasscholastichockeyleague.com/", "logo": "/assets/images/affiliations/tshl.png"},
+          {"name": "Texas Amateur Hockey Association", "url": "https://www.tahahockey.org/", "logo": "/assets/images/affiliations/taha.png"},
+          {"name": "USA Hockey", "url": "https://www.usahockey.com/", "logo": "/assets/images/affiliations/usahockey.png"}
+        ] %}
+        {% asyncEach org in affiliations %}
+          <a class="affiliation-badge no-indicator" href="{{ org.url }}" target="_blank" rel="noopener">
+            <span class="visually-hidden">{{ org.name }}</span>
+            {%
+              imageKeys {
+                "src": org.logo,
+                "alt": "",
+                "loading": "lazy",
+                "imageClass": "affiliation-badge__logo",
+                "widths": [160, 320],
+                "sizes": "160px"
+              }
+            %}
+          </a>
+        {% endeach %}
       </div>
     </div>
   </section>

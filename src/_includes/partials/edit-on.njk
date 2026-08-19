@@ -1,6 +1,6 @@
 {% if meta.viewRepo.allow %}
-  <hr />
-  <p class="text-step-min-1">
+  <hr data-pagefind-ignore />
+  <p class="text-step-min-1" data-pagefind-ignore>
     {{ meta[page.lang].blog.githubEdit }}
     <a href="{{ pkg.repository.url | url | replace('.git', '/tree/main/') }}{{ page.inputPath }}"
       >{{ meta.viewRepo.infoText }}</a

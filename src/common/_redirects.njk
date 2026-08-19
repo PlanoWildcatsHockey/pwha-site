@@ -3,6 +3,8 @@ permalink: /_redirects
 eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
+{#- Blog was renamed to News; catch the listing, its pagination, and every individual post. -#}
+/blog/*  /news/:splat  301
 {%- for page in collections.all -%}
 {%- if page.url and page.data.redirectFrom -%}
 {%- for oldUrl in page.data.redirectFrom %}

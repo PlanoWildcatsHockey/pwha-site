@@ -4,3 +4,9 @@
   font-size: var(--size-step-0);
   text-decoration: none;
 }
+
+.logo img {
+  block-size: 2.5lh;
+  inline-size: auto;
+  flex: none;
+}

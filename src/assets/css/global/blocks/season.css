@@ -1,0 +1,50 @@
+/* Season history pages — optional hero image on the season profile page */
+
+.season-hero {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--stroke);
+}
+
+.season-hero__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Team photo inside a roster section — unlike .season-hero this is a formal
+   team photo, so it isn't cropped to a fixed ratio (would risk clipping
+   heads/skates); full width, natural height, sits above the roster table. */
+.team-photo {
+  display: block;
+  border: var(--stroke);
+  margin-block-end: var(--space-s-m);
+}
+
+.team-photo__img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+/* Season/JV finish badge next to a roster section heading — neutral by
+   default, gold for Champions so it reads as the standout result. */
+.finish-badge {
+  display: inline-block;
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-bold);
+  color: var(--color-light);
+  background: var(--color-gray-600);
+  padding: var(--space-3xs) var(--space-xs);
+  margin-inline-start: var(--space-xs);
+  vertical-align: middle;
+}
+
+.finish-badge[data-finish='champions'] {
+  background: var(--color-tertiary);
+  color: var(--color-dark);
+}

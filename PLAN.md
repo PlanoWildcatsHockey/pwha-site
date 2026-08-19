@@ -33,31 +33,31 @@ Brand maroon: #641529 (maroon-800 token). Run `npm run colors` after editing col
 
 ## Open tasks
 
-- [ ] #1 Team pages: real roster (sorted by #) + coaching staff (filterCurrentStaff)
+- [ ] Team pages: real roster (sorted by #) + coaching staff (filterCurrentStaff) #1 #pwha
       Files: src/pages/teams/varsity.njk, junior-varsity.njk
 
-- [ ] #2 Alumni profile pages: /history/alumni/{slug}/ via Eleventy pagination
+- [ ] Alumni profile pages: /history/alumni/{slug}/ via Eleventy pagination #2 #pwha
       Create: src/pages/history/alumni-profile.njk + blocks/player-profile.css
       Members get college, hockey, social links sections.
 
-- [ ] #3 Alumni listing: link to profiles, use gradYear, group by year
+- [ ] Alumni listing: link to profiles, use gradYear, group by year #3 #pwha
       File: src/pages/history/alumni.njk
 
-- [ ] #4 Player database: new schema (gradYear, number, position, school, status)
+- [ ] Player database: new schema (gradYear, number, position, school, status) #4 #pwha
       File: src/pages/history/players.njk
 
-- [ ] #5 Officers page: sources/officers.csv + src/_data/officers.js
+- [ ] Officers page: sources/officers.csv + src/_data/officers.js #5 #pwha
       Source: sources/25-26 Board.md → update src/pages/about/officers.md
 
-- [ ] #6 Blog post audit: image shortcodes, descriptions, OG images
+- [ ] Blog post audit: image shortcodes, descriptions, OG images #6 #pwha
       Dir: src/posts/2026/
 
-- [ ] #7 Data questions (needs Eric):
-      - Derrick Deraleau: coaches id 5 AND players id 55 — player-coach?
+- [ ] Data questions (needs Eric): #7 #pwha
+  - Derrick Deraleau: coaches id 5 AND players id 55 — player-coach?
       - Gatewood (35) + Veyan (36): no roster entries — current or alumni?
       - Iverson Herr (20): dual V+JV for 2026-summer — intentional?
 
-- [ ] #8 Visual QA: fonts, headings, cards, hero, dark mode, mobile nav
+- [ ] Visual QA: fonts, headings, cards, hero, dark mode, mobile nav #8 #pwha
 
 ## CSV schemas
 

@@ -73,8 +73,8 @@
 
 <!-- Twitter specific head data was removed in v2 -->
 
-<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
-{% for feedLink in meta.blog.feedLinks %}
+<!-- RSS Autodiscovery. Loops over meta.news.feedLinks -->
+{% for feedLink in meta.news.feedLinks %}
   <link
     rel="alternate"
     type="{{ feedLink.type }}"

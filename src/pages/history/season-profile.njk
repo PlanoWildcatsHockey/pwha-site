@@ -1,0 +1,202 @@
+---
+layout: base
+pagination:
+  data: seasons
+  size: 1
+  alias: season
+permalink: "history/seasons/{{ season.id }}/index.html"
+eleventyComputed:
+  title: "{{ season.name }} — Plano Wildcats"
+  description: "The Plano Wildcats {{ season.name }} season — roster, league links, and results."
+---
+
+<div class="wrapper">
+  <article class="flow region" style="--flow-space: var(--space-l)">
+
+    {% if season.heroImage %}
+      {%
+        imageKeys {
+          "src": season.heroImage,
+          "alt": "",
+          "loading": "eager",
+          "containerClass": "season-hero",
+          "imageClass": "season-hero__img",
+          "widths": [650, 960, 1400, 1920],
+          "sizes": "100vw"
+        }
+      %}
+    {% endif %}
+
+    {% set varsityRoster = players | playersInSeason(season.id, "varsity") %}
+    {% set jvRoster = players | playersInSeason(season.id, "junior-varsity") %}
+    {% set showVarsity = season.league.division or varsityRoster.length %}
+    {% set showJv = season.league.hasOwnJvDivision or jvRoster.length %}
+
+    <header class="flow" style="--flow-space: var(--space-2xs)">
+      {% if season.active %}<span class="member-badge">Current Season</span>{% endif %}
+      <h1>{{ season.name }}</h1>
+      <p>
+        {% if season.league.name %}{{ season.league.name }}{% if season.league.shortName %} ({{ season.league.shortName }}){% endif %} — {% endif %}
+        {% if showVarsity and showJv %}
+          Varsity competed in the <strong>{{ season.league.division }}</strong> division
+          {% if season.league.jvDivision != season.league.division %}
+            and Scholastic (JV) in the <strong>{{ season.league.jvDivision }}</strong> division
+          {% endif %}.
+        {% elif showVarsity %}
+          Varsity competed in the <strong>{{ season.league.division }}</strong> division.
+        {% elif showJv %}
+          Scholastic (JV) competed in the <strong>{{ season.league.jvDivision }}</strong> division.
+        {% endif %}
+      </p>
+    </header>
+
+    {% if season.varsity or season.juniorVarsity %}
+      <aside class="league-links flow" style="--flow-space: var(--space-s)">
+        <p class="league-links__label">Official {{ season.name }} links</p>
+        {% if season.varsity %}
+          <div class="cluster" style="--gutter: var(--space-xs); align-items: center;">
+            <span>Varsity:</span>
+            <a href="{{ season.varsity.rosterUrl }}" class="button" data-small-button target="_blank" rel="noopener">Roster</a>
+            <a href="{{ season.varsity.scheduleUrl }}" class="button" data-small-button target="_blank" rel="noopener">Schedule</a>
+            <a href="{{ season.varsity.scoresUrl }}" class="button" data-small-button target="_blank" rel="noopener">Results</a>
+            <a href="{{ season.varsity.statsUrl }}" class="button" data-small-button target="_blank" rel="noopener">Stats</a>
+          </div>
+        {% endif %}
+        {% if season.juniorVarsity %}
+          <div class="cluster" style="--gutter: var(--space-xs); align-items: center;">
+            <span>Scholastic (JV):</span>
+            <a href="{{ season.juniorVarsity.rosterUrl }}" class="button" data-small-button target="_blank" rel="noopener">Roster</a>
+            <a href="{{ season.juniorVarsity.scheduleUrl }}" class="button" data-small-button target="_blank" rel="noopener">Schedule</a>
+            <a href="{{ season.juniorVarsity.scoresUrl }}" class="button" data-small-button target="_blank" rel="noopener">Results</a>
+            <a href="{{ season.juniorVarsity.statsUrl }}" class="button" data-small-button target="_blank" rel="noopener">Stats</a>
+          </div>
+        {% endif %}
+      </aside>
+    {% endif %}
+
+    {# ── Varsity roster ── #}
+    {% if showVarsity %}
+    <section>
+      <h2 class="section-heading-accent">
+        Varsity Roster
+        {% if season.finish %}<span class="finish-badge" data-finish="{{ season.finish | slugify }}">{{ season.finish }}</span>{% endif %}
+      </h2>
+      {% if season.varsityTeamPhoto %}
+        {%
+          imageKeys {
+            "src": season.varsityTeamPhoto,
+            "alt": season.name + " Varsity team photo",
+            "loading": "lazy",
+            "containerClass": "team-photo",
+            "imageClass": "team-photo__img",
+            "widths": [650, 960, 1400, 1920],
+            "sizes": "100vw"
+          }
+        %}
+      {% endif %}
+      {% if varsityRoster.length %}
+        <div class="table-wrap">
+          <table class="roster-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Pos</th>
+                <th scope="col">Shoots</th>
+                <th scope="col">School</th>
+                <th scope="col">Grad</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for p in varsityRoster %}
+                <tr>
+                  <td class="roster-number" data-label="#">{{ p.seasonEntry.number if p.seasonEntry.number else "—" }}</td>
+                  <td data-label="Name">
+                    {% if p.dateOfDeath or p.status == "current" or (p.status == "alumni" and p.gradYear and p.gradYear <= 2026) %}
+                      <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
+                    {% else %}
+                      {{ p.name }}
+                    {% endif %}
+                    {% if p.seasonEntry.captain %}<span class="captain-badge" title="{{ 'Captain' if p.seasonEntry.captain == 'C' else 'Alternate Captain' }}">{{ p.seasonEntry.captain }}</span>{% endif %}
+                  </td>
+                  <td data-label="Pos">{{ p.seasonEntry.position if p.seasonEntry.position and p.seasonEntry.position != "P" else "—" }}</td>
+                  <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
+                  <td data-label="School">{{ p.seasonEntry.school if p.seasonEntry.school else "—" }}</td>
+                  <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p><em>No Varsity roster recorded for this season yet.</em></p>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    {# ── Scholastic (JV) roster ── #}
+    {% if showJv %}
+    <section>
+      <h2 class="section-heading-accent">
+        Scholastic (JV) Roster
+        {% if season.jvFinish %}<span class="finish-badge" data-finish="{{ season.jvFinish | slugify }}">{{ season.jvFinish }}</span>{% endif %}
+      </h2>
+      {% if season.jvTeamPhoto %}
+        {%
+          imageKeys {
+            "src": season.jvTeamPhoto,
+            "alt": season.name + " Scholastic (JV) team photo",
+            "loading": "lazy",
+            "containerClass": "team-photo",
+            "imageClass": "team-photo__img",
+            "widths": [650, 960, 1400, 1920],
+            "sizes": "100vw"
+          }
+        %}
+      {% endif %}
+      {% if jvRoster.length %}
+        <div class="table-wrap">
+          <table class="roster-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Pos</th>
+                <th scope="col">Shoots</th>
+                <th scope="col">School</th>
+                <th scope="col">Grad</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for p in jvRoster %}
+                <tr>
+                  <td class="roster-number" data-label="#">{{ p.seasonEntry.number if p.seasonEntry.number else "—" }}</td>
+                  <td data-label="Name">
+                    {% if p.dateOfDeath or p.status == "current" or (p.status == "alumni" and p.gradYear and p.gradYear <= 2026) %}
+                      <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
+                    {% else %}
+                      {{ p.name }}
+                    {% endif %}
+                    {% if p.seasonEntry.captain %}<span class="captain-badge" title="{{ 'Captain' if p.seasonEntry.captain == 'C' else 'Alternate Captain' }}">{{ p.seasonEntry.captain }}</span>{% endif %}
+                  </td>
+                  <td data-label="Pos">{{ p.seasonEntry.position if p.seasonEntry.position and p.seasonEntry.position != "P" else "—" }}</td>
+                  <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
+                  <td data-label="School">{{ p.seasonEntry.school if p.seasonEntry.school else "—" }}</td>
+                  <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p><em>No Scholastic (JV) roster recorded for this season yet.</em></p>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    <p>
+      <a href="/history/seasons/">&larr; All Seasons</a>
+    </p>
+
+  </article>
+</div>

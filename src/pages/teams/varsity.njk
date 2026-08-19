@@ -13,7 +13,7 @@ layout: page
   </p>
 
   <aside class="league-links flow" style="--flow-space: var(--space-xs)">
-    <p class="league-links__label">Official {{ season.name }} stats on ATT MHSHL</p>
+    <p class="league-links__label">Official {{ season.name }} stats on HockeyShift</p>
     <div class="cluster" style="--gutter: var(--space-xs)">
       <a href="{{ season.varsity.rosterUrl }}" class="button" data-small-button target="_blank" rel="noopener">Roster</a>
       <a href="{{ season.varsity.scheduleUrl }}" class="button" data-small-button target="_blank" rel="noopener">Schedule</a>
@@ -28,7 +28,7 @@ layout: page
     <h2 class="section-heading-accent">Roster</h2>
     {% if roster.length %}
       <div class="table-wrap">
-        <table>
+        <table class="roster-table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -42,15 +42,15 @@ layout: page
           <tbody>
             {% for p in roster %}
               <tr>
-                <td>{{ p.number }}</td>
-                <td>
-                  <a href="/history/players/{{ p.slug }}/">{{ p.name }}</a>
+                <td class="roster-number" data-label="#">{{ p.number }}</td>
+                <td data-label="Name">
+                  <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
                   {% if p.captain %}<span class="captain-badge" title="{{ 'Captain' if p.captain == 'C' else 'Alternate Captain' }}">{{ p.captain }}</span>{% endif %}
                 </td>
-                <td>{{ p.position if p.position and p.position != "P" else "—" }}</td>
-                <td>{{ p.shoots if p.shoots else "—" }}</td>
-                <td>{{ p.school if p.school else "—" }}</td>
-                <td>{{ p.gradYear if p.gradYear else "—" }}</td>
+                <td data-label="Pos">{{ p.position if p.position and p.position != "P" else "—" }}</td>
+                <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
+                <td data-label="School">{{ p.school if p.school else "—" }}</td>
+                <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
               </tr>
             {% endfor %}
           </tbody>
@@ -77,8 +77,8 @@ layout: page
           <tbody>
             {% for c in staff %}
               <tr>
-                <td>{{ c.role }}</td>
-                <td>
+                <td data-label="Role">{{ c.role }}</td>
+                <td data-label="Name">
                   {{ c.name }}
                   {% if c.email %}
                     <a href="mailto:{{ c.email }}" aria-label="Email {{ c.name }}" style="margin-inline-start: var(--space-xs)">✉</a>

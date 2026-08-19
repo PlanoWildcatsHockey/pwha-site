@@ -1,5 +1,20 @@
 /* Alumni / player profile pages */
 
+/* Headshot floats top-right; header/body content wraps around it. */
+.player-headshot {
+  display: block;
+  float: right;
+  inline-size: 20%;
+  margin-inline-start: var(--space-m-l);
+  margin-block-end: var(--space-m-l);
+}
+
+.player-headshot__img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
 .player-profile__header {
   display: flex;
   align-items: flex-start;
@@ -9,7 +24,7 @@
 }
 
 .player-profile__number {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: var(--size-step-6);
   font-weight: var(--font-extra-bold);
   font-style: italic;
@@ -73,7 +88,7 @@
   font-weight: var(--font-extra-bold);
   font-style: italic;
   color: var(--color-light);
-  background: var(--color-primary);
+  background: var(--color-primary-surface);
   padding: 0 var(--space-2xs);
   vertical-align: middle;
   line-height: 1.6;
@@ -87,6 +102,6 @@
   letter-spacing: 0.1em;
   font-weight: var(--font-bold);
   color: var(--color-light);
-  background: var(--color-primary);
+  background: var(--color-primary-surface);
   padding: var(--space-3xs) var(--space-xs);
 }

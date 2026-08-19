@@ -25,7 +25,7 @@ layout: page
         <ul class="flow" role="list" style="--flow-space: var(--space-2xs); list-style: none; padding: 0;">
           {% for p in inMemoriam %}
             <li>
-              <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+              <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
               {% if p.position and p.position != "P" %} — {{ p.position }}{% endif %}
               <span style="color: var(--color-text-accent); font-size: var(--size-step-min-1);">{{ p.dateOfDeath | formatDate("MMMM D, YYYY") }}</span>
             </li>
@@ -43,7 +43,7 @@ layout: page
           {% for p in entry.players %}
             {% if not p.dateOfDeath %}{# deceased shown in In Memoriam above #}
             <li>
-              <a href="/history/alumni/{{ p.slug }}/">{{ p.name }}</a>
+              <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
               {% if p.position and p.position != "P" %} — {{ p.position }}{% endif %}
               {% if p.member %}<span class="member-badge" style="margin-inline-start: var(--space-xs)">Member</span>{% endif %}
             </li>

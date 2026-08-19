@@ -22,14 +22,14 @@ export const creator = {
   website: 'https://planowildcatshockey.com',
   social: ''
 };
-export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
+export const pathToSvgLogo = 'logos/paw.svg'; // used for favicon generation
 export const themeColor = '#641529'; // Plano Wildcats brand maroon — used in manifest as primary color
 export const themeLight = '#f8f8f8'; // used for meta tag theme-color, if light colors are prefered. best use value set for light bg
 export const themeDark = '#2e2e2e'; // used for meta tag theme-color, if dark colors are prefered. best use value set for dark bg
 export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
   'Plano Wildcats Hockey Association — the maroon paw mark of the Plano Wildcats hockey team.'; // alt text for default meta image
-export const blog = {
+export const news = {
   // RSS feed
   name: 'Plano Wildcats Hockey News',
   description: 'News, scores, schedules, and updates from the Plano Wildcats Hockey Association.',
@@ -51,7 +51,7 @@ export const blog = {
   tagPlural: 'Tags',
   tagMore: 'More tags:',
   // pagination
-  paginationLabel: 'Blog',
+  paginationLabel: 'News',
   paginationPage: 'Page',
   paginationPrevious: 'Previous',
   paginationNext: 'Next',
@@ -72,6 +72,7 @@ export const navigation = {
   ariaTop: 'Main',
   ariaBottom: 'Complementary',
   ariaPlatforms: 'Platforms',
+  ariaAffiliations: 'League Affiliations',
   drawerNav: false,
   subMenu: false
 };
@@ -94,7 +95,7 @@ export const greenweb = {
 export const tests = {
   pa11y: {
     // keep customPaths empty if you want to test all pages
-    customPaths: ['/', '/about/', '/blog/', '/styleguide/'],
+    customPaths: ['/', '/about/', '/news/', '/styleguide/'],
     globalIgnore: []
   }
 };

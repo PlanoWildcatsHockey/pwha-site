@@ -9,7 +9,7 @@ layout: page
 
 Contact the PWHA board at **[president@planowildcatshockey.com](mailto:president@planowildcatshockey.com)**.
 
-For team-specific questions, reach the managers directly from the [Varsity](/teams/varsity/) or [Junior Varsity](/teams/junior-varsity/) pages.
+For team-specific questions, reach the managers directly from the [Varsity](/teams/varsity/) or [Scholastic Division](/teams/junior-varsity/) pages.
 
 ## Mailing Address
 
@@ -27,3 +27,4 @@ Plano, TX 75093
 
 - [Instagram — @PlanoWildcatsHockey](https://www.instagram.com/PlanoWildcatsHockey/)
 - [Facebook — Plano Wildcats Hockey Association](https://www.facebook.com/PlanoWildcatsHockeyAssociation/)
+- [YouTube — @PlanoWildcatsHockey](https://www.youtube.com/@PlanoWildcatsHockey)

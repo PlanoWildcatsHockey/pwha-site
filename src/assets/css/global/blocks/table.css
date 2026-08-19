@@ -1,0 +1,140 @@
+table {
+  border: 0;
+  inline-size: 100%;
+  font-size: var(--size-step-min-1);
+}
+
+table br {
+  display: none;
+}
+
+thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  inline-size: 1px;
+}
+
+tr {
+  border: var(--stroke);
+  display: block;
+  margin-block-end: var(--space-s);
+}
+
+th,
+td {
+  padding: var(--space-xs) var(--space-s);
+  vertical-align: sub;
+}
+
+td {
+  border-block-end: var(--stroke);
+  display: block;
+  text-align: start;
+}
+
+td::before {
+  content: attr(data-label);
+  float: start;
+  font-weight: var(--font-bold);
+}
+
+td:last-child {
+  border-block-end: 0;
+}
+
+/* Row-header cells (th[scope="row"], e.g. the category column in a
+   comparison matrix) need the same block treatment as td on mobile —
+   the browser default (table-cell) breaks inside tr's display:block. */
+th[scope='row'] {
+  display: block;
+  text-align: start;
+  border-block-end: var(--stroke);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.roster-number {
+  font-family: var(--font-mono);
+  font-weight: var(--font-bold);
+}
+
+@media screen(sm) {
+  table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    /* table-layout: fixed splits columns evenly, so longer player names
+       need a smaller step to avoid wrapping within their column. */
+    font-size: var(--size-step-min-2);
+  }
+
+  table br {
+    display: block;
+  }
+
+  thead {
+    position: static;
+    text-align: start;
+    display: table-header-group;
+  }
+
+  caption {
+    margin: var(--space-xs) 0 var(--space-s);
+  }
+
+  tr {
+    border: 0;
+    padding: var(--space-xs);
+    margin: 0;
+    display: table-row;
+  }
+
+  tr:not(:last-child) {
+    border-block-end: var(--stroke);
+  }
+
+  td {
+    border: none;
+  }
+
+  td::before {
+    display: none;
+  }
+
+  th,
+  td {
+    padding: var(--space-s);
+    text-align: start;
+    display: table-cell;
+  }
+
+  /* Roster table (# / Name / Pos / Shoots / School / Grad): give the short,
+     fixed-format columns just enough room and let Name/School take the rest. */
+  .roster-table th:nth-child(1),
+  .roster-table td:nth-child(1) {
+    inline-size: 3ch;
+  }
+
+  .roster-table th:nth-child(3),
+  .roster-table td:nth-child(3) {
+    inline-size: 4ch;
+  }
+
+  .roster-table th:nth-child(4),
+  .roster-table td:nth-child(4) {
+    inline-size: 6ch;
+  }
+
+  .roster-table th:nth-child(6),
+  .roster-table td:nth-child(6) {
+    inline-size: 4ch;
+  }
+}

@@ -9,7 +9,7 @@
  */
 
 import {readFileSync} from 'node:fs';
-import {parseCSV, slugify, orNull} from '../_config/utils/parse-csv.js';
+import {parseCSV, slugify, orNull, imagePath} from '../_config/utils/parse-csv.js';
 
 export default function () {
   const seasonRecords = parseCSV(readFileSync('./sources/seasons.csv', 'latin1'));
@@ -30,12 +30,27 @@ export default function () {
         sortOrder: seasonMap[r.season]?.sortOrder ?? 0,
         team: r.team,
         number: parseInt(r.jersey_number) || null,
-        captain: orNull(r.captain) // "C", "A", or null
+        captain: orNull(r.captain), // "C", "A", or null
+        // Position/school can change season to season — roster.csv only
+        // carries a value when it differs from the player's usual one, so
+        // fall back to the players.csv identity fields when blank.
+        position: orNull(r.position) ?? orNull(p.position),
+        school: orNull(r.school) ?? orNull(p.school)
       }));
 
     const currentEntry = seasons.find(s => s.season === activeSeasonId) ?? null;
     const lastEntry = seasons.at(-1) ?? null;
-    const status = currentEntry ? 'current' : 'alumni';
+    const gradYear = parseInt(p.grad_year) || null;
+    const dateOfDeath = orNull(p.date_of_death);
+    const currentYear = new Date().getFullYear();
+    // Alumni means actually graduated (or deceased) — a future grad year
+    // or no grad year at all just means the record is incomplete/not yet
+    // graduated, so leave status blank instead of mislabeling them.
+    const status = currentEntry
+      ? 'current'
+      : (gradYear && gradYear <= currentYear) || dateOfDeath
+        ? 'alumni'
+        : null;
 
     return {
       id: parseInt(p.id),
@@ -43,11 +58,12 @@ export default function () {
       firstName: p.first_name,
       lastName: p.last_name,
       name: `${p.first_name} ${p.last_name}`,
-      gradYear: parseInt(p.grad_year) || null,
-      year: parseInt(p.grad_year) || null, // alias — keeps existing filters working
+      gradYear,
+      year: gradYear, // alias — keeps existing filters working
       position: orNull(p.position),
       shoots: orNull(p.shoots),
       school: orNull(p.school),
+      headshot: imagePath(p.headshot),
       college: orNull(p.college),
       collegeHockey: orNull(p.college_hockey),
       collegeHockeyLevel: orNull(p.college_hockey_level),
@@ -60,7 +76,7 @@ export default function () {
       member: p.member?.toLowerCase() === 'true',
       listed: p.listed?.toLowerCase() !== 'false', // default true when blank
       notes: orNull(p.notes),
-      dateOfDeath: orNull(p.date_of_death),
+      dateOfDeath,
       status,
       team: currentEntry?.team ?? lastEntry?.team ?? null,
       number: currentEntry?.number ?? lastEntry?.number ?? null,

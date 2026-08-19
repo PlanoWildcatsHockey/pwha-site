@@ -5,8 +5,6 @@ description: Donate to or sponsor the Plano Wildcats Hockey Association — help
 layout: page
 ---
 
-# Support PWHA
-
 The Plano Wildcats Hockey Association runs on community support. Whether you're a parent, alumnus, business owner, or fan, there are several ways to help.
 
 ## Donate
@@ -15,7 +13,7 @@ The Plano Wildcats Hockey Association runs on community support. Whether you're 
 
 ## Sponsorship
 
-> **Phase 1 placeholder.** Replace with: sponsorship tiers (e.g., Bronze / Silver / Gold / Platinum), what each tier includes (logo placement, jersey patches, banner display, social shoutouts), and contact for sponsorship inquiries.
+Sponsoring the Wildcats puts your business in front of players, families, and the community all season long. See the current [sponsorship packages, pricing, and benefits](/sponsors/).
 
 ## Our Sponsors
 

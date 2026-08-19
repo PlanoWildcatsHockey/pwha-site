@@ -1,0 +1,98 @@
+---
+title: Sponsors
+permalink: /sponsors/index.html
+description: Sponsors and supporters of the Plano Wildcats Hockey Association — 2026-2027 sponsorship packages, benefits, and how to become a sponsor.
+layout: page
+---
+
+<div class="flow" style="--flow-space: var(--space-l)">
+
+  <p>
+    The Plano Wildcats Hockey Association is supported by generous families and businesses who believe in youth hockey and the development of student athletes. We are grateful for every sponsor who helps keep our program on the ice.
+  </p>
+
+  <blockquote class="sponsor-why">
+    <p>
+      Fundraising allows Plano Wildcats Hockey to support player experience, strengthen community engagement, create visibility for local partners, and reduce pressure on families while building a sustainable future for the program.
+    </p>
+  </blockquote>
+
+  <section class="flow" style="--flow-space: var(--space-s)">
+    <h2 class="section-heading-accent">{{ sponsorPackages.season }} Sponsorship Packages</h2>
+    <p>
+      Choose from our sponsorship packages to support the team. Follow the link below to submit your request and complete payment, or download the full package details.
+    </p>
+    <div class="cluster" style="--gutter: var(--space-s)">
+      <a href="{{ sponsorPackages.formUrl }}" class="button" data-button-variant="primary" target="_blank" rel="noopener">Complete Sponsorship Form</a>
+      <a href="{{ sponsorPackages.pdf }}" class="button" data-ghost-button download="{{ sponsorPackages.pdfFilename }}">Download Packages (PDF)</a>
+    </div>
+  </section>
+
+  {# ── Tier pricing cards ── #}
+  <ul class="grid" role="list" style="--grid-min-item-size: 14rem; list-style: none; padding: 0;">
+    {% for tier in sponsorPackages.tiers %}
+      <li class="sponsor-tier">
+        {% if tier.available %}
+          <span class="sponsor-tier__available">Only {{ tier.available }} available!</span>
+        {% endif %}
+        <p class="sponsor-tier__price">${{ tier.price }}</p>
+        <p class="sponsor-tier__name">{{ tier.name }}</p>
+        {% if tier.footnote %}
+          <p class="sponsor-tier__footnote">{{ sponsorPackages.footnotes[tier.footnote] }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {# ── Benefits comparison table ── #}
+  <section class="flow" style="--flow-space: var(--space-s)">
+    <h2 class="section-heading-accent">Sponsorship Level Summary</h2>
+    <div class="table-wrap">
+      <table class="sponsor-table">
+        <thead>
+          <tr>
+            <th scope="col">Recognition &amp; Engagement</th>
+            {% for tier in sponsorPackages.tiers %}
+              <th scope="col">{{ tier.name }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in sponsorPackages.benefits %}
+            <tr>
+              <th scope="row">{{ row.category }}</th>
+              {% for tier in sponsorPackages.tiers %}
+                <td data-label="{{ tier.name }}">{{ row.values[tier.id] }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sponsor-in-kind flow" style="--flow-space: var(--space-2xs)">
+      <p class="league-links__label">{{ sponsorPackages.inKind.heading }}</p>
+      <p>{{ sponsorPackages.inKind.text }}</p>
+    </div>
+  </section>
+
+  {# ── Fundraising contact ── #}
+  <aside class="league-links flow" style="--flow-space: var(--space-2xs)">
+    <p class="league-links__label">Questions? Contact us</p>
+    <ul role="list" style="list-style: none; padding: 0;">
+      <li><a href="mailto:{{ sponsorPackages.contact.email }}">{{ sponsorPackages.contact.email }}</a></li>
+      <li>{{ sponsorPackages.contact.address }}</li>
+      <li><a href="tel:{{ sponsorPackages.contact.phone }}">{{ sponsorPackages.contact.phone }}</a></li>
+      <li><a href="https://instagram.com/{{ sponsorPackages.contact.instagram }}" target="_blank" rel="noopener">@{{ sponsorPackages.contact.instagram }}</a></li>
+    </ul>
+  </aside>
+
+  <section class="flow" style="--flow-space: var(--space-xs)">
+    <h2 class="section-heading-accent">Current &amp; Past Seasons</h2>
+    <ul role="list" style="list-style: none; padding: 0;">
+      <li><a href="/sponsors/2025-2026/">2025–2026 Sponsors</a></li>
+      <li><a href="/sponsors/2024-2025/">2024–2025 Sponsors</a></li>
+    </ul>
+  </section>
+
+</div>

@@ -1,0 +1,67 @@
+---
+title: Player Database
+permalink: /players/index.html
+description: The full Plano Wildcats player database — current rosters and historical entries across all seasons.
+layout: page
+---
+
+<div class="flow" style="--flow-space: var(--space-l)">
+
+  <p>
+    Every player who has worn the maroon, current and past.
+    Alumni entries link to individual profile pages.
+  </p>
+
+  {% if players.length %}
+    {% set sorted = players | sort(false, false, "lastName") %}
+    <sortable-table>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Pos</th>
+            <th scope="col">School</th>
+            <th scope="col">Grad</th>
+            <th scope="col">Team</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in sorted %}
+            <tr>
+              <td data-label="#">{{ p.number if p.number else "—" }}</td>
+              <td data-label="Name">
+                {% if p.dateOfDeath %}
+                  <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
+                {% elif p.status == "alumni" and p.gradYear and p.gradYear <= 2026 %}
+                  <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
+                {% elif p.status == "current" %}
+                  <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
+                {% else %}
+                  {{ p.name }}
+                {% endif %}
+              </td>
+              <td data-label="Pos">{{ p.position if p.position and p.position != "P" else "—" }}</td>
+              <td data-label="School">{{ p.school if p.school else "—" }}</td>
+              <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
+              <td data-label="Team">
+                {% if p.team == "varsity" %}Varsity
+                {% elif p.team == "junior-varsity" %}JV
+                {% else %}—{% endif %}
+              </td>
+              <td data-label="Status">{{ "Current" if p.status == "current" else ("Alumni" if p.status == "alumni" else "—") }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </sortable-table>
+    <script src="/assets/scripts/components/sortable-table.js" type="module"></script>
+    <p><small>{{ players.length }} players total — {{ players | filterStatus("current") | length }} current, {{ players | filterStatus("alumni") | length }} alumni.</small></p>
+  {% else %}
+    <p><em>No players found.</em></p>
+  {% endif %}
+
+</div>

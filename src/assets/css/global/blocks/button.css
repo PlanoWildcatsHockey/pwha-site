@@ -58,9 +58,9 @@
 
 /* Variants */
 .button[data-button-variant='primary'] {
-  --button-bg: var(--color-primary);
+  --button-bg: var(--color-primary-surface);
   --button-color: var(--color-light);
-  --button-color: color-mix(in oklab, var(--color-primary) 5%, var(--color-light));
+  --button-color: color-mix(in oklab, var(--color-primary-surface) 5%, var(--color-light));
 }
 
 .button[data-button-variant='secondary'] {

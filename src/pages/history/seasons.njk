@@ -1,0 +1,47 @@
+---
+title: Seasons
+permalink: /history/seasons/index.html
+description: Every Plano Wildcats hockey season on record — rosters, league links, and results by year.
+layout: page
+---
+
+<div class="flow" style="--flow-space: var(--space-l)">
+
+  <p>
+    Every recorded Plano Wildcats season, most recent first. Open a season for its roster and official league links.
+  </p>
+
+  {% set sorted = seasons | sort(true, false, "sortOrder") %}
+  {% if sorted.length %}
+    <sortable-table>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Season</th>
+            <th scope="col">League</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in sorted %}
+            <tr>
+              <td data-label="Season"><a href="/history/seasons/{{ s.id }}/">{{ s.name }}</a></td>
+              <td data-label="League">{{ s.league.shortName if s.league.shortName else "—" }}</td>
+              <td data-label="Status">{{ "Current" if s.active else "—" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </sortable-table>
+    <script src="/assets/scripts/components/sortable-table.js" type="module"></script>
+  {% else %}
+    <p><em>No seasons on record yet.</em></p>
+  {% endif %}
+
+  <p>
+    <a href="/history/">&larr; Back to History</a>
+  </p>
+
+</div>

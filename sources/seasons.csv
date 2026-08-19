@@ -1,8 +1,11 @@
-id,name,active,sort_order,league_name,league_short,division,att_league_id,varsity_team_id,jv_team_id
-2024-summer,Summer 2024,FALSE,10,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2024-2025,2024-2025 Season,FALSE,20,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2025-summer,Summer 2025,FALSE,30,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2025-leveling-festival,2025 Leveling Festival,FALSE,40,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2025-2026,2025-2026 Season,FALSE,50,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2026-texas-cup,2026 Texas Cup,FALSE,60,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,,
-2026-summer,Summer 2026,TRUE,70,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,31,667004,667037
+id,name,active,sort_order,league_name,league_short,division,jv_division,att_league_id,varsity_team_id,jv_team_id,hero_image,finish,jv_finish,varsity_team_photo,jv_team_photo
+2024-summer,Summer 2024,FALSE,10,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,,,,,
+2024-2025,2024-2025 Season,FALSE,20,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,,,,,
+2025-summer,Summer 2025,FALSE,30,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,,,,,
+2025-leveling-festival,2025 Leveling Festival,FALSE,40,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,,,,,
+2025-2026,2025-2026 Season,FALSE,50,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,2526-wildcats.jpeg,,,25-26-varsity.jpeg,2526-jv.jpeg
+2026-texas-cup,2026 Texas Cup,FALSE,60,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,,,,,,,
+2026-summer,Summer 2026,FALSE,70,AT&T Metro High School Hockey League,ATT MHSHL,Lower Varsity East,,31,667004,667037,,,,,
+2026-2027,2026-2027 Season,TRUE,80,Texas Scholastic Hockey League,TSHL,Varsity,Scholastic (JV),,,,,,,,
+2023-2024,2023-2024 Season,FALSE,5,AT&T Metro High School Hockey League,ATT MHSHL,,Bronze White,,,,2024-jv-title-on-ice.jpeg,,Champions,,
+1997,Inaugural Season,FALSE,1,,,High School,,,,,,Champions,,,

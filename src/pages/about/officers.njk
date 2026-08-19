@@ -27,9 +27,9 @@ layout: page
           <tbody>
             {% for o in officers.current %}
               <tr>
-                <td>{{ o.role }}</td>
-                <td>{{ o.name }}</td>
-                <td>
+                <td data-label="Role">{{ o.role }}</td>
+                <td data-label="Officer">{{ o.name }}</td>
+                <td data-label="Contact">
                   {% if o.email %}
                     <a href="mailto:{{ o.email }}">Email</a>
                   {% else %}
@@ -66,8 +66,8 @@ layout: page
                   <tbody>
                     {% for o in entry.officers %}
                       <tr>
-                        <td>{{ o.role }}</td>
-                        <td>{{ o.name }}</td>
+                        <td data-label="Role">{{ o.role }}</td>
+                        <td data-label="Officer">{{ o.name }}</td>
                       </tr>
                     {% endfor %}
                   </tbody>

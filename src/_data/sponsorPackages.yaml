@@ -1,0 +1,114 @@
+# 2026-2027 sponsorship packages — sourced from PWH Sponsor Packages.pdf.
+# Update here (and re-export the PDF to src/assets/downloads/) when the
+# board approves new pricing or benefits for a season.
+
+season: 2026-2027 Season
+pdf: /assets/downloads/pwh-sponsor-packages-2026-2027.pdf
+pdfFilename: PWH-Sponsor-Packages-2026-2027.pdf
+formUrl: https://forms.cloud.microsoft/r/JsvzVDsQvA
+
+contact:
+  email: fundraising@planowildcatshockey.com
+  phone: '773.592.3229'
+  address: 'PO Box 867512, Plano, TX'
+  instagram: planowildcatshockey
+
+tiers:
+  - id: wildcat-legacy
+    name: Wildcat Legacy Sponsor
+    price: '5,000'
+    available: 1
+  - id: jersey
+    name: Jersey Sponsor
+    price: '3,500'
+    available: 2
+  - id: helmet
+    name: Helmet Sponsor
+    price: '2,500'
+    available: 2
+  - id: gameday
+    name: Gameday Sponsor
+    price: '1,500'
+    footnote: spirit-nights-2
+  - id: power-play
+    name: Power Play Sponsor
+    price: '1,000'
+    footnote: spirit-nights-1
+  - id: shout-out
+    name: Shout Out Sponsor
+    price: '500'
+  - id: breakaway
+    name: Breakaway Sponsor
+    price: '250'
+
+footnotes:
+  spirit-nights-2: Two or more spirit nights qualify for Gameday Sponsor level.
+  spirit-nights-1: One-time spirit nights automatically qualify for Power Play Sponsor level.
+
+benefits:
+  - category: Website
+    values:
+      wildcat-legacy: Large logo + link
+      jersey: Logo + link
+      helmet: Logo + link
+      gameday: Logo + link
+      power-play: Logo + link
+      shout-out: Name listing
+      breakaway: Name listing
+
+  - category: Social Media
+    values:
+      wildcat-legacy: Feature post + sponsor spotlight + 15 gameday posts + link
+      jersey: Feature post + player profile + link
+      helmet: Thank-you post + logo + link
+      gameday: Thank-you post + logo
+      power-play: Power play post (segment mention)
+      shout-out: Community sponsor thank-you post
+      breakaway: Community sponsor thank-you post
+
+  - category: Game Day Print/Banner
+    values:
+      wildcat-legacy: Premier logo
+      jersey: Large logo
+      helmet: Large logo
+      gameday: Logo
+      power-play: Small logo
+      shout-out: Name
+      breakaway: Name
+
+  - category: Jersey/Equipment Visibility
+    values:
+      wildcat-legacy: Large patch on jersey front (game day & practice jersey)
+      jersey: Patch on jersey arm
+      helmet: Sticker on helmet
+      gameday: Patch on gameday warm-up jersey cover
+      power-play: None
+      shout-out: None
+      breakaway: None
+
+  - category: Little Rookies Community Service Day
+    values:
+      wildcat-legacy: Invitation to attend and take a photo with the team; opportunity to share marketing materials with PWH and Little Rookies guests and families
+      jersey: Invitation to attend and take a photo with the team; opportunity to share marketing materials with PWH and Little Rookies guests and families
+      helmet: Invitation to attend and recognition on the game day banner at the event
+      gameday: Invitation to attend and recognition on the game day banner at the event
+      power-play: Invitation to attend and recognition on the game day banner at the event
+      shout-out: Recognition on the game day banner at the event
+      breakaway: Recognition on the game day banner at the event
+
+  - category: End of Season Banquet
+    values:
+      wildcat-legacy: 4 complimentary tickets + speaking opportunity + branding
+      jersey: 2 complimentary tickets + branding
+      helmet: 2 complimentary tickets + branding
+      gameday: 2 complimentary tickets + verbal recognition
+      power-play: 2 complimentary tickets + verbal recognition
+      shout-out: 2 complimentary tickets + verbal recognition
+      breakaway: Invitation to join + verbal recognition
+
+inKind:
+  heading: In-Kind Promotions & Incentives
+  text: >-
+    First right of refusal for incentives to promote your business and partnership with the team.
+    Donations might include food & beverages for tournaments and events, game day program printing,
+    50/50 raffle prizes, end-of-season player gifts, and restaurant discounts.
