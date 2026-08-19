@@ -21,7 +21,6 @@ layout: page
             <tr>
               <th scope="col">Role</th>
               <th scope="col">Officer</th>
-              <th scope="col">Contact</th>
             </tr>
           </thead>
           <tbody>
@@ -29,13 +28,6 @@ layout: page
               <tr>
                 <td data-label="Role">{{ o.role }}</td>
                 <td data-label="Officer">{{ o.name }}</td>
-                <td data-label="Contact">
-                  {% if o.email %}
-                    <a href="mailto:{{ o.email }}">Email</a>
-                  {% else %}
-                    —
-                  {% endif %}
-                </td>
               </tr>
             {% endfor %}
           </tbody>

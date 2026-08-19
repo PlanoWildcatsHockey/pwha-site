@@ -40,20 +40,9 @@ export default {
       url: '/search/'
     }
   ],
-  bottom: [
-    {
-      text: 'Imprint',
-      url: '/imprint/'
-    },
-    {
-      text: 'Privacy',
-      url: '/privacy/'
-    },
-    {
-      text: 'Accessibility',
-      url: '/accessibility/'
-    }
-  ],
+  // Imprint/Privacy/Accessibility links removed for now — pages still exist,
+  // just not linked from the footer.
+  bottom: [],
   // Deeper sitemap for the footer — pulls in subpages that aren't in the
   // top-level header nav (bylaws, officers, coaches, etc).
   footer: [

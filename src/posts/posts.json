@@ -1,5 +1,8 @@
 {
   "layout": "post",
   "tags": "posts",
-  "permalink": "/news/{{ title | slugify }}/index.html"
+  "permalink": "/news/{{ page.date | formatDate('YYYY') }}/{{ title | slugify }}/index.html",
+  "eleventyComputed": {
+    "redirectFrom": ["/news/{{ title | slugify }}/"]
+  }
 }

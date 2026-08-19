@@ -15,11 +15,13 @@ permalink: 'news/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber
     </div>
   </header>
 
-  <custom-masonry layout="50-50">
-		{% asyncEach item in pagination.items %}
-			{% include "partials/card-blog.njk" %}
-		{% endeach %}
-	</custom-masonry>
+  <div class="region region-space-l">
+    <custom-masonry layout="50-50">
+      {% asyncEach item in pagination.items %}
+        {% include "partials/card-blog.njk" %}
+      {% endeach %}
+    </custom-masonry>
+  </div>
 
   <!-- set collection to paginate -->
   {% set collectionToPaginate = collections.posts %}

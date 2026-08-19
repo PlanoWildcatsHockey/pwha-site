@@ -35,12 +35,12 @@ id,first_name,last_name,grad_year,position,shoots,school,college,college_hockey,
 34,Nolan ,O'Neill,,F,R,Clark HS,,,,,,,,,,FALSE,TRUE,,,26-Nolan-Oneill.jpg
 35,Gram ,Gatewood,,P,,Hendrick MS,,,,,,,,,,FALSE,TRUE,,,
 36,Ulysse ,Veyan,,F,R,,,,,,,,,,,FALSE,TRUE,,,26-Ulysse-Veyan.jpg
-37,Cole,Thomas,2026,F,L,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26-Cole-Thomas.jpg
-38,Ford,Hansard,2026,F,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26_Ford_Hansard.jpeg
-39,Felix,Rivest,2026,G,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,26_Felix_Rivest.jpeg
-40,Brooks,Harsila,2026,G,,Fairhill School,East Texas Baptist University,East Texas Baptist University,,,,,,,,TRUE,TRUE,,,26-Brooks-Harsila.jpg
+37,Cole,Thomas,2026,F,L,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,0426-ColeThomas.jpg
+38,Ford,Hansard,2026,F,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,0426-Ford.jpg
+39,Felix,Rivest,2026,G,R,Plano Senior HS,,,,,,,,,,TRUE,TRUE,,,0426-Felix.jpg
+40,Brooks,Harsila,2026,G,,Fairhill School,East Texas Baptist University,East Texas Baptist University,,,,,,,,TRUE,TRUE,,,0426-Brooks.jp
 41,Ben,Wolfe,2026,D,R,John Paul II HS,,,,,https://www.facebook.com/profile.php?id=61554822091317,,,,,TRUE,TRUE,,,26-Ben-Wofle.jpg
-42,Rex,Birch,2026,D,R,Plano Senior HS,,,,,https://www.facebook.com/rex.birch.3,,,,,TRUE,TRUE,,,26-Rix-Birch.jpg
+42,Rex,Birch,2026,D,R,Plano Senior HS,,,,,https://www.facebook.com/rex.birch.3,,,,,TRUE,TRUE,,,0426-Rex.jpg
 43,Kien,Matson,2026,F,R,,,,,,,,,,,TRUE,TRUE,,,26-Kien-Matson.jpg
 44,Zachary,Litaker,2026,F,,Celina HS,Dallas Baptist University,Dallas Baptist University,,,,,,,,TRUE,TRUE,,,26-Zachary-Litaker.jpg
 45,Jackson,Perez,2025,,R,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
@@ -68,3 +68,4 @@ id,first_name,last_name,grad_year,position,shoots,school,college,college_hockey,
 67,Aidan,Dalton,2022,,,Plano Senior HS,,,,,,,,,,FALSE,TRUE,,,
 68,Ain,Rubio,2028,,,The IB World School at Plano East Senior HS,,,,,,,,,,FALSE,TRUE,,,
 69,Cyle,Pannell,,P,R,,,,,,,,,,,FALSE,TRUE,,,26-Cyle-Pannell.jpg
+70,Karl,Loether,,P,,,,,,,,,,,,,,,,
