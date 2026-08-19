@@ -115,6 +115,9 @@ export default async function (eleventyConfig) {
     // -- to root
     'src/assets/images/favicon/*': '/',
 
+    // -- Cloudflare Pages headers config, must land in the dist root
+    'src/_headers': '_headers',
+
     // -- header logo (referenced as a raw <img>, not inlined via {% svg %}:
     // SVGO's class-merging corrupts this file's fill-rule and collapses
     // the mark to a sliver, so it's served untouched instead)

@@ -9,11 +9,10 @@ layout: page
 
 Send a message to the PWHA board using the form below.
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks/" class="contact-form flow">
+<form name="contact" method="POST" action="/api/contact" class="contact-form flow">
   <p class="contact-form__honeypot">
     <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
   </p>
-  <input type="hidden" name="form-name" value="contact">
 
   <div class="contact-form__field">
     <label for="contact-name">Name</label>

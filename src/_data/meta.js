@@ -90,7 +90,7 @@ export const greenweb = {
       domain: domain
     }
   ],
-  services: [{domain: 'netlify.com', serviceType: 'cdn'}]
+  services: [{domain: 'cloudflare.com', serviceType: 'cdn'}]
 };
 export const tests = {
   pa11y: {

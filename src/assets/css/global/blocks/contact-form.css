@@ -1,11 +1,11 @@
-/* Netlify Forms contact form (src/pages/contact.md) */
+/* Contact form (src/pages/contact.md), submits to functions/api/contact.js */
 
 .contact-form {
   --flow-space: var(--space-m);
   max-inline-size: 40rem;
 }
 
-/* Netlify honeypot field: must stay invisible to sighted and screen-reader
+/* Honeypot field: must stay invisible to sighted and screen-reader
    users alike (not just visually-hidden) — it exists purely to catch bots
    that don't render CSS, and a real visitor should never see or hear it. */
 .contact-form__honeypot {
