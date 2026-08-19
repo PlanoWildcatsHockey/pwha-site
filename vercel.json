@@ -1,35 +1,34 @@
 {
-    "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          {
-            "key": "Content-Security-Policy",
-            "value": "upgrade-insecure-requests;"
-          },
-          {
-            "key": "X-Content-Type-Options",
-            "value": "nosniff"
-          },
-          {
-            "key": "X-Frame-Options",
-            "value": "DENY"
-          },
-          {
-            "key": "X-XSS-Protection",
-            "value": "1; mode=block"
-          },
-          {
-            "key": "Referrer-Policy",
-            "value": "strict-origin-when-cross-origin"
-          },
-          {
-            "key": "Permissions-Policy",
-            "value": "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
-          }
-        ]
-      }
-    ],
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist"
-  }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "upgrade-insecure-requests;" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/blog/:path*", "destination": "/news/:path*", "permanent": true },
+    { "source": "/news/wildcats-banquet/", "destination": "/news/2026/wildcats-banquet/", "permanent": true },
+    { "source": "/news/2026-2027-tentative-dates-announced/", "destination": "/news/2026/2026-2027-tentative-dates-announced/", "permanent": true },
+    { "source": "/news/taha-announces-tshl/", "destination": "/news/2026/taha-announces-tshl/", "permanent": true },
+    { "source": "/news/the-next-chapter-for-high-school-hockey/", "destination": "/news/2026/the-next-chapter-for-high-school-hockey/", "permanent": true },
+    { "source": "/news/thanks-to-all-for-a-great-alumni-game/", "destination": "/news/2026/thanks-to-all-for-a-great-alumni-game/", "permanent": true },
+    { "source": "/news/2026-2027-fall-tryouts/", "destination": "/news/2026/2026-2027-fall-tryouts/", "permanent": true },
+    { "source": "/news/safesport-required-for-all-08-and-09-players/", "destination": "/news/2026/safesport-required-for-all-08-and-09-players/", "permanent": true },
+    { "source": "/news/goodbye-junior-varsity-hello-scholastic-division/", "destination": "/news/2026/goodbye-junior-varsity-hello-scholastic-division/", "permanent": true },
+    { "source": "/news/thank-you-coach-jason/", "destination": "/news/2026/thank-you-coach-jason/", "permanent": true },
+    { "source": "/news/tshl-communication-protocol/", "destination": "/news/2026/tshl-communication-protocol/", "permanent": true },
+    { "source": "/news/wildcats-2026-2027-season-registration/", "destination": "/news/2026/wildcats-2026-2027-season-registration/", "permanent": true },
+    { "source": "/news/zach-litaker-to-play-for-dbu/", "destination": "/news/2026/zach-litaker-to-play-for-dbu/", "permanent": true },
+    { "source": "/news/updates-from-the-parent-meeting/", "destination": "/news/2026/updates-from-the-parent-meeting/", "permanent": true },
+    { "source": "/news/plano-wildcats-hockeys-new-home/", "destination": "/news/2026/plano-wildcats-hockeys-new-home/", "permanent": true }
+  ]
+}

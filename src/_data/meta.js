@@ -1,4 +1,8 @@
-export const url = process.env.URL || 'http://localhost:8080';
+// Netlify auto-injects a `URL` env var with the site's canonical domain;
+// Vercel does not, so fall back to the real domain (not localhost) whenever
+// this is a production build, regardless of which host is running it.
+const isProductionBuild = process.env.ELEVENTY_ENV === 'production';
+export const url = process.env.URL || (isProductionBuild ? 'https://planowildcatshockey.com' : 'http://localhost:8080');
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
 export const siteName = 'Plano Wildcats Hockey Association';

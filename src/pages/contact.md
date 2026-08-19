@@ -9,11 +9,14 @@ layout: page
 
 Send a message to the PWHA board using the form below.
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks/" class="contact-form flow">
+<form method="POST" action="https://api.web3forms.com/submit" class="contact-form flow">
+  <!-- TODO before launch: replace with a real Web3Forms access key — get one free, no signup, at https://web3forms.com/ -->
+  <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+  <input type="hidden" name="subject" value="New message from the PWHA contact form">
+  <input type="hidden" name="redirect" value="https://planowildcatshockey.com/contact/thanks/">
   <p class="contact-form__honeypot">
-    <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    <label>Don't fill this out if you're human: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
   </p>
-  <input type="hidden" name="form-name" value="contact">
 
   <div class="contact-form__field">
     <label for="contact-name">Name</label>
