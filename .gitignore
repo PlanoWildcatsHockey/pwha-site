@@ -20,5 +20,8 @@ src/_includes/scripts
 skill.md.txt
 
 # Working assets we don't want to commit (large source files for logos, etc.)
-# Move final, optimized versions into src/assets/images/ and commit those instead.
-logos/
+# planohockeylogo.svg and original4logo.svg ARE served directly from here
+# (see eleventy.config.js passthrough copy) and must stay tracked.
+logos/*
+!logos/planohockeylogo.svg
+!logos/original4logo.svg
