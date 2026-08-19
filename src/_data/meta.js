@@ -73,7 +73,7 @@ export const navigation = {
   ariaBottom: 'Complementary',
   ariaPlatforms: 'Platforms',
   ariaAffiliations: 'League Affiliations',
-  drawerNav: false,
+  drawerNav: true,
   subMenu: false
 };
 export const themeSwitch = {
