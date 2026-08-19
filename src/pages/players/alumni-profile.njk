@@ -127,8 +127,10 @@ eleventyComputed:
       </section>
     {% endif %}
 
-    {# ── Connect (members with social links only) ── #}
-    {% if player.member and (player.website or player.instagram or player.twitter or player.linkedin or player.facebook) %}
+    {# ── Connect (members with social links only) ──
+       Disabled for now — not ready to show anyone's social links publicly.
+       Flip `false` back to the member/social-link check below to re-enable. #}
+    {% if false and player.member and (player.website or player.instagram or player.twitter or player.linkedin or player.facebook) %}
       <section class="flow" style="--flow-space: var(--space-s)">
         <h2 class="section-heading-accent">Connect</h2>
         <div class="profile-links">
