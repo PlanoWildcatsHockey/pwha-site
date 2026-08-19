@@ -9,9 +9,13 @@ layout: page
 
 Send a message to the PWHA board using the form below.
 
-<form name="contact" method="POST" action="/api/contact" class="contact-form flow">
+<form name="contact" method="POST" action="https://api.web3forms.com/submit" class="contact-form flow">
+  <input type="hidden" name="access_key" value="{{ env.web3formsAccessKey }}">
+  <input type="hidden" name="subject" value="PWHA Contact Form Submission">
+  <input type="hidden" name="from_name" value="PWHA Website">
+  <input type="hidden" name="redirect" value="{{ meta.url }}/contact/thanks/">
   <p class="contact-form__honeypot">
-    <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    <label>Don't fill this out if you're human: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
   </p>
 
   <div class="contact-form__field">

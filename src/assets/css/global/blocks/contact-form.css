@@ -1,4 +1,4 @@
-/* Contact form (src/pages/contact.md), submits to functions/api/contact.js */
+/* Contact form (src/pages/contact.md), submits directly to Web3Forms */
 
 .contact-form {
   --flow-space: var(--space-m);
