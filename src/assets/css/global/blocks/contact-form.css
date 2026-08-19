@@ -1,0 +1,39 @@
+/* Netlify Forms contact form (src/pages/contact.md) */
+
+.contact-form {
+  --flow-space: var(--space-m);
+  max-inline-size: 40rem;
+}
+
+/* Netlify honeypot field: must stay invisible to sighted and screen-reader
+   users alike (not just visually-hidden) — it exists purely to catch bots
+   that don't render CSS, and a real visitor should never see or hear it. */
+.contact-form__honeypot {
+  display: none;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.contact-form__field label {
+  font-weight: var(--font-bold);
+}
+
+.contact-form__field :is(input, textarea) {
+  padding: var(--space-2xs) var(--space-xs);
+  border: var(--stroke);
+  border-radius: var(--border-radius-small);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.contact-form__field :is(input, textarea):focus-visible {
+  border-color: var(--color-primary);
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+}

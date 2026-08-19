@@ -7,7 +7,31 @@ layout: page
 
 ## General Inquiries
 
-Contact the PWHA board at **[president@planowildcatshockey.com](mailto:president@planowildcatshockey.com)**.
+Send a message to the PWHA board using the form below.
+
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks/" class="contact-form flow">
+  <p class="contact-form__honeypot">
+    <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+  </p>
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="contact-form__field">
+    <label for="contact-name">Name</label>
+    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-email">Email</label>
+    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit" class="button contact-form__submit" data-button-variant="primary">Send Message</button>
+</form>
 
 For team-specific questions, reach the managers directly from the [Varsity](/teams/varsity/) or [Scholastic Division](/teams/junior-varsity/) pages.
 
