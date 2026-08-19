@@ -13,13 +13,13 @@ export const author = {
   name: 'Plano Wildcats Hockey Association',
   avatar: '/icon-512x512.png', // the favicon (paw mark) doubles as the org avatar
   email: 'president@planowildcatshockey.com',
-  website: 'https://planowildcatshockey.com',
+  website: 'https://www.planowildcatshockey.com',
   fediverse: ''
 };
 export const creator = {
   name: 'Plano Wildcats Hockey Association',
   email: '',
-  website: 'https://planowildcatshockey.com',
+  website: 'https://www.planowildcatshockey.com',
   social: ''
 };
 export const pathToSvgLogo = 'logos/paw.svg'; // used for favicon generation
