@@ -59,9 +59,6 @@ eleventyComputed:
           {% if player.dateOfDeath %}
             <li class="player-profile__meta-item">{{ player.dateOfDeath | formatDate("MMMM D, YYYY") }}</li>
           {% endif %}
-          {% if player.member %}
-            <li><span class="member-badge">Member</span></li>
-          {% endif %}
         </ul>
       </div>
     </header>
