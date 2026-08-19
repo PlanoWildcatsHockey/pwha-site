@@ -11,7 +11,7 @@ Send a message to the PWHA board using the form below.
 
 <form method="POST" action="https://api.web3forms.com/submit" class="contact-form flow">
   <!-- TODO before launch: replace with a real Web3Forms access key — get one free, no signup, at https://web3forms.com/ -->
-  <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+  <input type="hidden" name="access_key" value="668890a5-c1a1-4d22-86f4-6182dd40853b">
   <input type="hidden" name="subject" value="New message from the PWHA contact form">
   <input type="hidden" name="redirect" value="https://planowildcatshockey.com/contact/thanks/">
   <p class="contact-form__honeypot">
