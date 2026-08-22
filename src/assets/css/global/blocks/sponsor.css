@@ -10,14 +10,24 @@
 }
 
 .sponsor-tier {
+  display: block;
   border: var(--stroke);
   padding: var(--space-m);
   text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sponsor-tier:hover,
+.sponsor-tier:focus-visible {
+  border-color: var(--color-primary);
+  background: var(--color-bg-accent);
 }
 
 .sponsor-tier__available {
   display: inline-block;
-  margin-block-end: var(--space-xs);
+  margin-block-end: var(--space-s);
   font-size: var(--size-step-min-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -38,7 +48,7 @@
 }
 
 .sponsor-tier__name {
-  margin-block-start: var(--space-2xs);
+  margin-block-start: var(--space-s);
   font-size: var(--size-step-min-1);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -50,6 +60,20 @@
   font-size: var(--size-step-min-2);
   font-style: italic;
   color: var(--color-text-accent);
+}
+
+.sponsor-table tbody tr {
+  margin-block-end: var(--space-m);
+  scroll-margin-block-start: 12rem;
+}
+
+.sponsor-table td,
+.sponsor-table th[scope='row'] {
+  padding-block: var(--space-s);
+}
+
+.sponsor-table th[scope='row'] {
+  scroll-margin-block-start: 12rem;
 }
 
 .sponsor-in-kind {

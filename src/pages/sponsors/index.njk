@@ -31,15 +31,17 @@ layout: page
   {# ── Tier pricing cards ── #}
   <ul class="grid" role="list" style="--grid-min-item-size: 14rem; list-style: none; padding: 0;">
     {% for tier in sponsorPackages.tiers %}
-      <li class="sponsor-tier">
-        {% if tier.available %}
-          <span class="sponsor-tier__available">Only {{ tier.available }} available!</span>
-        {% endif %}
-        <p class="sponsor-tier__price">${{ tier.price }}</p>
-        <p class="sponsor-tier__name">{{ tier.name }}</p>
-        {% if tier.footnote %}
-          <p class="sponsor-tier__footnote">{{ sponsorPackages.footnotes[tier.footnote] }}</p>
-        {% endif %}
+      <li>
+        <a class="sponsor-tier" href="#tier-{{ tier.id }}">
+          {% if tier.available %}
+            <span class="sponsor-tier__available">Only {{ tier.available }} available!</span>
+          {% endif %}
+          <p class="sponsor-tier__price">${{ tier.price }}</p>
+          <p class="sponsor-tier__name">{{ tier.name }}</p>
+          {% if tier.footnote %}
+            <p class="sponsor-tier__footnote">{{ sponsorPackages.footnotes[tier.footnote] }}</p>
+          {% endif %}
+        </a>
       </li>
     {% endfor %}
   </ul>
@@ -51,18 +53,18 @@ layout: page
       <table class="sponsor-table">
         <thead>
           <tr>
-            <th scope="col">Recognition &amp; Engagement</th>
-            {% for tier in sponsorPackages.tiers %}
-              <th scope="col">{{ tier.name }}</th>
+            <th scope="col">Sponsor Level</th>
+            {% for row in sponsorPackages.benefits %}
+              <th scope="col">{{ row.category }}</th>
             {% endfor %}
           </tr>
         </thead>
         <tbody>
-          {% for row in sponsorPackages.benefits %}
-            <tr>
-              <th scope="row">{{ row.category }}</th>
-              {% for tier in sponsorPackages.tiers %}
-                <td data-label="{{ tier.name }}">{{ row.values[tier.id] }}</td>
+          {% for tier in sponsorPackages.tiers %}
+            <tr id="tier-{{ tier.id }}">
+              <th scope="row">{{ tier.name }}</th>
+              {% for row in sponsorPackages.benefits %}
+                <td data-label="{{ row.category }}">{{ row.values[tier.id] }}</td>
               {% endfor %}
             </tr>
           {% endfor %}
