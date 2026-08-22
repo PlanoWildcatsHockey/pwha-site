@@ -1,57 +1,101 @@
 player_id,season,team,jersey_number,captain,position,school
-1,2026-2027,varsity,1,,,
-1,2026-summer,varsity,1,,,
+2,2023-2024,junior-varsity,2,,,Schimelpfenig MS
+3,2023-2024,junior-varsity,,,,
+9,2023-2024,junior-varsity,,,,
+10,2023-2024,junior-varsity,,,,
+11,2023-2024,junior-varsity,24,C,,
+13,2023-2024,junior-varsity,,,,
+14,2023-2024,junior-varsity,36,,,
+16,2023-2024,junior-varsity,,,,
+17,2023-2024,junior-varsity,,,,
+19,2023-2024,junior-varsity,,,,
+40,2023-2024,junior-varsity,,,,
+42,2023-2024,junior-varsity,,,,
+47,2023-2024,junior-varsity,,A,,
+2,2024-2025,junior-varsity,2,,,Schimelpfenig MS
+5,2024-2025,junior-varsity,5,,,Hendrick MS
+10,2024-2025,varsity,23,,,
+11,2024-2025,varsity,24,,,
+17,2024-2025,varsity,80,,,
+37,2024-2025,varsity,25,,,
+38,2024-2025,varsity,8,,,
+39,2024-2025,varsity,31,,,
+40,2024-2025,varsity,32,,,
+41,2024-2025,varsity,91,,,
+42,2024-2025,varsity,14,,,
+43,2024-2025,varsity,,,,
+44,2024-2025,varsity,,,,
+45,2024-2025,varsity,19,C,,
+46,2024-2025,varsity,47,,,
+48,2024-2025,varsity,37,,,
+49,2024-2025,varsity,,,,
+50,2024-2025,varsity,44,,,
+66,2024-2025,junior-varsity,66,,,
+5,2024-summer,junior-varsity,5,,,Hendrick MS
 2,2025-2026,junior-varsity,2,C,,
+5,2025-2026,junior-varsity,5,A,,Clark HS
+6,2025-2026,varsity,6,,,
+37,2025-2026,varsity,25,A,,
+38,2025-2026,varsity,8,C,,
+39,2025-2026,varsity,31,,,
+40,2025-2026,varsity,32,,,
+41,2025-2026,varsity,91,,,
+42,2025-2026,varsity,14,,,
 2,2025-leveling-festival,junior-varsity,2,,,
-2,2026-summer,varsity,2,,,
-2,2026-texas-cup,varsity,2,,,
-2,2026-2027,varsity,2,,,
-3,2026-2027,varsity,4,,,
+5,2025-leveling-festival,junior-varsity,5,,,Clark HS
+6,2025-leveling-festival,varsity,6,,,
+5,2025-summer,junior-varsity,5,,,Clark HS
+6,2025-summer,varsity,6,,,
+1,2026-2027,varsity,1,,G,John Paul II HS
+2,2026-2027,varsity,2,,P,Clark HS
+3,2026-2027,varsity,4,,P,
+5,2026-2027,varsity,5,,P,Clark HS
+6,2026-2027,varsity,6,,P,
+7,2026-2027,varsity,7,,F,Plano Senior HS
+9,2026-2027,varsity,22,,P,Plano Senior HS
+10,2026-2027,varsity,23,,P,Plano Senior HS
+11,2026-2027,varsity,24,,P,Plano Senior HS
+13,2026-2027,varsity,35,,G,Plano Senior HS
+14,2026-2027,varsity,36,,P,Plano Senior HS
+15,2026-2027,varsity,41,,D,Plano Senior HS
+16,2026-2027,varsity,55,,P,Plano Senior HS
+17,2026-2027,varsity,80,,D,Plano Senior HS
+18,2026-2027,varsity,92,,P,
+19,2026-2027,varsity,97,,P,
+68,2026-2027,varsity,95,,P,
+20,2026-2027,junior-varsity,88,,G,John Paul II HS
+21,2026-2027,junior-varsity,3,,P,Vine HS
+22,2026-2027,junior-varsity,6,,P,
+23,2026-2027,junior-varsity,13,,P,
+24,2026-2027,junior-varsity,16,,D,Vine HS
+25,2026-2027,junior-varsity,18,,G,
+27,2026-2027,junior-varsity,20,,P,Vine HS
+29,2026-2027,junior-varsity,29,,P,
+32,2026-2027,junior-varsity,75,,P,
+33,2026-2027,junior-varsity,74,,P,
+34,2026-2027,junior-varsity,82,,P,Clark HS
+35,2026-2027,junior-varsity,96,,P,
+70,2026-2027,junior-varsity,8,,P,
+1,2026-summer,varsity,1,,G,John Paul II HS
+2,2026-summer,varsity,2,,,Clark HS
 3,2026-summer,varsity,4,,,
 4,2026-summer,varsity,10,,,
-5,2024-2025,junior-varsity,5,,,Hendrick MS
-5,2024-summer,junior-varsity,5,,,Hendrick MS
-5,2025-2026,junior-varsity,5,A,,Clark HS
-5,2025-leveling-festival,junior-varsity,5,,,Clark HS
-5,2025-summer,junior-varsity,5,,,Clark HS
-5,2026-2027,varsity,5,,,
-5,2026-summer,varsity,5,,,
-5,2026-texas-cup,varsity,5,,,
-6,2025-2026,varsity,6,,,
-6,2025-leveling-festival,varsity,6,,,
-6,2025-summer,varsity,6,,,
-6,2026-2027,varsity,6,,,
-6,2026-summer,varsity,6,,,
-6,2026-texas-cup,varsity,6,,,
-7,2026-2027,varsity,7,,,
-7,2026-summer,varsity,7,,,
-8,2026-summer,varsity,12,,,
-9,2026-2027,varsity,22,,,
-9,2026-summer,varsity,22,,,
-10,2024-2025,varsity,23,,,
-10,2026-2027,varsity,23,,,
-10,2026-summer,varsity,23,,,
-11,2024-2025,varsity,24,,,
-11,2026-2027,varsity,24,,,
-11,2026-summer,varsity,24,,,
-12,2026-summer,varsity,62,,,
-13,2026-2027,varsity,35,,,
-13,2026-summer,varsity,35,,,
-14,2026-2027,varsity,36,,,
-14,2026-summer,varsity,36,,,
-15,2026-2027,varsity,41,,,Plano Senior HS
+5,2026-summer,varsity,5,,,Clark HS
+6,2026-summer,varsity,6,,,Plano Senior HS
+7,2026-summer,varsity,7,,,Plano Senior HS
+8,2026-summer,varsity,12,,,Plano West HS
+9,2026-summer,varsity,22,,,Plano Senior HS
+10,2026-summer,varsity,23,,,Plano Senior HS
+11,2026-summer,varsity,24,,,Plano Senior HS
+12,2026-summer,varsity,62,,,Trinity Christian Academy
+13,2026-summer,varsity,35,,G,Plano Senior HS
+14,2026-summer,varsity,36,,,Plano Senior HS
 15,2026-summer,varsity,41,,,Plano Senior HS
-16,2026-2027,varsity,55,,,
-16,2026-summer,varsity,55,,,
-17,2024-2025,varsity,80,,,
-17,2026-2027,varsity,80,,,
-17,2026-summer,varsity,80,,,
-18,2026-2027,varsity,92,,,
+16,2026-summer,varsity,55,,,Plano Senior HS
+17,2026-summer,varsity,80,,,Plano Senior HS
 18,2026-summer,varsity,92,,,
-19,2026-2027,varsity,97,,,
 19,2026-summer,varsity,97,,,
-20,2026-2027,varsity,88,,,
-20,2026-summer,varsity,88,,,
+20,2026-summer,varsity,88,,G,John Paul II HS
 21,2026-summer,junior-varsity,3,,,
 22,2026-summer,junior-varsity,6,,,
 23,2026-summer,junior-varsity,13,,,
@@ -68,62 +112,13 @@ player_id,season,team,jersey_number,captain,position,school
 34,2026-summer,junior-varsity,82,,,
 35,2026-summer,junior-varsity,96,,,
 36,2026-summer,junior-varsity,98,,,
-37,2024-2025,varsity,25,,,
-37,2025-2026,varsity,25,A,,
-37,2026-texas-cup,varsity,25,,,
-38,2024-2025,varsity,8,,,
-38,2025-2026,varsity,8,C,,
-38,2026-texas-cup,varsity,8,,,
-39,2024-2025,varsity,31,,,
-39,2025-2026,varsity,31,,,
-39,2026-texas-cup,varsity,31,,,
-40,2024-2025,varsity,32,,,
-40,2025-2026,varsity,32,,,
+20,2026-summer,junior-varsity,88,,G,John Paul II HS
+2,2026-texas-cup,varsity,2,,,Clark HS
+5,2026-texas-cup,varsity,5,,,Clark HS
+6,2026-texas-cup,varsity,6,,,Plano Senior HS
+37,2026-texas-cup,varsity,25,,,Plano Senior HS
+38,2026-texas-cup,varsity,8,,,Plano Senior HS
+39,2026-texas-cup,varsity,31,,,Plano Senior HS
 40,2026-texas-cup,varsity,32,,,
-41,2024-2025,varsity,91,,,
-41,2025-2026,varsity,91,,,
-41,2026-texas-cup,varsity,91,,,
-42,2024-2025,varsity,14,,,
-42,2025-2026,varsity,14,,,
+41,2026-texas-cup,varsity,91,,,John Paul II HS
 42,2026-texas-cup,varsity,14,,,
-43,2024-2025,varsity,,,,
-44,2024-2025,varsity,,,,
-45,2024-2025,varsity,19,C,,
-46,2024-2025,varsity,47,,,
-48,2024-2025,varsity,37,,,
-49,2024-2025,varsity,,,,
-50,2024-2025,varsity,44,,,
-66,2024-2025,junior-varsity,66,,,
-68,2026-2027,varsity,,,,
-2,2023-2024,junior-varsity,2,,,Schimelpfenig MS
-3,2023-2024,junior-varsity,,,,
-9,2023-2024,junior-varsity,,,,
-10,2023-2024,junior-varsity,,,,
-11,2023-2024,junior-varsity,24,C,,
-13,2023-2024,junior-varsity,,,,
-14,2023-2024,junior-varsity,36,,,
-16,2023-2024,junior-varsity,,,,
-17,2023-2024,junior-varsity,,,,
-19,2023-2024,junior-varsity,,,,
-40,2023-2024,junior-varsity,,,,
-42,2023-2024,junior-varsity,,,,
-47,2023-2024,junior-varsity,,A,,
-2,2024-2025,junior-varsity,2,,,Schimelpfenig MS
-20,2026-2027,junior-varsity,,,,
-21,2026-2027,junior-varsity,,,,
-22,2026-2027,junior-varsity,6,,,
-23,2026-2027,junior-varsity,,,,
-24,2026-2027,junior-varsity,,,,
-25,2026-2027,junior-varsity,,,,
-26,2026-2027,junior-varsity,,,,
-27,2026-2027,junior-varsity,20,,,
-28,2026-2027,junior-varsity,,,,
-29,2026-2027,junior-varsity,,,,
-30,2026-2027,junior-varsity,,,,
-31,2026-2027,junior-varsity,,,,
-32,2026-2027,junior-varsity,,,,
-33,2026-2027,junior-varsity,,,,
-34,2026-2027,junior-varsity,,,,
-35,2026-2027,junior-varsity,,,,
-36,2026-2027,junior-varsity,,,,
-70,2026-2027,junior-varsity,,,,
