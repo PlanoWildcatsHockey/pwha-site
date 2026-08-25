@@ -8,7 +8,7 @@ layout: page
 <div class="flow" style="--flow-space: var(--space-l)">
 
   <p>
-    The Plano Wildcats are coached and managed by experienced volunteers dedicated
+    The Plano Wildcats are coached and managed by an experienced staff dedicated
     to developing players on and off the ice.
   </p>
 
@@ -31,7 +31,10 @@ layout: page
             {% for c in varsityStaff %}
               {% if c.role != "Team Manager" %}
                 <tr>
-                  <td data-label="Name">{{ c.name }}</td>
+                  <td data-label="Name">
+                    {{ c.name }}
+                    {% if c.bio %}<span class="coach-bio">{{ c.bio }}</span>{% endif %}
+                  </td>
                   <td data-label="Role">{{ c.role }}</td>
                   <td data-label="Contact">
                     {% if c.email %}
@@ -64,7 +67,10 @@ layout: page
           <tbody>
             {% for c in jvStaff %}
               <tr>
-                <td data-label="Name">{{ c.name }}</td>
+                <td data-label="Name">
+                  {{ c.name }}
+                  {% if c.bio %}<span class="coach-bio">{{ c.bio }}</span>{% endif %}
+                </td>
                 <td data-label="Role">{{ c.role }}</td>
                 <td data-label="Contact">
                   {% if c.email %}

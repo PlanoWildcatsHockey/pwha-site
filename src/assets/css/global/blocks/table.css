@@ -66,6 +66,14 @@ th[scope='row'] {
   font-weight: var(--font-bold);
 }
 
+.coach-bio {
+  display: block;
+  font-weight: var(--font-regular);
+  font-size: var(--size-step-min-2);
+  color: var(--color-mid);
+  margin-block-start: var(--space-3xs);
+}
+
 @media screen(sm) {
   table {
     border-collapse: collapse;

@@ -34,7 +34,12 @@ export default function () {
         role: s.role
       }));
 
-    const currentEntry = seasons.find(s => s.season === activeSeasonId) ?? null;
+    // A coach can be assigned to more than one team in the same season
+    // (e.g. an assistant coach shared between Varsity and Scholastic), so
+    // this is *all* of that coach's entries for the active season, not just
+    // the first match.
+    const currentAssignments = seasons.filter(s => s.season === activeSeasonId);
+    const currentEntry = currentAssignments[0] ?? null;
     const lastEntry = seasons.at(-1) ?? null;
     const status = currentEntry ? 'current' : 'former';
 
@@ -55,6 +60,7 @@ export default function () {
       status,
       team: currentEntry?.team ?? lastEntry?.team ?? null,
       role: currentEntry?.role ?? lastEntry?.role ?? null,
+      currentAssignments,
       seasons
     };
   }).filter(c => c.listed);

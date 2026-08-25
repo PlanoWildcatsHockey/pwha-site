@@ -40,7 +40,12 @@ export const filterDeceased = players => {
 
 export const filterCurrentStaff = (coaches, teamSlug) => {
   if (!Array.isArray(coaches)) return [];
-  return coaches.filter(c => c.status === 'current' && c.team === teamSlug);
+  return coaches
+    .filter(c => c.status === 'current' && c.currentAssignments?.some(a => a.team === teamSlug))
+    .map(c => ({
+      ...c,
+      role: c.currentAssignments.find(a => a.team === teamSlug)?.role ?? c.role
+    }));
 };
 
 /**
