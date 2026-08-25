@@ -18,5 +18,5 @@ We compete in the [Texas Scholastic Hockey League](https://www.texasscholasticho
 
 ## More
 
-- [Resources](/resources/) — required documents, conduct standards, membership info
+- [Resources](/resources/) — required documents and conduct standards
 - [History](/history/) — 30 seasons of Wildcats hockey

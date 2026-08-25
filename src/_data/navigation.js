@@ -62,7 +62,6 @@ export default {
       links: [
         {text: 'Join the Wildcats', url: '/join/'},
         {text: 'Resources', url: '/resources/'},
-        {text: 'Membership', url: '/resources/membership/'},
         {text: 'By-Laws', url: '/resources/bylaws/'},
         {text: 'Code of Conduct', url: '/resources/conduct/'},
         {text: 'Support the Club', url: '/support/'}

@@ -1,17 +1,16 @@
 ---
 title: Resources
 permalink: /resources/index.html
-description: Resources for Plano Wildcats Hockey families — required documents, conduct standards, membership, and season information.
+description: Resources for Plano Wildcats Hockey families — required documents, conduct standards, and season information.
 layout: page
 ---
 
-Everything a Wildcats family needs in one place — required documents, conduct standards, membership, and season information.
+Everything a Wildcats family needs in one place — required documents, conduct standards, and season information.
 
 ## Required
 
 - [Join the Wildcats](/join/) — tryout info, eligibility, USA Hockey registration, SafeSport training
 - [Code of Conduct](/resources/conduct/) — standards required by USA Hockey, TAHA, and StarCenters
-- [Membership](/resources/membership/) — joining PWHA, dues, and member benefits
 
 ## Governance
 
