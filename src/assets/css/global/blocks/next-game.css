@@ -16,7 +16,34 @@
 }
 
 .next-game__game {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.next-game__details {
   --flow-space: var(--space-3xs);
+  flex: 1;
+  min-inline-size: 0;
+}
+
+/* Logos come in every color, so they sit on a light tile in both themes. */
+.next-game__logo {
+  flex: none;
+  display: grid;
+  place-items: center;
+  inline-size: clamp(4rem, 18vw, 6rem);
+  aspect-ratio: 1;
+  padding: var(--space-3xs);
+  border: var(--stroke);
+  border-radius: var(--border-radius-small);
+  background: var(--color-light);
+}
+
+.next-game__logo img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  object-fit: contain;
 }
 
 .next-game__matchup {

@@ -13,6 +13,7 @@
 import EleventyFetch from '@11ty/eleventy-fetch';
 import getSeason from './season.js';
 import {parseICS} from '../_config/utils/parse-ics.js';
+import {slugify, imagePath} from '../_config/utils/parse-csv.js';
 
 const TIME_ZONE = 'America/Chicago';
 const GAMES_PER_TEAM = 5; // buffer so the client script can skip past games
@@ -56,6 +57,12 @@ const parseLocation = location => {
   };
 };
 
+// Opponent logos live in src/assets/images/opponents/, one per school, named
+// by the slugified school name ("Southlake Carroll" → southlake-carroll.png).
+// They were downloaded from the TSHL stats site (same logo across divisions).
+// A school without a file just gets no logo.
+const opponentLogo = school => imagePath(`opponents/${slugify(school)}.png`);
+
 const toGame = (event, ownTeam, suffix) => {
   const [away, home] = event.summary.split(' @ ');
   const isHome = home === ownTeam;
@@ -63,6 +70,7 @@ const toGame = (event, ownTeam, suffix) => {
   const {venue, address} = parseLocation(event.location);
   // Assume a one-hour slot when the feed omits DTEND.
   const end = event.end || new Date(event.start.getTime() + 60 * 60 * 1000);
+  const opponentName = stripSuffix(opponent || event.summary, suffix);
   return {
     id: event.uid,
     start: event.start.toISOString(),
@@ -70,7 +78,8 @@ const toGame = (event, ownTeam, suffix) => {
     dateLabel: dateFormat.format(event.start),
     timeLabel: timeFormat.format(event.start),
     isHome,
-    opponent: stripSuffix(opponent || event.summary, suffix),
+    opponent: opponentName,
+    opponentLogo: opponentLogo(opponentName),
     venue,
     address,
     mapUrl: address

@@ -50,7 +50,10 @@ const processImage = async options => {
     }
   });
 
-  const lowsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  // PNG fallback for callers that need transparency (e.g. logos) and pass
+  // formats without jpeg.
+  const fallback = metadata.jpeg || metadata.png;
+  const lowsrc = fallback[fallback.length - 1];
 
   const imageSources = Object.values(metadata)
     .map(imageFormat => {
