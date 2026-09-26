@@ -2,18 +2,24 @@
  * seasons.js — Eleventy global data file
  *
  * All known seasons, read from sources/seasons.csv.
- * ATT MHSHL links are computed from team IDs — no URL duplication.
+ * League stats links are computed from league + team IDs — no URL duplication.
  * sort_order controls chronological display (higher = more recent).
  */
 
 import {readFileSync} from 'node:fs';
 import {parseCSV, orNull, imagePath} from '../_config/utils/parse-csv.js';
 
-const ATT_BASE = 'https://www.atthighschoolhockeyleague.com/stats#';
+// Both leagues run on the same stats platform, so only the host differs.
+// Keyed by league_short in seasons.csv.
+const STATS_BASES = {
+  'ATT MHSHL': 'https://www.atthighschoolhockeyleague.com/stats#',
+  TSHL: 'https://www.texasscholastichockeyleague.com/stats#'
+};
 
-const teamLinks = (leagueId, teamId) => {
-  if (!leagueId || !teamId) return null;
-  const base = `${ATT_BASE}/${leagueId}/team/${teamId}`;
+const teamLinks = (leagueShort, leagueId, teamId) => {
+  const statsBase = STATS_BASES[leagueShort];
+  if (!statsBase || !leagueId || !teamId) return null;
+  const base = `${statsBase}/${leagueId}/team/${teamId}`;
   return {
     teamId,
     leagueId,
@@ -49,7 +55,7 @@ export default function () {
       jvDivision: orNull(s.jv_division) || orNull(s.division),
       hasOwnJvDivision: Boolean(orNull(s.jv_division))
     },
-    varsity: teamLinks(orNull(s.att_league_id), orNull(s.varsity_team_id)),
-    juniorVarsity: teamLinks(orNull(s.att_league_id), orNull(s.jv_team_id))
+    varsity: teamLinks(s.league_short, orNull(s.league_id), orNull(s.varsity_team_id)),
+    juniorVarsity: teamLinks(s.league_short, orNull(s.league_id), orNull(s.jv_team_id))
   }));
 }

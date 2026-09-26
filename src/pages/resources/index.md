@@ -25,7 +25,7 @@ Everything a Wildcats family needs in one place — required documents, conduct 
 ## League
 
 Both Wildcats teams compete in the **Texas Scholastic Hockey League (TSHL)**, the successor to the former AT&T Metroplex High School Hockey League.
-[League website](https://www.texasscholastichockeyleague.com/)
+[League website](https://www.texasscholastichockeyleague.com/) · [Varsity & Scholastic schedules](/schedule/)
 
 ## Questions?
 
