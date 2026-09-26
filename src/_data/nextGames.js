@@ -63,6 +63,12 @@ const parseLocation = location => {
 // A school without a file just gets no logo.
 const opponentLogo = school => imagePath(`opponents/${slugify(school)}.png`);
 
+// Stand-in for a missing logo: "Southlake Carroll" → "SC", "Frisco" → "FR".
+const initials = name => {
+  const words = name.split(/\s+/).filter(Boolean);
+  return (words.length > 1 ? words.map(w => w[0]).join('').slice(0, 3) : name.slice(0, 2)).toUpperCase();
+};
+
 const toGame = (event, ownTeam, suffix) => {
   const [away, home] = event.summary.split(' @ ');
   const isHome = home === ownTeam;
@@ -80,6 +86,7 @@ const toGame = (event, ownTeam, suffix) => {
     isHome,
     opponent: opponentName,
     opponentLogo: opponentLogo(opponentName),
+    opponentInitials: initials(opponentName),
     venue,
     address,
     mapUrl: address

@@ -1,7 +1,9 @@
 {#
   Next game for each team, from the league iCal feeds (see _data/nextGames.js).
   Every upcoming game is rendered; all but the first are hidden, and the
-  next-games script re-picks the first one that hasn't ended yet.
+  next-games script re-picks the first one that hasn't ended yet, fills in
+  the countdown pill, and switches the card to its game-day look.
+  Without JS the card still shows the first game, just without the pill.
 #}
 {% if nextGames.length %}
   <section class="full | region" aria-labelledby="next-games-heading">
@@ -14,42 +16,59 @@
       <div class="grid" data-layout="50-50">
         {% asyncEach team in nextGames %}
           <article class="next-game flow" data-next-game>
-            <h3 class="next-game__team">{{ team.label }}</h3>
+            <div class="next-game__top">
+              <h3 class="next-game__team">{{ team.label }}</h3>
+              <span class="next-game__countdown" data-countdown hidden></span>
+            </div>
 
             {% asyncEach game in team.games %}
-              <div class="next-game__game" data-game-end="{{ game.end }}" {% if not loop.first %}hidden{% endif %}>
-                {% if game.opponentLogo %}
-                  {# Decorative: the opponent is named right beside it. #}
-                  {%
-                    imageKeys {
-                      "src": game.opponentLogo,
-                      "alt": "",
-                      "containerClass": "next-game__logo",
-                      "widths": [96, 192],
-                      "sizes": "96px",
-                      "formats": ["avif", "webp", "png"]
-                    }
-                  %}
+              {# Away team on the left, home on the right, like the feed's "Away @ Home". #}
+              {% set us = { "name": "Plano", "us": true } %}
+              {% set them = { "name": game.opponent, "logo": game.opponentLogo, "initials": game.opponentInitials } %}
+              {% set sides = [them, us] if game.isHome else [us, them] %}
+
+              <div class="next-game__game flow" data-game-start="{{ game.start }}" data-game-end="{{ game.end }}" {% if not loop.first %}hidden{% endif %}>
+                <p class="next-game__vs">
+                  {% asyncEach side in sides %}
+                    {% if not loop.first %}
+                      <span class="next-game__at"><span aria-hidden="true">@</span><span class="visually-hidden">at</span></span>
+                    {% endif %}
+                    <span class="next-game__crest">
+                      {# Logos are decorative: the team is named right under each one. #}
+                      <span class="next-game__logo">
+                        {% if side.us %}
+                          <img src="/logos/planohockeylogo.svg" alt="" width="226" height="123" loading="lazy" decoding="async" eleventy:ignore />
+                        {% elif side.logo %}
+                          {%
+                            imageKeys {
+                              "src": side.logo,
+                              "alt": "",
+                              "widths": [96, 192],
+                              "sizes": "96px",
+                              "formats": ["avif", "webp", "png"]
+                            }
+                          %}
+                        {% else %}
+                          <span class="next-game__initials" aria-hidden="true">{{ side.initials }}</span>
+                        {% endif %}
+                      </span>
+                      <span class="next-game__name">{{ side.name }}</span>
+                    </span>
+                  {% endeach %}
+                </p>
+                <p class="next-game__when">
+                  <time datetime="{{ game.start }}">{{ game.dateLabel }} · {{ game.timeLabel }}</time>
+                  <span class="next-game__badge" data-home="{{ game.isHome }}">{{ "Home" if game.isHome else "Away" }}</span>
+                </p>
+                {% if game.venue %}
+                  <p class="next-game__where">
+                    {% if game.mapUrl %}
+                      <a href="{{ game.mapUrl }}" target="_blank" rel="noopener">{{ game.venue }}</a>
+                    {% else %}
+                      {{ game.venue }}
+                    {% endif %}
+                  </p>
                 {% endif %}
-                <div class="next-game__details flow">
-                  <p class="next-game__matchup">
-                    <span class="next-game__side">{{ "vs" if game.isHome else "@" }}</span>
-                    {{ game.opponent }}
-                  </p>
-                  <p class="next-game__when">
-                    <time datetime="{{ game.start }}">{{ game.dateLabel }} · {{ game.timeLabel }}</time>
-                    <span class="next-game__badge" data-home="{{ game.isHome }}">{{ "Home" if game.isHome else "Away" }}</span>
-                  </p>
-                  {% if game.venue %}
-                    <p class="next-game__where">
-                      {% if game.mapUrl %}
-                        <a href="{{ game.mapUrl }}" target="_blank" rel="noopener">{{ game.venue }}</a>
-                      {% else %}
-                        {{ game.venue }}
-                      {% endif %}
-                    </p>
-                  {% endif %}
-                </div>
               </div>
             {% endeach %}
 

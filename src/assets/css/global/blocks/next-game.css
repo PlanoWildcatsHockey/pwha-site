@@ -1,10 +1,21 @@
-/* Next-game cards — home page, one per team, fed by the league iCal feeds */
+/* Next-game cards — home page, one per team, fed by the league iCal feeds.
+   Styled as a small scoreboard: the two crests face off across an "@".
+   The next-games script adds [data-gameday] on the day of the game. */
 
 .next-game {
-  --flow-space: var(--space-xs);
+  --flow-space: var(--space-s);
+  --next-game-accent: var(--color-primary);
   padding: var(--space-s-m);
-  border-inline-start: 4px solid var(--color-primary);
+  border-block-start: var(--space-xs) solid var(--color-primary-surface);
   background: var(--color-bg-accent);
+}
+
+.next-game__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
 }
 
 .next-game__team {
@@ -15,58 +26,105 @@
   color: var(--color-text-accent);
 }
 
-.next-game__game {
-  display: flex;
-  align-items: center;
-  gap: var(--space-s);
+.next-game__countdown {
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-0);
+  font-weight: var(--font-extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 0.35em 0.6em;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-.next-game__details {
-  --flow-space: var(--space-3xs);
-  flex: 1;
+.next-game__game {
+  --flow-space: var(--space-2xs);
+}
+
+/* ── Face-off: away crest · @ · home crest ── */
+
+.next-game__vs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-s);
+  text-align: center;
+}
+
+.next-game__crest {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2xs);
   min-inline-size: 0;
 }
 
 /* Logos come in every color, so they sit on a light tile in both themes. */
 .next-game__logo {
-  flex: none;
   display: grid;
   place-items: center;
   inline-size: clamp(4rem, 18vw, 6rem);
   aspect-ratio: 1;
-  padding: var(--space-3xs);
+  padding: var(--space-2xs);
   border: var(--stroke);
   border-radius: var(--border-radius-small);
   background: var(--color-light);
 }
 
-.next-game__logo img {
+.next-game__logo :is(picture, img) {
+  display: block;
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
 }
 
-.next-game__matchup {
+.next-game__initials {
   font-family: var(--font-condensed);
   font-size: var(--size-step-3);
   font-weight: var(--font-extra-bold);
-  font-style: italic;
-  line-height: 1.1;
+  color: var(--color-primary-surface);
 }
 
-.next-game__side {
-  color: var(--color-primary);
+.next-game__name {
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-1);
+  font-weight: var(--font-extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
+
+/* Centered on the logo tiles, not on the whole crest */
+.next-game__at {
+  align-self: center;
+  margin-block-end: var(--space-l);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-4);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  line-height: 1;
+  color: var(--next-game-accent);
+}
+
+/* ── When and where ── */
 
 .next-game__when {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2xs);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-1);
   font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .next-game__badge {
+  font-family: var(--font-base);
   font-size: var(--size-step-min-2);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -81,6 +139,10 @@
   color: var(--color-light);
 }
 
+.next-game__where {
+  text-align: center;
+}
+
 .next-game__where,
 .next-game__link {
   font-size: var(--size-step-min-1);
@@ -88,4 +150,45 @@
 
 .next-game [hidden] {
   display: none;
+}
+
+/* ── Game day: solid maroon, gold trim ── */
+
+.next-game[data-gameday] {
+  --next-game-accent: var(--color-tertiary);
+  background: var(--color-primary-surface);
+  border-block-start-color: var(--color-tertiary);
+  color: var(--color-light);
+}
+
+.next-game[data-gameday] :is(.next-game__team, .next-game__badge, a) {
+  color: var(--color-light);
+}
+
+.next-game[data-gameday] .next-game__badge[data-home='true'] {
+  background: var(--color-light);
+  border-color: var(--color-light);
+  color: var(--color-primary-surface);
+}
+
+.next-game[data-gameday] .next-game__logo {
+  border-color: transparent;
+}
+
+.next-game[data-gameday] .next-game__countdown {
+  background: var(--color-tertiary);
+  color: var(--color-dark);
+  animation: next-game-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes next-game-pulse {
+  50% {
+    box-shadow: 0 0 0 var(--space-2xs) color-mix(in oklab, var(--color-tertiary) 35%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .next-game[data-gameday] .next-game__countdown {
+    animation: none;
+  }
 }

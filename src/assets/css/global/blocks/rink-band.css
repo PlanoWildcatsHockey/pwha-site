@@ -1,0 +1,61 @@
+/* Rink band — a full-bleed dark band dressed in hockey rink markings:
+   an angled bottom edge (a skate cutting into the ice), the center red
+   line in club maroon, and a faint gold faceoff circle. The markings are
+   decoration only; content sits above them. Used on the home stat bar. */
+
+.rink-band {
+  --rink-angle: var(--space-m-l);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding-block-end: var(--rink-angle);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--rink-angle)), 0 100%);
+}
+
+/* Center red line. At full width it lands in the gutter between the
+   2nd and 3rd stats; the slight lean echoes the angled edge. */
+.rink-band::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  inline-size: var(--space-xs);
+  background: var(--color-primary-surface);
+  transform: skewX(-6deg);
+}
+
+/* Gold stripe running parallel to the angled edge, like a blue line in
+   club colors. --gap is its distance above the edge. */
+.rink-band::after {
+  --gap: calc(var(--rink-angle) / 2);
+  --line: var(--space-3xs);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--color-tertiary);
+  opacity: 0.6;
+  clip-path: polygon(
+    0 calc(100% - var(--gap) - var(--line)),
+    100% calc(100% - var(--rink-angle) - var(--gap) - var(--line)),
+    100% calc(100% - var(--rink-angle) - var(--gap)),
+    0 calc(100% - var(--gap))
+  );
+}
+
+.rink-band__circle {
+  position: absolute;
+  z-index: -1;
+  inset-inline-end: calc(var(--space-2xl) * -1);
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  block-size: 180%;
+  aspect-ratio: 1;
+  color: var(--color-tertiary);
+  opacity: 0.2;
+  pointer-events: none;
+}

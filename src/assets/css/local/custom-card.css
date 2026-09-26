@@ -74,6 +74,39 @@ custom-card[no-padding] {
   border-radius: none;
 }
 
+/* cover photo — bleeds to the card edges, slow zoom on hover */
+
+custom-card[has-image] > picture {
+  display: block;
+  max-inline-size: none;
+  overflow: hidden;
+  margin: calc(var(--space-s-m) * -1) calc(var(--space-s-m) * -1) 0;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-block-end: var(--space-2xs) solid var(--color-primary-surface);
+}
+
+custom-card[has-image] > picture img {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: none;
+  transition: transform 0.5s ease;
+}
+
+custom-card[has-image]:is(:hover, :focus-within) > picture img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  custom-card[has-image] > picture img {
+    transition: none;
+  }
+
+  custom-card[has-image]:is(:hover, :focus-within) > picture img {
+    transform: none;
+  }
+}
+
 /* squared image */
 
 custom-card[img-square] img {

@@ -2,7 +2,18 @@
 {% set definedDate = definedDate | default(item.date) %}
 {% set showTags = showTags | default(true) %}
 
-<custom-card clickable>
+<custom-card clickable{% if item.data.image %} has-image{% endif %}>
+  {% if item.data.image %}
+    {# Decorative on the card: the title right below says what the post is. #}
+    {%
+      imageKeys {
+        "src": item.data.image,
+        "alt": "",
+        "widths": [480, 800, 1200],
+        "sizes": "(min-width: 50rem) 40rem, 100vw"
+      }
+    %}
+  {% endif %}
   <{{ headingLevel }} slot="headline" class="text-step-2">
     <a href="{{ item.url | url }}">{{ item.data.title }}</a>
   </{{ headingLevel }}>
