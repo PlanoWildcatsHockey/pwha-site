@@ -58,6 +58,8 @@ export default function () {
       firstName: p.first_name,
       lastName: p.last_name,
       name: `${p.first_name} ${p.last_name}`,
+      // Phonetic respelling, stressed syllable in caps: "roo-GAR-mee"
+      pronunciation: orNull(p.pronunciation),
       gradYear,
       year: gradYear, // alias — keeps existing filters working
       position: orNull(p.position),

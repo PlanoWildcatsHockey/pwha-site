@@ -24,7 +24,7 @@
 }
 
 .player-profile__number {
-  font-family: var(--font-mono);
+  font-family: var(--font-condensed);
   font-size: var(--size-step-6);
   font-weight: var(--font-extra-bold);
   font-style: italic;
@@ -39,8 +39,31 @@
   margin-block-end: var(--space-xs);
 }
 
+.player-profile__pronunciation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2xs);
+  margin-block-end: var(--space-xs);
+  padding: var(--space-3xs) var(--space-xs);
+  background: var(--color-bg-accent);
+  font-size: var(--size-step-0);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.02em;
+}
+
+.player-profile__pronunciation-label {
+  font-size: var(--size-step-min-2);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-accent);
+}
+
 .player-profile__meta {
-  font-size: var(--size-step-min-1);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-0);
+  font-weight: var(--font-bold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-text-accent);
@@ -56,6 +79,15 @@
 
 .player-profile__meta-item:last-child::after {
   content: none;
+}
+
+/* Seasons table on player and alumni pages: natural column widths and
+   readable text, instead of the global table's evenly split columns. */
+@media screen(sm) {
+  .player-seasons {
+    table-layout: auto;
+    font-size: var(--size-step-min-1);
+  }
 }
 
 /* Social links cluster on member profiles */
@@ -83,15 +115,14 @@
 /* Captain / Alternate Captain badge */
 .captain-badge {
   display: inline-block;
-  font-size: var(--size-step-min-2);
-  font-family: var(--font-display);
+  font-size: var(--size-step-min-1);
+  font-family: var(--font-condensed);
   font-weight: var(--font-extra-bold);
-  font-style: italic;
-  color: var(--color-light);
-  background: var(--color-primary-surface);
-  padding: 0 var(--space-2xs);
+  color: var(--color-dark);
+  background: var(--color-tertiary);
+  padding: 0 0.4em;
   vertical-align: middle;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* Member badge */

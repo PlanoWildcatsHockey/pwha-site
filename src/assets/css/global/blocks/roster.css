@@ -1,0 +1,196 @@
+/* Season roster — team pages and season history pages
+   (partials/roster-table.njk). It stays a real table at every width: the
+   global table styles stack rows into cards on phones, but a roster with
+   four narrow columns reads better as rows. */
+
+.roster {
+  inline-size: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  font-size: var(--size-step-0);
+}
+
+.roster thead {
+  position: static;
+  display: table-header-group;
+  clip: auto;
+  inline-size: auto;
+  block-size: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.roster tr,
+.roster tr:not(:last-child) {
+  display: table-row;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.roster th,
+.roster td,
+.roster td:last-child {
+  display: table-cell;
+  padding: var(--space-2xs) var(--space-xs);
+  border: 0;
+  border-block-end: var(--stroke);
+  text-align: start;
+  vertical-align: middle;
+}
+
+.roster td::before {
+  content: none;
+}
+
+.roster thead th {
+  font-size: var(--size-step-min-2);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-accent);
+  border-block-end: 2px solid var(--color-text);
+}
+
+/* Position group heading row: GOALIES 2 */
+.roster__group th {
+  padding-block-start: var(--space-m);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-1);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.roster__count {
+  margin-inline-start: var(--space-3xs);
+  font-size: var(--size-step-min-1);
+  font-weight: var(--font-bold);
+  font-style: normal;
+  color: var(--color-text-accent);
+}
+
+.roster tbody tr:not(.roster__group):hover td {
+  background: var(--color-bg-accent);
+}
+
+/* Short, fixed-format columns take only the room they need; Player gets the rest. */
+.roster .roster__number,
+.roster .roster__fit {
+  inline-size: 1%;
+  white-space: nowrap;
+}
+
+.roster .roster__number {
+  text-align: end;
+}
+
+.roster .roster__fit {
+  text-align: center;
+}
+
+.roster td.roster__number {
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-3);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.roster td.roster__fit {
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-1);
+  font-weight: var(--font-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.roster__player {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.roster__name {
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+}
+
+a.roster__name {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.roster__name:hover,
+a.roster__name:focus-visible {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Headshot thumbnail, or initials when there's no photo. */
+.roster__avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-accent);
+  background: var(--color-bg-accent);
+  color: var(--color-text-accent);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-min-1);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.roster__avatar:has(img) {
+  border-color: var(--color-tertiary);
+}
+
+.roster__avatar picture {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* Headshots are full player cards (portrait, graphics around the player).
+   Fill the circle with the top of the card, then zoom in on the face. */
+.roster__photo {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+  transform: scale(2);
+  transform-origin: 50% 40%;
+}
+
+@media (max-width: 30em) {
+  .roster {
+    font-size: var(--size-step-min-1);
+  }
+
+  .roster th,
+  .roster td {
+    padding-inline: var(--space-3xs);
+  }
+
+  .roster td.roster__number {
+    font-size: var(--size-step-2);
+  }
+
+  .roster td.roster__fit {
+    font-size: var(--size-step-0);
+  }
+
+  .roster__avatar {
+    inline-size: 2.25rem;
+  }
+}

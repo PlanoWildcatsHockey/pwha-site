@@ -39,12 +39,12 @@
 
 .hero-kicker {
   margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--size-step-0);
-  font-weight: var(--font-extra-bold);
+  font-family: var(--font-condensed);
+  font-size: var(--size-step-1);
+  font-weight: var(--font-bold);
   font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   color: var(--color-tertiary);
 }
 
@@ -120,7 +120,7 @@
 }
 
 .stat-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-condensed);
   font-size: var(--size-step-3);
   font-weight: var(--font-extra-bold);
   font-style: italic;

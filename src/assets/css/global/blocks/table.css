@@ -61,11 +61,6 @@ th[scope='row'] {
   overflow-x: auto;
 }
 
-.roster-number {
-  font-family: var(--font-mono);
-  font-weight: var(--font-bold);
-}
-
 .coach-bio {
   display: block;
   font-weight: var(--font-regular);
@@ -123,27 +118,5 @@ th[scope='row'] {
     padding: var(--space-s);
     text-align: start;
     display: table-cell;
-  }
-
-  /* Roster table (# / Name / Pos / Shoots / School / Grad): give the short,
-     fixed-format columns just enough room and let Name/School take the rest. */
-  .roster-table th:nth-child(1),
-  .roster-table td:nth-child(1) {
-    inline-size: 3ch;
-  }
-
-  .roster-table th:nth-child(3),
-  .roster-table td:nth-child(3) {
-    inline-size: 4ch;
-  }
-
-  .roster-table th:nth-child(4),
-  .roster-table td:nth-child(4) {
-    inline-size: 6ch;
-  }
-
-  .roster-table th:nth-child(6),
-  .roster-table td:nth-child(6) {
-    inline-size: 4ch;
   }
 }

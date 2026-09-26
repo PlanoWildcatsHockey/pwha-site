@@ -94,43 +94,11 @@ eleventyComputed:
           }
         %}
       {% endif %}
-      {% if varsityRoster.length %}
-        <div class="table-wrap">
-          <table class="roster-table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Pos</th>
-                <th scope="col">Shoots</th>
-                <th scope="col">School</th>
-                <th scope="col">Grad</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for p in varsityRoster %}
-                <tr>
-                  <td class="roster-number" data-label="#">{{ p.seasonEntry.number if p.seasonEntry.number else "—" }}</td>
-                  <td data-label="Name">
-                    {% if p.dateOfDeath or p.status == "current" or (p.status == "alumni" and p.gradYear and p.gradYear <= 2026) %}
-                      <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
-                    {% else %}
-                      {{ p.name }}
-                    {% endif %}
-                    {% if p.seasonEntry.captain %}<span class="captain-badge" title="{{ 'Captain' if p.seasonEntry.captain == 'C' else 'Alternate Captain' }}">{{ p.seasonEntry.captain }}</span>{% endif %}
-                  </td>
-                  <td data-label="Pos">{{ p.seasonEntry.position if p.seasonEntry.position and p.seasonEntry.position != "P" else "—" }}</td>
-                  <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
-                  <td data-label="School">{{ p.seasonEntry.school if p.seasonEntry.school else "—" }}</td>
-                  <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      {% else %}
-        <p><em>No Varsity roster recorded for this season yet.</em></p>
-      {% endif %}
+      {% set roster = varsityRoster %}
+      {% set rosterLabel = season.name + " Varsity roster" %}
+      {% set unknownLabel = "Position not listed" %}
+      {% set emptyMessage = "No Varsity roster recorded for this season yet." %}
+      {% include "partials/roster-table.njk" %}
     </section>
     {% endif %}
 
@@ -154,43 +122,11 @@ eleventyComputed:
           }
         %}
       {% endif %}
-      {% if jvRoster.length %}
-        <div class="table-wrap">
-          <table class="roster-table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Pos</th>
-                <th scope="col">Shoots</th>
-                <th scope="col">School</th>
-                <th scope="col">Grad</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for p in jvRoster %}
-                <tr>
-                  <td class="roster-number" data-label="#">{{ p.seasonEntry.number if p.seasonEntry.number else "—" }}</td>
-                  <td data-label="Name">
-                    {% if p.dateOfDeath or p.status == "current" or (p.status == "alumni" and p.gradYear and p.gradYear <= 2026) %}
-                      <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
-                    {% else %}
-                      {{ p.name }}
-                    {% endif %}
-                    {% if p.seasonEntry.captain %}<span class="captain-badge" title="{{ 'Captain' if p.seasonEntry.captain == 'C' else 'Alternate Captain' }}">{{ p.seasonEntry.captain }}</span>{% endif %}
-                  </td>
-                  <td data-label="Pos">{{ p.seasonEntry.position if p.seasonEntry.position and p.seasonEntry.position != "P" else "—" }}</td>
-                  <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
-                  <td data-label="School">{{ p.seasonEntry.school if p.seasonEntry.school else "—" }}</td>
-                  <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      {% else %}
-        <p><em>No Scholastic (JV) roster recorded for this season yet.</em></p>
-      {% endif %}
+      {% set roster = jvRoster %}
+      {% set rosterLabel = season.name + " Scholastic (JV) roster" %}
+      {% set unknownLabel = "Position not listed" %}
+      {% set emptyMessage = "No Scholastic (JV) roster recorded for this season yet." %}
+      {% include "partials/roster-table.njk" %}
     </section>
     {% endif %}
 

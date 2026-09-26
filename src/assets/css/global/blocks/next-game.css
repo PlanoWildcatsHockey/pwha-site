@@ -47,7 +47,7 @@
 }
 
 .next-game__matchup {
-  font-family: var(--font-mono);
+  font-family: var(--font-condensed);
   font-size: var(--size-step-3);
   font-weight: var(--font-extra-bold);
   font-style: italic;

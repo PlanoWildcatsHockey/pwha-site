@@ -39,7 +39,7 @@
 
 .sponsor-tier__price {
   margin: 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-condensed);
   font-size: var(--size-step-4);
   font-weight: var(--font-extra-bold);
   font-style: italic;

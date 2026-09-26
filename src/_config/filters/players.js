@@ -8,26 +8,9 @@
  *   - /history/alumni/        former players grouped by graduation year
  *
  * These filters keep template logic minimal — Nunjucks calls them as
- * `{{ players | filterCurrentTeam("varsity") }}` etc.
+ * `{{ players | playersInSeason(season.id, "varsity") }}` etc.
  */
 
-/**
- * Players currently rostered on a given team.
- * @param {Array} players - the full list (typically Eleventy's `players` global)
- * @param {string} teamSlug - "varsity" or "junior-varsity"
- * @returns {Array} matching players, original order preserved
- */
-export const filterCurrentTeam = (players, teamSlug) => {
-  if (!Array.isArray(players)) return [];
-  return players.filter(p => p.status === 'current' && p.team === teamSlug);
-};
-
-/**
- * Coaching staff currently assigned to a given team.
- * @param {Array} coaches - the full coaches list (Eleventy's `coaches` global)
- * @param {string} teamSlug - "varsity" or "junior-varsity"
- * @returns {Array}
- */
 /**
  * Players who have passed away — used for the In Memoriam section.
  * @param {Array} players
@@ -38,6 +21,12 @@ export const filterDeceased = players => {
   return players.filter(p => p.dateOfDeath);
 };
 
+/**
+ * Coaching staff currently assigned to a given team.
+ * @param {Array} coaches - the full coaches list (Eleventy's `coaches` global)
+ * @param {string} teamSlug - "varsity" or "junior-varsity"
+ * @returns {Array}
+ */
 export const filterCurrentStaff = (coaches, teamSlug) => {
   if (!Array.isArray(coaches)) return [];
   return coaches
@@ -67,6 +56,47 @@ export const playersInSeason = (players, seasonId, teamSlug) => {
     })
     .filter(Boolean)
     .sort((a, b) => (a.seasonEntry.number ?? Infinity) - (b.seasonEntry.number ?? Infinity));
+};
+
+/**
+ * Split a season roster (from playersInSeason) into position groups the way
+ * hockey programs list them: Goalies, Defense, Forwards.
+ *
+ * Grouping only helps when positions are actually known — early in a season
+ * most players are "P" (pending leveling), and older seasons have gaps. So
+ * when fewer than 75% of players have a known position, this returns one
+ * ungrouped entry ({label: null}) and the template shows a flat list with a
+ * Pos column instead.
+ *
+ * @param {Array} roster - players with a `seasonEntry`, already sorted
+ * @param {string} unknownLabel - heading for players without a known position
+ * @returns {Array} [{key, label, players}], empty groups omitted
+ */
+const POSITION_GROUPS = [
+  ['G', 'Goalies'],
+  ['D', 'Defense'],
+  ['F', 'Forwards']
+];
+const KNOWN_POSITIONS = new Set(POSITION_GROUPS.map(([key]) => key));
+
+export const rosterGroups = (roster, unknownLabel = 'Position TBD') => {
+  if (!Array.isArray(roster) || !roster.length) return [];
+  const positionOf = p => p.seasonEntry?.position;
+  const known = roster.filter(p => KNOWN_POSITIONS.has(positionOf(p)));
+  if (known.length < roster.length * 0.75) {
+    return [{key: 'all', label: null, players: roster}];
+  }
+  const groups = POSITION_GROUPS.map(([key, label]) => ({
+    key,
+    label,
+    players: roster.filter(p => positionOf(p) === key)
+  }));
+  groups.push({
+    key: 'other',
+    label: unknownLabel,
+    players: roster.filter(p => !KNOWN_POSITIONS.has(positionOf(p)))
+  });
+  return groups.filter(g => g.players.length);
 };
 
 /**

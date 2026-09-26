@@ -1,0 +1,82 @@
+{#
+  Season roster table — shared by the team pages and the season history pages.
+
+  Expects:
+    roster        players with a `seasonEntry` (from the playersInSeason filter)
+    rosterLabel   accessible name for the table, e.g. "2026-2027 Varsity roster"
+    unknownLabel  optional heading for players without a known position
+    emptyMessage  shown instead of the table when the roster is empty
+
+  Players are grouped Goalies / Defense / Forwards when enough positions are
+  known (see the rosterGroups filter); otherwise it's one list with a Pos
+  column. School lives on the player's own page, not here.
+#}
+{% if roster.length %}
+{% set groups = roster | rosterGroups(unknownLabel or "Position TBD") %}
+{% set flat = groups.length == 1 and not groups[0].label %}
+<div class="table-wrap">
+  <table class="roster" aria-label="{{ rosterLabel }}">
+    <thead>
+      <tr>
+        <th scope="col" class="roster__number">#</th>
+        <th scope="col">Player</th>
+        {% if flat %}<th scope="col" class="roster__fit">Pos</th>{% endif %}
+        <th scope="col" class="roster__fit">Shoots</th>
+        <th scope="col" class="roster__fit">Grad</th>
+      </tr>
+    </thead>
+    {% asyncEach group in groups %}
+      <tbody>
+        {% if group.label %}
+          <tr class="roster__group">
+            <th scope="rowgroup" colspan="4">
+              {{ group.label }} <span class="roster__count">{{ group.players.length }}</span>
+            </th>
+          </tr>
+        {% endif %}
+        {% asyncEach p in group.players %}
+          {% set entry = p.seasonEntry %}
+          <tr>
+            <td class="roster__number">{{ entry.number if entry.number else "—" }}</td>
+            <td>
+              <div class="roster__player">
+                <span class="roster__avatar" aria-hidden="true">
+                  {% if p.headshot %}
+                    {%
+                      imageKeys {
+                        "src": p.headshot,
+                        "alt": "",
+                        "widths": [120, 240],
+                        "sizes": "88px",
+                        "imageClass": "roster__photo"
+                      }
+                    %}
+                  {% else %}
+                    {{ p.firstName | first }}{{ p.lastName | first }}
+                  {% endif %}
+                </span>
+                {# Current players and alumni have profile pages; anyone else is listed by name only. #}
+                {% if p.status %}
+                  <a href="/players/{{ p.slug }}/" class="roster__name">{{ p.name }}</a>
+                {% else %}
+                  <span class="roster__name">{{ p.name }}</span>
+                {% endif %}
+                {% if entry.captain %}
+                  <span class="captain-badge" title="{{ 'Captain' if entry.captain == 'C' else 'Alternate Captain' }}">{{ entry.captain }}</span>
+                {% endif %}
+              </div>
+            </td>
+            {% if flat %}
+              <td class="roster__fit">{{ entry.position if entry.position and entry.position != "P" else "—" }}</td>
+            {% endif %}
+            <td class="roster__fit">{{ p.shoots if p.shoots else "—" }}</td>
+            <td class="roster__fit">{{ p.gradYear if p.gradYear else "—" }}</td>
+          </tr>
+        {% endeach %}
+      </tbody>
+    {% endeach %}
+  </table>
+</div>
+{% else %}
+  <p><em>{{ emptyMessage }}</em></p>
+{% endif %}

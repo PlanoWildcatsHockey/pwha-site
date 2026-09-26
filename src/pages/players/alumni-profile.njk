@@ -46,6 +46,12 @@ eleventyComputed:
       </div>
       <div>
         <h1 class="player-profile__name">{{ player.name }}</h1>
+        {% if player.pronunciation %}
+          <p class="player-profile__pronunciation">
+            <span class="player-profile__pronunciation-label">Pronounced</span>
+            {{ player.pronunciation }}
+          </p>
+        {% endif %}
         <ul class="player-profile__meta" role="list">
           {% if player.position and player.position != "P" %}
             <li class="player-profile__meta-item">{{ player.position }}</li>
@@ -95,7 +101,7 @@ eleventyComputed:
       <section class="flow" style="--flow-space: var(--space-s)">
         <h2 class="section-heading-accent">Plano Career</h2>
         <div class="table-wrap">
-          <table>
+          <table class="player-seasons">
             <thead>
               <tr>
                 <th scope="col">Season</th>
@@ -110,7 +116,7 @@ eleventyComputed:
               {% for s in player.seasons | sort(true, false, "sortOrder") %}
                 <tr>
                   <td data-label="Season">{{ s.seasonName }}</td>
-                  <td data-label="Team">{{ "Varsity" if s.team == "varsity" else "Junior Varsity" }}</td>
+                  <td data-label="Team">{{ "Varsity" if s.team == "varsity" else "Scholastic (JV)" }}</td>
                   <td data-label="#">{{ s.number if s.number else "—" }}</td>
                   <td data-label="Pos">{{ s.position if s.position and s.position != "P" else "—" }}</td>
                   <td data-label="School">{{ s.school if s.school else "—" }}</td>

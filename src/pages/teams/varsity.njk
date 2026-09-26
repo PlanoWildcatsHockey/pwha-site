@@ -1,7 +1,7 @@
 ---
 title: Varsity
 permalink: /teams/varsity/index.html
-description: The Plano Wildcats Varsity hockey roster and coaching staff — Summer 2026.
+description: The Plano Wildcats Varsity hockey roster and coaching staff.
 layout: page
 ---
 
@@ -23,42 +23,12 @@ layout: page
   </aside>
 
   {# ── Roster ── #}
-  {% set roster = players | filterCurrentTeam("varsity") | sort(false, false, "number") %}
+  {% set roster = players | playersInSeason(season.id, "varsity") %}
   <section>
     <h2 class="section-heading-accent">Roster</h2>
-    {% if roster.length %}
-      <div class="table-wrap">
-        <table class="roster-table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Pos</th>
-              <th scope="col">Shoots</th>
-              <th scope="col">School</th>
-              <th scope="col">Grad</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for p in roster %}
-              <tr>
-                <td class="roster-number" data-label="#">{{ p.number }}</td>
-                <td data-label="Name">
-                  <a href="/players/{{ p.slug }}/">{{ p.name }}</a>
-                  {% if p.captain %}<span class="captain-badge" title="{{ 'Captain' if p.captain == 'C' else 'Alternate Captain' }}">{{ p.captain }}</span>{% endif %}
-                </td>
-                <td data-label="Pos">{{ p.position if p.position and p.position != "P" else "—" }}</td>
-                <td data-label="Shoots">{{ p.shoots if p.shoots else "—" }}</td>
-                <td data-label="School">{{ p.school if p.school else "—" }}</td>
-                <td data-label="Grad">{{ p.gradYear if p.gradYear else "—" }}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    {% else %}
-      <p><em>No Varsity players found for the current season.</em></p>
-    {% endif %}
+    {% set rosterLabel = season.name + " Varsity roster" %}
+    {% set emptyMessage = "No Varsity players found for the current season." %}
+    {% include "partials/roster-table.njk" %}
   </section>
 
   {# ── Coaching Staff ── #}
