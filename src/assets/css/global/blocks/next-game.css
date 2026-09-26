@@ -92,8 +92,9 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   line-height: 1.05;
+  /* Wrap only between words; break inside one only if it can't fit at all. */
   overflow-wrap: break-word;
-  hyphens: auto;
+  text-wrap: balance;
 }
 
 /* Centered on the logo tiles, not on the whole crest */
