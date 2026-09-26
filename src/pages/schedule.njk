@@ -27,6 +27,13 @@ layout: page
       <a href="{{ season.varsity.statsUrl }}" class="button" target="_blank" rel="noopener">Stats</a>
       <a href="/teams/varsity/" class="button">Roster</a>
     </div>
+    {% if season.varsity.subscribeUrl %}
+      <div class="cluster calendar-subscribe" style="--gutter: var(--space-xs)">
+        <span class="calendar-subscribe__label">Add to your calendar:</span>
+        <a href="{{ season.varsity.subscribeUrl }}" class="button" data-small-button>Apple / Outlook</a>
+        <a href="{{ season.varsity.googleCalendarUrl }}" class="button" data-small-button target="_blank" rel="noopener">Google Calendar</a>
+      </div>
+    {% endif %}
   </section>
 
   <section>
@@ -37,6 +44,13 @@ layout: page
       <a href="{{ season.juniorVarsity.statsUrl }}" class="button" target="_blank" rel="noopener">Stats</a>
       <a href="/teams/junior-varsity/" class="button">Roster</a>
     </div>
+    {% if season.juniorVarsity.subscribeUrl %}
+      <div class="cluster calendar-subscribe" style="--gutter: var(--space-xs)">
+        <span class="calendar-subscribe__label">Add to your calendar:</span>
+        <a href="{{ season.juniorVarsity.subscribeUrl }}" class="button" data-small-button>Apple / Outlook</a>
+        <a href="{{ season.juniorVarsity.googleCalendarUrl }}" class="button" data-small-button target="_blank" rel="noopener">Google Calendar</a>
+      </div>
+    {% endif %}
   </section>
 
 </div>

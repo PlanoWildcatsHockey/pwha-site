@@ -14,3 +14,16 @@
   font-weight: var(--font-bold);
   color: var(--color-text-accent);
 }
+
+/* Calendar subscribe row — schedule page, under each team's league links */
+
+.calendar-subscribe {
+  align-items: center;
+  margin-block-start: var(--space-s);
+}
+
+.calendar-subscribe__label {
+  font-size: var(--size-step-min-1);
+  font-weight: var(--font-bold);
+  color: var(--color-text-accent);
+}

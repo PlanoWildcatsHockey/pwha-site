@@ -27,6 +27,12 @@ const teamLinks = (leagueShort, leagueId, teamId) => {
   const league = LEAGUES[leagueShort];
   if (!league || !leagueId || !teamId) return null;
   const base = `${league.statsBase}/${leagueId}/team/${teamId}`;
+  const calendarUrl = league.calendarClientId
+    ? `${ICAL_BASE}?team_id=${teamId}&league_id=${leagueId}&client_service_id=${league.calendarClientId}`
+    : null;
+  // webcal:// opens a subscription in Apple Calendar / Outlook; Google
+  // Calendar needs its own add-by-URL link.
+  const subscribeUrl = calendarUrl?.replace(/^https:/, 'webcal:');
   return {
     teamId,
     leagueId,
@@ -34,8 +40,10 @@ const teamLinks = (leagueShort, leagueId, teamId) => {
     scheduleUrl: `${base}/schedule`,
     scoresUrl: `${base}/scores`,
     statsUrl: `${base}/stats`,
-    calendarUrl: league.calendarClientId
-      ? `${ICAL_BASE}?team_id=${teamId}&league_id=${leagueId}&client_service_id=${league.calendarClientId}`
+    calendarUrl,
+    subscribeUrl: subscribeUrl || null,
+    googleCalendarUrl: subscribeUrl
+      ? `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(subscribeUrl)}`
       : null
   };
 };
