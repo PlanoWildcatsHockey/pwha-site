@@ -9,24 +9,34 @@
 import {readFileSync} from 'node:fs';
 import {parseCSV, orNull, imagePath} from '../_config/utils/parse-csv.js';
 
-// Both leagues run on the same stats platform, so only the host differs.
-// Keyed by league_short in seasons.csv.
-const STATS_BASES = {
-  'ATT MHSHL': 'https://www.atthighschoolhockeyleague.com/stats#',
-  TSHL: 'https://www.texasscholastichockeyleague.com/stats#'
+// Both leagues run on the same stats platform (DigitalShift), so only the
+// host differs. Keyed by league_short in seasons.csv. calendarClientId is the
+// league's key for the platform's iCal feed (from "More → Subscribe" on any
+// team schedule); leagues without one simply get no calendarUrl.
+const LEAGUES = {
+  'ATT MHSHL': {statsBase: 'https://www.atthighschoolhockeyleague.com/stats#'},
+  TSHL: {
+    statsBase: 'https://www.texasscholastichockeyleague.com/stats#',
+    calendarClientId: '8cee69b5-5180-4f28-9878-f5eb8cad8742'
+  }
 };
 
+const ICAL_BASE = 'https://web.api.digitalshift.ca/partials/stats/schedule/ical';
+
 const teamLinks = (leagueShort, leagueId, teamId) => {
-  const statsBase = STATS_BASES[leagueShort];
-  if (!statsBase || !leagueId || !teamId) return null;
-  const base = `${statsBase}/${leagueId}/team/${teamId}`;
+  const league = LEAGUES[leagueShort];
+  if (!league || !leagueId || !teamId) return null;
+  const base = `${league.statsBase}/${leagueId}/team/${teamId}`;
   return {
     teamId,
     leagueId,
     rosterUrl: `${base}/roster`,
     scheduleUrl: `${base}/schedule`,
     scoresUrl: `${base}/scores`,
-    statsUrl: `${base}/stats`
+    statsUrl: `${base}/stats`,
+    calendarUrl: league.calendarClientId
+      ? `${ICAL_BASE}?team_id=${teamId}&league_id=${leagueId}&client_service_id=${league.calendarClientId}`
+      : null
   };
 };
 

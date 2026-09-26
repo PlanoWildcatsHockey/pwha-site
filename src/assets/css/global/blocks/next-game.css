@@ -1,0 +1,64 @@
+/* Next-game cards — home page, one per team, fed by the league iCal feeds */
+
+.next-game {
+  --flow-space: var(--space-xs);
+  padding: var(--space-s-m);
+  border-inline-start: 4px solid var(--color-primary);
+  background: var(--color-bg-accent);
+}
+
+.next-game__team {
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--font-bold);
+  color: var(--color-text-accent);
+}
+
+.next-game__game {
+  --flow-space: var(--space-3xs);
+}
+
+.next-game__matchup {
+  font-family: var(--font-mono);
+  font-size: var(--size-step-3);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.next-game__side {
+  color: var(--color-primary);
+}
+
+.next-game__when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-weight: var(--font-bold);
+}
+
+.next-game__badge {
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.15em 0.6em;
+  border: 1px solid currentColor;
+  color: var(--color-text-accent);
+}
+
+.next-game__badge[data-home='true'] {
+  background: var(--color-primary-surface);
+  border-color: var(--color-primary-surface);
+  color: var(--color-light);
+}
+
+.next-game__where,
+.next-game__link {
+  font-size: var(--size-step-min-1);
+}
+
+.next-game [hidden] {
+  display: none;
+}

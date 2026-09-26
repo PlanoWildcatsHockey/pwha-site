@@ -1,0 +1,57 @@
+{#
+  Next game for each team, from the league iCal feeds (see _data/nextGames.js).
+  Every upcoming game is rendered; all but the first are hidden, and the
+  next-games script re-picks the first one that hasn't ended yet.
+#}
+{% if nextGames.length %}
+  <section class="full | region" aria-labelledby="next-games-heading">
+    <div class="wrapper flow">
+      <div class="repel">
+        <h2 class="section-heading-accent" id="next-games-heading">Next Games</h2>
+        <a href="/schedule/" class="button" data-small-button data-button-variant="primary">Full Schedule</a>
+      </div>
+
+      <div class="grid" data-layout="50-50">
+        {% for team in nextGames %}
+          <article class="next-game flow" data-next-game>
+            <h3 class="next-game__team">{{ team.label }}</h3>
+
+            {% for game in team.games %}
+              <div class="next-game__game flow" data-game-end="{{ game.end }}" {% if not loop.first %}hidden{% endif %}>
+                <p class="next-game__matchup">
+                  <span class="next-game__side">{{ "vs" if game.isHome else "@" }}</span>
+                  {{ game.opponent }}
+                </p>
+                <p class="next-game__when">
+                  <time datetime="{{ game.start }}">{{ game.dateLabel }} · {{ game.timeLabel }}</time>
+                  <span class="next-game__badge" data-home="{{ game.isHome }}">{{ "Home" if game.isHome else "Away" }}</span>
+                </p>
+                {% if game.venue %}
+                  <p class="next-game__where">
+                    {% if game.mapUrl %}
+                      <a href="{{ game.mapUrl }}" target="_blank" rel="noopener">{{ game.venue }}</a>
+                    {% else %}
+                      {{ game.venue }}
+                    {% endif %}
+                  </p>
+                {% endif %}
+              </div>
+            {% endfor %}
+
+            <p class="next-game__empty" data-next-game-empty {% if team.games.length %}hidden{% endif %}>
+              No upcoming games on the schedule.
+            </p>
+
+            <p class="next-game__link">
+              <a href="{{ team.scheduleUrl }}" target="_blank" rel="noopener">{{ team.label }} schedule on the {{ season.league.shortName }} site</a>
+            </p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% js "defer" %}
+    {% include "scripts/next-games.js" %}
+  {% endjs %}
+{% endif %}
