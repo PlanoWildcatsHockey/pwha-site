@@ -107,9 +107,13 @@ export default async function (eleventyConfig) {
   // --------------------- Passthrough File Copy
 
   // -- same path
-  ['src/assets/fonts/', 'src/assets/images/template', 'src/assets/og-images', 'src/assets/downloads'].forEach(path =>
-    eleventyConfig.addPassthroughCopy(path)
-  );
+  [
+    'src/assets/fonts/',
+    'src/assets/images/template',
+    'src/assets/og-images',
+    'src/assets/downloads',
+    'src/assets/forms'
+  ].forEach(path => eleventyConfig.addPassthroughCopy(path));
 
   eleventyConfig.addPassthroughCopy({
     // -- to root
@@ -134,6 +138,12 @@ export default async function (eleventyConfig) {
   if (process.env.ELEVENTY_ENV != 'test') {
     eleventyConfig.ignores.add('src/common/pa11y.njk');
   }
+
+  // -- self-contained static pages (own <html>/<head>/<body>, no site layout)
+  // served as-is via the passthrough copy above; stop Eleventy from also
+  // templating them, which would otherwise double-build a duplicate copy
+  // at a directory-style URL (e.g. .../winter-spirit-wear-order-form/).
+  eleventyConfig.ignores.add('src/assets/forms/*.html');
 
   // --------------------- general config
   return {
