@@ -3,6 +3,8 @@ title: 'Halloween Practice: Name Your Favorite Candy'
 description: 'At our Halloween practice we asked the team for their favorite Halloween candy. Then we got to Coach Garrett.'
 date: 2026-10-30
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-10-30-halloween-practice.jpg'
+alt: 'Coach in a blue hockey helmet in the rink hallway with a cartoon carrot beside him, next to the words His answer?!'
 ---
 
 One of our favorite practices of the year: the Halloween practice!
