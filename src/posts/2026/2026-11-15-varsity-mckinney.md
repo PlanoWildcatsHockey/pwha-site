@@ -3,6 +3,9 @@ title: "Plano Senior shuts out McKinney, 8–0"
 description: "Hudson Mun and Iverson Herr each scored a hat trick and Kai Hu had six points in an 8–0 win."
 date: 2026-11-15
 tags: ['varsity']
+image: '/assets/images/2026-11-15-varsity-mckinney.jpg'
+alt: 'Hudson Mun (#24) skates in on a McKinney goaltender sprawled across the ice'
+credit: 'Photo: Jeff Yu'
 ---
 
 *Nov. 15, 2026 · US Rink, Plano*

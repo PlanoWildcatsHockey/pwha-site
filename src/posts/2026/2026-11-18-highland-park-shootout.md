@@ -5,6 +5,7 @@ date: 2026-11-18
 tags: ['varsity']
 image: '/assets/images/2026-11-18-highland-park-shootout.jpg'
 alt: 'Ethan Barton (#80) carries the puck up the ice ahead of three Highland Park players'
+credit: 'Photo: Jeff Yu'
 ---
 
 *Nov. 18, 2026 · Gaglardi Rink, Farmers Branch*
