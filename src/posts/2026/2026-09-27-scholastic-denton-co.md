@@ -7,10 +7,10 @@ tags: ['scholastic']
 
 *Sept. 27, 2026 · World Rink, Plano*
 
-William Wallace scored a hat trick as the scholastic team opened its season with a 4–2 win over Denton Co.
+[William Wallace](/players/william-wallace/) scored a hat trick as the scholastic team opened its season with a 4–2 win over Denton Co.
 
-Wallace scored unassisted midway through the first period. Denton Co's Diego Sanchez tied it late in the second, but Wallace answered with 45 seconds left in the period, assisted by Abel Peperis. Wallace completed his hat trick early in the third, and Dominic Martinez added a fourth, also from Peperis. Cortland White scored Denton Co's second goal with 4:22 left.
+Wallace scored unassisted midway through the first period. Denton Co's Diego Sanchez tied it late in the second, but Wallace answered with 45 seconds left in the period, assisted by [Abel Peperis](/players/abel-peperis/). Wallace completed his hat trick early in the third, and [Dominic Martinez](/players/dominic-martinez/) added a fourth, also from Peperis. Cortland White scored Denton Co's second goal with 4:22 left.
 
-Plano outshot Denton Co 28–26, and Ayden Shobe made 24 saves in goal. Neither team took a penalty.
+Plano outshot Denton Co 28–26, and [Ayden Shobe](/players/ayden-shobe/) made 24 saves in goal. Neither team took a penalty.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346921)
