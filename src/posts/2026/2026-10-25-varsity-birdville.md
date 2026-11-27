@@ -3,6 +3,9 @@ title: "Plano Senior holds off Birdville, 4–3"
 description: "Isiah Fowler scored shorthanded with 1:29 left after Birdville erased a 3–0 Plano lead."
 date: 2026-10-25
 tags: ['varsity']
+image: '/assets/images/2026-10-25-varsity-birdville.jpg'
+alt: "Isiah Fowler (#36), still in uniform, celebrates with friends after the win over Birdville"
+credit: 'Photo: Eric Wallace'
 ---
 
 *Oct. 25, 2026 · US Rink, Plano*
