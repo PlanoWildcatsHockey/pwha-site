@@ -3,6 +3,8 @@ title: TSHL Communication Protocol
 description:
 date: 2026-08-13
 tags:
+image: '/assets/images/tshl-logo.jpg'
+alt: 'Texas Scholastic Hockey League logo'
 ---
 TSHL Commissioner Zee Howard asked clubs to share this with our families:
 

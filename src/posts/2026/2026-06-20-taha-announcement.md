@@ -5,6 +5,8 @@ date: 2026-06-20
 tags:
   - league
   - taha
+image: '/assets/images/tshl-logo.jpg'
+alt: 'Texas Scholastic Hockey League logo'
 ---
 Breaking news: A major change is coming to high school hockey.
 
