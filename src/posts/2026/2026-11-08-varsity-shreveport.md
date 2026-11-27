@@ -4,7 +4,7 @@ description: "Hudson “No Mercy” Mun scored the winner as Plano beat Shrevepo
 date: 2026-11-08
 tags: ['varsity']
 image: '/assets/images/2026-11-08-varsity-shreveport.jpg'
-alt: "Hudson Mun (#24) raises his stick as he skates to the bench with Iverson Herr (#92), Braeden Ysasaga (#22), Carter Doyle (#2) and a teammate"
+alt: "Hudson Mun (#24) raises his stick as he skates to the bench with Iverson Herr (#92), Braeden Ysasaga (#22), Carter Doyle (#2) and Ethan Barton"
 credit: 'Photo: Jeff Yu'
 ---
 
