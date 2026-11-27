@@ -13,6 +13,6 @@ The first period ended in a flurry. Arlington's Aidan Anderson scored with 2:11 
 
 William Wallace made it 4–3 midway through the third, but Anderson scored his second of the game with 3:32 left to seal it.
 
-Plano's goaltender made 28 saves.
+Andrew Drake made 28 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346820)

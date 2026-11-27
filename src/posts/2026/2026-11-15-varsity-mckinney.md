@@ -11,6 +11,6 @@ Hudson Mun and Iverson Herr each scored a hat trick as Plano shut out McKinney 8
 
 Tyler Downum opened the scoring in the first period. Plano scored three times in the second, two from Herr and one from Mun, to lead 4–0, then added four more in the third. Kai Hu scored one of them and assisted on five goals for six points. Mun finished with three goals and two assists, Herr with three goals and an assist, and Braeden Ysasaga had two assists.
 
-Plano outshot McKinney 46–15, and Plano's goaltender stopped all 15 shots for the shutout. Neither team took a penalty.
+Plano outshot McKinney 46–15, and Raudeen Roodgarmi stopped all 15 shots for the shutout. Neither team took a penalty.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1374459)

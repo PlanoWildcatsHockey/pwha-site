@@ -13,6 +13,6 @@ Plano built its lead on very few shots: the score sheet credits Plano with only 
 
 Birdville scored three times in the third. George Ebert started it, and Zakary Patterson scored twice, the second with 3:33 left, to tie the game 3–3. With Plano killing a penalty, Fowler won it, assisted by Mun and David Yu. Fowler finished with a goal and three assists.
 
-Birdville outshot Plano 26–22, and Plano's goaltender made 23 saves.
+Birdville outshot Plano 26–22, and Raudeen Roodgarmi made 23 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346914)

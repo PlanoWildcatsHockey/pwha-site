@@ -13,6 +13,6 @@ Southlake Carroll's Austin Bierwirth opened the scoring in the first period, and
 
 Hu cut it to 4–2 midway through the third, but Mason Dispensa restored the three-goal lead 32 seconds later. Hu completed his hat trick with 1:54 left, assisted by Iverson Herr.
 
-Southlake Carroll outshot Plano 40–16, and Plano's goaltender made 35 saves.
+Southlake Carroll outshot Plano 40–16, and Raudeen Roodgarmi made 35 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346892)
