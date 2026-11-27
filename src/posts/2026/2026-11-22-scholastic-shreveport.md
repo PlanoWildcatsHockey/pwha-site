@@ -11,6 +11,6 @@ Playing its second game of the day, the scholastic team lost 3–0 to Shreveport
 
 The first period was scoreless. Shreveport scored twice in the second, through Milo Cook and Isaac Lewis, and Leon Gu added a third midway through the third period.
 
-Shreveport outshot Plano 15–10, and Ayden Shobe made 12 saves in goal.
+Shreveport outshot Plano 15–10, and [Ayden Shobe](/players/ayden-shobe/) made 12 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1374455)

@@ -7,12 +7,12 @@ tags: ['scholastic']
 
 *Oct. 25, 2026 · Gaglardi Rink, Farmers Branch*
 
-William Wallace scored twice and the scholastic team led after two periods, but Denton Co won 4–3 in overtime.
+[William Wallace](/players/william-wallace/) scored twice and the scholastic team led after two periods, but Denton Co won 4–3 in overtime.
 
-Broderick Allison gave Denton Co the lead in the first period, and Wallace tied it late in the period, assisted by Flynn Plate. The teams traded goals again in the second: Zachary Johnson scored for Denton Co, and Wallace answered from Miranda Reiff and Dominic Martinez. Abel Peperis then put Plano ahead 3–2 on a power play with 2:16 left in the period, assisted by Wallace. Plano outshot Denton Co 18–11 in the second.
+Broderick Allison gave Denton Co the lead in the first period, and Wallace tied it late in the period, assisted by [Flynn Plate](/players/flynn-plate/). The teams traded goals again in the second: Zachary Johnson scored for Denton Co, and Wallace answered from [Miranda Reiff](/players/miranda-reiff/) and [Dominic Martinez](/players/dominic-martinez/). [Abel Peperis](/players/abel-peperis/) then put Plano ahead 3–2 on a power play with 2:16 left in the period, assisted by Wallace. Plano outshot Denton Co 18–11 in the second.
 
 Johnson tied it on a power play with 2:20 left in regulation, and Gavin Van Akin scored the overtime winner.
 
-Denton Co outshot Plano 41–32, and Isaac Bywater made 37 saves in goal.
+Denton Co outshot Plano 41–32, and [Isaac Bywater](/players/isaac-bywater/) made 37 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346797)
