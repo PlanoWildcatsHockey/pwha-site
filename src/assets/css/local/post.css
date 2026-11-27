@@ -24,7 +24,8 @@
   color: var(--color-text-light);
 }
 
-.post .credit {
+.post .credit,
+.post .feature figcaption {
   font-size: var(--size-step-min-1);
   color: var(--color-text-accent);
   background-color: var(--color-bg);

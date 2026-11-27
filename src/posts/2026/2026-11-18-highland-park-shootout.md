@@ -3,6 +3,9 @@ title: 'Plano Senior falls to Highland Park in a shootout, 4–3'
 description: 'Plano outshot Highland Park 48–38 and twice came back to tie, but lost 4–3 in the fourth round of the shootout.'
 date: 2026-11-18
 tags: ['varsity']
+image: '/assets/images/2026-11-18-highland-park-shootout.jpg'
+alt: 'Ethan Barton (#80) carries the puck up the ice ahead of three Highland Park players'
+credit: 'Photo: Jeff Yu'
 ---
 
 *Nov. 18, 2026 · Gaglardi Rink, Farmers Branch*
