@@ -1,7 +1,7 @@
 ---
 title: 'Winter Spirit Wear Order Form'
 description: 'Order Plano Wildcats winter spirit wear — t-shirts, hoodies, puffer jackets and vests, pajama pants, a scarf, and a beanie — before the December 11 deadline.'
-date: 2026-11-26
+date: 2026-11-25
 tags: ['varsity','scholastic']
 ---
 
