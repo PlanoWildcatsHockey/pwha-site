@@ -3,6 +3,9 @@ title: "Plano Senior edges Shreveport, 7–6"
 description: "Hudson “No Mercy” Mun scored the winner as Plano beat Shreveport 7–6 in a game that was tied four times."
 date: 2026-11-08
 tags: ['varsity']
+image: '/assets/images/2026-11-08-varsity-shreveport.jpg'
+alt: "Hudson Mun (#24) raises his stick as he skates to the bench with Iverson Herr (#92), Braeden Ysasaga (#22), Carter Doyle (#2) and a teammate"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Nov. 8, 2026 · Blue Rink, Richardson*
