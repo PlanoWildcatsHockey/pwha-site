@@ -13,6 +13,6 @@ Broderick Allison gave Denton Co the lead in the first period, and Wallace tied 
 
 Johnson tied it on a power play with 2:20 left in regulation, and Gavin Van Akin scored the overtime winner.
 
-Denton Co outshot Plano 41–32, and Plano's goaltender made 37 saves.
+Denton Co outshot Plano 41–32, and Isaac Bywater made 37 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346797)

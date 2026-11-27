@@ -60,6 +60,8 @@ export default function () {
       name: `${p.first_name} ${p.last_name}`,
       // Phonetic respelling, stressed syllable in caps: "roo-GAR-mee"
       pronunciation: orNull(p.pronunciation),
+      // Team nickname, e.g. "No Mercy" (Hudson Mun); handy for recaps.
+      nickname: orNull(p.nickname),
       gradYear,
       year: gradYear, // alias — keeps existing filters working
       position: orNull(p.position),

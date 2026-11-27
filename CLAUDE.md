@@ -46,6 +46,12 @@ Design proposal with mockups: https://claude.ai/artifact/Dy8vBnNd8h2d17HShyr4HH
 
 - `sources/*.csv` are CRLF + latin1. Edit bytes carefully and keep column
   counts equal.
+- Player nicknames live in the last column of `sources/players.csv`
+  (`nickname`, e.g. Hudson Mun = "No Mercy"). Use them now and then in
+  recaps, not every time.
+- Goalies on TSHL score sheets aren't named; go by jersey number. Varsity:
+  #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
+  #18 Isaac Bywater.
 - eleventy-fetch returns a Buffer on cache hits; wrap it with `String()`.
 - Async shortcodes (`imageKeys`) need `asyncEach`. An `{% include %}` of an
   async partial placed directly inside `{% if %}` renders empty, so put the
