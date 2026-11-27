@@ -4,6 +4,8 @@ description: A reminder from the TSHL about the SafeSport training requirements.
 date: 2026-08-01
 tags:
   - varsity
+image: '/assets/images/2026-08-01-safesport.jpg'
+alt: 'U.S. Center for SafeSport logo with the tagline Champion Respect. End Abuse.'
 ---
 A reminder from the TSHL Commissioner:
 

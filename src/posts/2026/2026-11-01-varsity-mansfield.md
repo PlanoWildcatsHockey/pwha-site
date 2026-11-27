@@ -3,6 +3,9 @@ title: "Plano Senior rallies past Mansfield, 7–6"
 description: "Kai Hu scored four times and Carter Doyle won it with 2:05 left as Plano came back from 5–3 down."
 date: 2026-11-01
 tags: ['varsity']
+image: '/assets/images/2026-11-01-varsity-mansfield.jpg'
+alt: "Kai Hu carries the puck past a reaching Mansfield defender"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Nov. 1, 2026 · US Rink, Plano*

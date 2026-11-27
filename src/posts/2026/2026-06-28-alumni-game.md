@@ -4,9 +4,12 @@ description: Photos and videos from the Plano Wildcats Alumni Game.
 date: 2026-06-28
 tags:
   - alumni
+image: '/assets/images/2026-06-28-alumni-game.jpg'
+alt: 'Alumni, current players and coaches pose together on the ice after the 2026 Wildcats Alumni Game'
+credit: 'Photo: Jeff Yu'
 ---
 
-Thanks to everyone for making the 2026 Wildcats Alumni game a huge succes.
+Thanks to everyone for making the 2026 Wildcats Alumni game a huge success.
 
 <custom-youtube slug="o6O6a6t-vZA" label="Plano Wildcats Alumni Game 2026"></custom-youtube>
 

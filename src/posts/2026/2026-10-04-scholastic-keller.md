@@ -3,6 +3,9 @@ title: "Scholastic rally falls short against Keller, 6–4"
 description: "Down 6–0 after two periods, the scholastic team scored four times in the third before falling 6–4."
 date: 2026-10-04
 tags: ['scholastic']
+image: '/assets/images/2026-10-04-scholastic-keller.jpg'
+alt: "Ayden Shobe reaches for a shot from Keller's Jackson Clay (#54)"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Oct. 4, 2026 · World Rink, Plano*
