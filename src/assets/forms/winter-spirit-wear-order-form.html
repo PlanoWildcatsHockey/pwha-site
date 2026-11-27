@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Order Plano Wildcats winter spirit wear: t-shirts, hoodies, puffer jackets and vests, pajama pants, a scarf, and a beanie. Deadline Friday, December 11, 2026.">
+<title>Plano Wildcats Winter Spirit Wear Order Form</title>
+<style>
+  :root{
+    --maroon:#641529;
+    --maroon-dark:#4c0f1f;
+    --light:#F6EEEE;
+    --gray:#8a8a8a;
+    --text:#1b1b1b;
+    --bg:#f3f1ef;
+    --card-bg:#fff;
+    --border:#bbb;
+    --maroon-ink:var(--maroon);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --light:#3a2a2d;
+      --gray:#8a8a8a;
+      --text:#eee6e6;
+      --bg:#1b1414;
+      --card-bg:#241a1c;
+      --border:#5a4a4c;
+      --maroon-ink:#e38aa0;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    padding:20px 10px 60px;
+  }
+  .card{
+    max-width:760px;
+    margin:0 auto;
+    background:var(--card-bg);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 14px rgba(0,0,0,0.12);
+  }
+  header{
+    background:var(--maroon);
+    color:#fff;
+    text-align:center;
+    padding:22px 16px 18px;
+  }
+  header h1{
+    margin:0 0 4px;
+    font-size:1.5rem;
+    letter-spacing:0.5px;
+  }
+  header h2{
+    margin:0 0 8px;
+    font-size:1.05rem;
+    font-weight:600;
+    color:#f4dede;
+  }
+  header p{
+    margin:0;
+    font-size:0.88rem;
+    font-style:italic;
+    color:#f0d9d9;
+  }
+  section{
+    padding:18px 20px;
+    border-bottom:1px solid #eee;
+  }
+  .section-title{
+    background:var(--maroon);
+    color:#fff;
+    font-weight:700;
+    font-size:0.95rem;
+    padding:8px 12px;
+    border-radius:4px;
+    margin:-4px -20px 14px;
+  }
+  .note{
+    font-style:italic;
+    color:#555;
+    font-size:0.85rem;
+    margin:-6px 0 14px;
+  }
+  label{
+    font-weight:600;
+    font-size:0.9rem;
+    display:block;
+    margin-bottom:4px;
+  }
+  input[type=text], input[type=email], input[type=tel], input[type=number]{
+    width:100%;
+    padding:8px 9px;
+    font-size:0.95rem;
+    border:1px solid var(--border);
+    border-radius:5px;
+    background:var(--card-bg);
+    color:var(--text);
+  }
+  select{
+    width:100%;
+    padding:8px 7px;
+    font-size:0.9rem;
+    border:1px solid var(--border);
+    border-radius:5px;
+    background:var(--card-bg);
+    color:var(--text);
+  }
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .field{margin-bottom:12px;}
+  @media (max-width:560px){
+    .grid-2{grid-template-columns:1fr;}
+  }
+
+  /* Items table */
+  table{width:100%;border-collapse:collapse;font-size:0.88rem;}
+  thead th{
+    background:var(--maroon);
+    color:#fff;
+    padding:8px 6px;
+    text-align:center;
+    font-size:0.82rem;
+  }
+  thead th:first-child{text-align:left;}
+  tbody tr:nth-child(even){background:var(--light);}
+  tbody td{
+    padding:7px 6px;
+    border-bottom:1px solid #e4e4e4;
+    vertical-align:middle;
+  }
+  tbody td.item-name{font-weight:600;}
+  tbody td.price-cell, tbody td.total-cell{text-align:center;white-space:nowrap;}
+  tbody td input[type=number]{width:60px;text-align:center;padding:5px;}
+  tbody td select{min-width:92px;padding:5px 4px;font-size:0.82rem;}
+  .line-total{font-weight:600;}
+  .order-total-row td{
+    background:var(--light);
+    font-weight:700;
+    border-top:2px solid var(--maroon);
+  }
+  .order-total-row td.price-cell{text-align:right;padding-right:10px;}
+
+  /* mobile card layout for table */
+  @media (max-width:600px){
+    table, thead, tbody, th, td, tr{display:block;}
+    thead{display:none;}
+    tbody tr{
+      border:1px solid #e0d6d6;
+      border-radius:6px;
+      margin-bottom:10px;
+      padding:8px 10px;
+    }
+    tbody td{
+      border:none;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:4px 0;
+    }
+    tbody td.item-name{
+      display:block;
+      font-size:1rem;
+      padding-bottom:6px;
+      border-bottom:1px dashed #ddd;
+      margin-bottom:4px;
+    }
+    tbody td::before{
+      content:attr(data-label);
+      font-weight:600;
+      color:#555;
+      font-size:0.8rem;
+      margin-right:10px;
+    }
+    .order-total-row td{display:flex;}
+  }
+
+  /* Payment */
+  .pay-option{
+    border:1px solid #ddd;
+    border-radius:7px;
+    padding:12px 14px;
+    margin-bottom:10px;
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .pay-option input[type=radio]{margin-top:3px;transform:scale(1.2);}
+  .pay-option .pay-label{font-weight:700;}
+  .pay-option .pay-detail{font-size:0.88rem;color:#333;margin-top:3px;}
+  .pay-option .pay-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    background:var(--maroon);
+    color:#fff !important;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:6px;
+    font-size:0.85rem;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--maroon-dark);}
+  .btn.secondary{
+    background:var(--card-bg);
+    color:var(--maroon-ink) !important;
+    border:1.5px solid var(--maroon-ink);
+  }
+  .btn.secondary:hover{background:var(--light);}
+  .copy-feedback{
+    font-size:0.78rem;
+    color:#0a7a2f;
+    margin-left:4px;
+    display:none;
+  }
+
+  .submit-row{text-align:center;padding:22px 20px;}
+  .submit-row .btn{font-size:1rem;padding:12px 26px;}
+
+  #summaryBox{
+    display:none;
+    padding:18px 20px;
+    background:var(--light);
+    border-top:2px solid var(--maroon);
+  }
+  #summaryBox h3{margin-top:0;}
+  #summaryText{
+    width:100%;
+    min-height:220px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:0.8rem;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+  }
+  .summary-actions{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;}
+
+  footer{
+    text-align:center;
+    padding:18px 20px 24px;
+    font-size:0.85rem;
+    color:#444;
+  }
+  a{color:var(--maroon-ink);}
+  footer a{color:var(--maroon-ink);font-weight:700;}
+  .deadline{font-weight:700;margin-top:6px;}
+  .required{color:var(--maroon-ink);}
+</style>
+</head>
+<body>
+
+<form class="card" id="orderForm">
+  <header>
+    <h1>PLANO WILDCATS HOCKEY</h1>
+    <h2>Winter Spirit Wear Order Form</h2>
+    <p>Order deadline: Friday, December 11, 2026 — get your order in before then!</p>
+  </header>
+
+  <!-- ORDER INFO -->
+  <section>
+    <div class="section-title">ORDER INFORMATION</div>
+    <div class="grid-2">
+      <div class="field">
+        <label for="buyerName">Parent / Buyer Name <span class="required">*</span></label>
+        <input type="text" id="buyerName" name="buyerName" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">Email Address <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required>
+    </div>
+  </section>
+
+  <!-- STEP 1: ITEMS -->
+  <section>
+    <div class="section-title">STEP 1 — SELECT YOUR ITEMS</div>
+    <p class="note">T-shirts, hoodies, puffer jackets/vests, and pajama pants come in sizes Small Adult through 2XL. Scarf and beanie are one size.</p>
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Size</th><th>Qty</th><th>Price Ea.</th><th>Line Total</th></tr>
+      </thead>
+      <tbody id="itemsBody"></tbody>
+      <tfoot>
+        <tr class="order-total-row">
+          <td data-label="" colspan="1" style="border:none;"></td>
+          <td data-label="" style="border:none;"></td>
+          <td data-label="" style="border:none;"></td>
+          <td data-label="Order Total" class="price-cell">ORDER TOTAL</td>
+          <td data-label="" class="total-cell"><span id="orderTotal">$0.00</span></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <!-- STEP 2: PAYMENT -->
+  <section>
+    <div class="section-title">STEP 2 — PAYMENT</div>
+
+    <div class="pay-option">
+      <input type="radio" name="paymentMethod" id="pay-check" value="Check">
+      <div>
+        <label for="pay-check" class="pay-label">Check</label>
+        <div class="pay-detail">Payable to <strong>Plano Wildcats Hockey Association (PWHA)</strong>. Mail or hand to the varsity manager.</div>
+      </div>
+    </div>
+
+    <div class="pay-option">
+      <input type="radio" name="paymentMethod" id="pay-zelle" value="Zelle">
+      <div style="flex:1;">
+        <label for="pay-zelle" class="pay-label">Zelle</label>
+        <div class="pay-detail">Send to <a href="mailto:treasurer@planowildcatshockey.com">treasurer@planowildcatshockey.com</a> or recipient name "wildcatshockey" in your banking app.</div>
+        <div class="pay-actions">
+          <button type="button" class="btn secondary" onclick="copyText('treasurer@planowildcatshockey.com', this)">Copy Zelle Email</button>
+          <button type="button" class="btn secondary" onclick="copyText('wildcatshockey', this)">Copy Zelle Name</button>
+          <span class="copy-feedback">Copied!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pay-option">
+      <input type="radio" name="paymentMethod" id="pay-paypal" value="PayPal">
+      <div style="flex:1;">
+        <label for="pay-paypal" class="pay-label">PayPal</label>
+        <div class="pay-detail">Send to <strong>@planowildcatshockey</strong>. Please add 3% to cover the PayPal fee — the button below already includes it.</div>
+        <div class="pay-actions">
+          <a id="paypalLink" class="btn" href="https://www.paypal.com/paypalme/planowildcatshockey" target="_blank" rel="noopener">Pay with PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pay-option">
+      <input type="radio" name="paymentMethod" id="pay-cash" value="Cash">
+      <div>
+        <label for="pay-cash" class="pay-label">Cash</label>
+        <div class="pay-detail">Accepted — hand directly to the varsity manager.</div>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:14px;">
+      <label for="amountPaid">Total Amount Enclosed / Paid ($)</label>
+      <input type="text" id="amountPaid" name="amountPaid">
+    </div>
+  </section>
+
+  <!-- SUBMIT -->
+  <div class="submit-row">
+    <button type="button" class="btn" onclick="buildOrder()">Review &amp; Email My Order</button>
+  </div>
+
+  <div id="summaryBox">
+    <h3>Your order summary</h3>
+    <p>Review the details below, then click "Email This Order" to open your email app with everything filled in — just hit send. If your email app doesn't open automatically, copy the text and paste it into a new email to the varsity manager.</p>
+    <textarea id="summaryText" readonly></textarea>
+    <div class="summary-actions">
+      <a id="mailLink" class="btn" href="#">Email This Order</a>
+      <button type="button" class="btn secondary" onclick="copySummary()">Copy Order Text</button>
+    </div>
+  </div>
+
+  <footer>
+    Questions or trouble with this form? Email
+    <a href="mailto:varsitymanager@planowildcatshockey.com">varsitymanager@planowildcatshockey.com</a>
+    <div class="deadline">Deadline: Friday, December 11, 2026 &nbsp;•&nbsp; Go Wildcats!</div>
+  </footer>
+</form>
+
+<script>
+  var ITEMS = [
+    {slug:"tshirt_black_no_roster",   name:"T-Shirt — Black (No Roster)",        price:9,  size:true},
+    {slug:"tshirt_black_with_roster", name:"T-Shirt — Black (With Roster)",      price:12, size:true},
+    {slug:"tshirt_maroon_no_roster",  name:"T-Shirt — Maroon (No Roster)",       price:9,  size:true},
+    {slug:"tshirt_maroon_with_roster",name:"T-Shirt — Maroon (With Roster)",     price:12, size:true},
+    {slug:"hoodie_black",             name:"Hoodie — Black",                     price:18, size:true},
+    {slug:"hoodie_maroon",            name:"Hoodie — Maroon",                    price:18, size:true},
+    {slug:"vest_mens",                name:"Puffer Vest — Men's (embroidered)",  price:34, size:true},
+    {slug:"vest_womens",              name:"Puffer Vest — Women's (embroidered)",price:34, size:true},
+    {slug:"jacket_mens",              name:"Puffer Jacket — Men's (embroidered)",price:38, size:true},
+    {slug:"jacket_womens",            name:"Puffer Jacket — Women's (embroidered)",price:38,size:true},
+    {slug:"pajama_pants",             name:"Pajama Pants",                       price:18, size:true},
+    {slug:"scarf",                    name:"Scarf",                              price:13, size:false},
+    {slug:"beanie",                   name:"Embroidered Beanie",                 price:18, size:false}
+  ];
+  var SIZE_OPTIONS = ["Small Adult (S)","Medium (M)","Large (L)","X-Large (XL)","2XL"];
+
+  var tbody = document.getElementById("itemsBody");
+  ITEMS.forEach(function(item, idx){
+    var tr = document.createElement("tr");
+
+    var tdName = document.createElement("td");
+    tdName.className = "item-name";
+    tdName.textContent = item.name;
+    tr.appendChild(tdName);
+
+    var tdSize = document.createElement("td");
+    tdSize.setAttribute("data-label","Size");
+    if(item.size){
+      var sel = document.createElement("select");
+      sel.id = item.slug + "_size";
+      var optBlank = document.createElement("option");
+      optBlank.value = ""; optBlank.textContent = "— Size —";
+      sel.appendChild(optBlank);
+      SIZE_OPTIONS.forEach(function(s){
+        var o = document.createElement("option");
+        o.value = s; o.textContent = s;
+        sel.appendChild(o);
+      });
+      tdSize.appendChild(sel);
+    } else {
+      tdSize.innerHTML = "&mdash;";
+      tdSize.style.textAlign = "center";
+      tdSize.style.color = "#999";
+    }
+    tr.appendChild(tdSize);
+
+    var tdQty = document.createElement("td");
+    tdQty.setAttribute("data-label","Qty");
+    var qtyInput = document.createElement("input");
+    qtyInput.type = "number"; qtyInput.min = "0"; qtyInput.value = "0";
+    qtyInput.id = item.slug + "_qty";
+    qtyInput.addEventListener("input", recalc);
+    tdQty.appendChild(qtyInput);
+    tr.appendChild(tdQty);
+
+    var tdPrice = document.createElement("td");
+    tdPrice.className = "price-cell";
+    tdPrice.setAttribute("data-label","Price");
+    tdPrice.textContent = "$" + item.price.toFixed(2);
+    tr.appendChild(tdPrice);
+
+    var tdTotal = document.createElement("td");
+    tdTotal.className = "total-cell";
+    tdTotal.setAttribute("data-label","Line Total");
+    var span = document.createElement("span");
+    span.className = "line-total";
+    span.id = item.slug + "_total";
+    span.textContent = "$0.00";
+    tdTotal.appendChild(span);
+    tr.appendChild(tdTotal);
+
+    tbody.appendChild(tr);
+  });
+
+  function recalc(){
+    var grandTotal = 0;
+    ITEMS.forEach(function(item){
+      var qtyEl = document.getElementById(item.slug + "_qty");
+      var qty = parseInt(qtyEl.value, 10) || 0;
+      if(qty < 0){ qty = 0; qtyEl.value = 0; }
+      var lineTotal = qty * item.price;
+      document.getElementById(item.slug + "_total").textContent = "$" + lineTotal.toFixed(2);
+      grandTotal += lineTotal;
+    });
+    document.getElementById("orderTotal").textContent = "$" + grandTotal.toFixed(2);
+    document.getElementById("amountPaid").value = grandTotal.toFixed(2);
+    var paypalAmount = (grandTotal * 1.03).toFixed(2);
+    var link = "https://www.paypal.com/paypalme/planowildcatshockey";
+    if(grandTotal > 0){ link += "/" + paypalAmount; }
+    document.getElementById("paypalLink").href = link;
+    return grandTotal;
+  }
+  recalc();
+
+  function copyText(text, btn){
+    function done(){
+      var fb = btn.parentElement.querySelector(".copy-feedback");
+      if(fb){ fb.style.display = "inline"; setTimeout(function(){ fb.style.display = "none"; }, 1800); }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text); done(); });
+    } else {
+      fallbackCopy(text); done();
+    }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); }catch(e){}
+    document.body.removeChild(ta);
+  }
+
+  function buildOrder(){
+    var name = document.getElementById("buyerName").value.trim();
+    var email = document.getElementById("email").value.trim();
+    if(!name || !email){
+      alert("Please fill in the Parent/Buyer Name and Email Address before submitting.");
+      return;
+    }
+    var phone = document.getElementById("phone").value.trim();
+    var total = recalc();
+
+    var lines = [];
+    lines.push("PLANO WILDCATS HOCKEY — WINTER SPIRIT WEAR ORDER");
+    lines.push("");
+    lines.push("Buyer Name: " + name);
+    lines.push("Phone: " + (phone || "—"));
+    lines.push("Email: " + email);
+    lines.push("");
+    lines.push("ITEMS ORDERED:");
+    var anyItems = false;
+    ITEMS.forEach(function(item){
+      var qty = parseInt(document.getElementById(item.slug + "_qty").value, 10) || 0;
+      if(qty > 0){
+        anyItems = true;
+        var sizeTxt = "";
+        if(item.size){
+          var sEl = document.getElementById(item.slug + "_size");
+          sizeTxt = sEl.value ? " — Size: " + sEl.value : " — Size: (not specified)";
+        }
+        var lineTotal = (qty * item.price).toFixed(2);
+        lines.push("  • " + item.name + sizeTxt + " — Qty: " + qty + " — $" + item.price.toFixed(2) + " ea — Line Total: $" + lineTotal);
+      }
+    });
+    if(!anyItems){
+      lines.push("  (no items selected)");
+    }
+    lines.push("");
+    lines.push("ORDER TOTAL: $" + total.toFixed(2));
+    lines.push("");
+    var payMethodEl = document.querySelector('input[name="paymentMethod"]:checked');
+    var payMethod = payMethodEl ? payMethodEl.value : "(not selected)";
+    var amountPaid = document.getElementById("amountPaid").value.trim();
+    lines.push("Payment Method: " + payMethod);
+    lines.push("Amount Enclosed/Paid: $" + (amountPaid || total.toFixed(2)));
+    lines.push("");
+    lines.push("Deadline: Friday, December 11, 2026");
+
+    var summary = lines.join("\n");
+    document.getElementById("summaryText").value = summary;
+
+    var subject = "Winter Spirit Wear Order — " + name;
+    var mailHref = "mailto:varsitymanager@planowildcatshockey.com"
+      + "?subject=" + encodeURIComponent(subject)
+      + "&body=" + encodeURIComponent(summary);
+    document.getElementById("mailLink").href = mailHref;
+
+    var box = document.getElementById("summaryBox");
+    box.style.display = "block";
+    box.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function copySummary(){
+    var ta = document.getElementById("summaryText");
+    ta.select();
+    ta.setSelectionRange(0, 999999);
+    copyText(ta.value, document.querySelector('.summary-actions .secondary'));
+  }
+</script>
+
+</body>
+</html>
