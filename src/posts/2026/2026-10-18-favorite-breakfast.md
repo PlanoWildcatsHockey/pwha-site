@@ -3,6 +3,8 @@ title: 'Ask the Wildcats: Favorite Breakfast'
 description: 'We crashed early Saturday practice to ask the team about their go-to breakfast. Then we asked the coach.'
 date: 2026-10-18
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-10-18-favorite-breakfast.jpg'
+alt: 'Smiling coach in a white hockey helmet next to a cartoon breakfast sandwich and the words Coach’s pick?'
 ---
 
 We crashed early Saturday morning practice and asked one question: what's your favorite breakfast?

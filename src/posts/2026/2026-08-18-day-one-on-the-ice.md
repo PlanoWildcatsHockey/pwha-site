@@ -3,6 +3,8 @@ title: 'Day One on the Ice'
 description: 'We caught the team coming off the ice after the first practice of the season and asked: how did it go?'
 date: 2026-08-18
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-08-18-day-one-on-the-ice.jpg'
+alt: 'Player in a white Plano helmet and cage next to the words First practice: Day one'
 ---
 
 We caught the Plano Senior High hockey team coming off the ice after the first practice of the season and asked one question: how'd it go? New players, returning players, and a few welcome-to-the-team moments.
