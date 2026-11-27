@@ -1,0 +1,16 @@
+---
+title: "Scholastic falls to Shreveport, 3–0"
+description: "Playing its second game of the day, the scholastic team lost 3–0 to Shreveport."
+date: 2026-11-22
+tags: ['scholastic']
+---
+
+*Nov. 22, 2026 · Blue Rink, Richardson*
+
+Playing its second game of the day, the scholastic team lost 3–0 to Shreveport.
+
+The first period was scoreless. Shreveport scored twice in the second, through Milo Cook and Isaac Lewis, and Leon Gu added a third midway through the third period.
+
+Shreveport outshot Plano 15–10, and Plano's goaltender made 12 saves.
+
+[Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1374455)
