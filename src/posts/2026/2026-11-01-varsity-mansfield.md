@@ -13,6 +13,6 @@ The teams traded goals for two periods. Hu tied it 1–1 in the first, then scor
 
 Plano took over in the third. Hu scored midway through the period, and Iverson Herr tied it 5–5 just 17 seconds later. Hu put Plano ahead with 3:41 left, but Mansfield's Connor Heverly tied it again less than a minute later. Doyle answered 39 seconds after that, assisted by Brett Riska and Ysasaga, and Plano held on.
 
-Mansfield outshot Plano 30–25, and Plano's goaltender made 24 saves.
+Mansfield outshot Plano 30–25, and Andrew Drake made 24 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1346918)
