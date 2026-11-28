@@ -1,5 +1,5 @@
 ---
-title: "Prosper beats the Wildcats in scholastic leveling, 8–1"
+title: "Prosper beats Plano Scholastic in leveling, 8–1"
 description: "Abel Peperis scored Plano’s goal in an 8–1 leveling loss to Prosper."
 date: 2026-09-13
 tags: ['scholastic']
@@ -7,7 +7,7 @@ image: '/assets/images/2026-09-13-scholastic-leveling-prosper.jpg'
 alt: "Isaac Bywater in goal for Plano in a maroon practice jersey"
 credit: 'Photo: Meghan Gatewood'
 recap: true
-oldTitles: ["Scholastic falls to Prosper in leveling, 8–1"]
+oldTitles: ["Scholastic falls to Prosper in leveling, 8–1", "Prosper beats the Wildcats in scholastic leveling, 8–1"]
 ---
 
 *Sept. 13, 2026 · US Rink, Plano*

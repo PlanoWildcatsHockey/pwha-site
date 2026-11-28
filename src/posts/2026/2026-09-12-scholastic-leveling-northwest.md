@@ -1,5 +1,5 @@
 ---
-title: "Northwest shuts out Plano in scholastic leveling opener, 5–0"
+title: "Northwest shuts out Plano Scholastic in leveling opener, 5–0"
 description: "The Wildcats opened their scholastic leveling weekend with a 5–0 loss to Northwest."
 date: 2026-09-12
 tags: ['scholastic']
@@ -7,7 +7,7 @@ image: '/assets/images/2026-09-12-scholastic-leveling-northwest.jpg'
 alt: "Plano scholastic players in white battle Northwest for the puck"
 credit: 'Photo: Meghan Gatewood'
 recap: true
-oldTitles: ["Scholastic falls to Northwest in leveling, 5–0"]
+oldTitles: ["Scholastic falls to Northwest in leveling, 5–0", "Northwest shuts out Plano in scholastic leveling opener, 5–0"]
 ---
 
 *Sept. 12, 2026 · Montini Rink, Northlake*

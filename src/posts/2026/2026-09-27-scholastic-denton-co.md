@@ -1,5 +1,5 @@
 ---
-title: "Scholastic opens with a 4–2 win over Denton Co"
+title: "Plano Scholastic opens with a 4–2 win over Denton Co"
 description: "William Wallace scored a hat trick as the scholastic team opened its season with a 4–2 win."
 date: 2026-09-27
 tags: ['scholastic']
@@ -7,6 +7,7 @@ image: '/assets/images/2026-09-27-scholastic-denton-co.jpg'
 alt: "Coach Garrett Johnson talks to scholastic players at the bench, including Miranda Reiff and Gram Gatewood (#96)"
 credit: 'Photo: Eric Wallace'
 recap: true
+oldTitles: ["Scholastic opens with a 4–2 win over Denton Co"]
 ---
 
 *Sept. 27, 2026 · World Rink, Plano*

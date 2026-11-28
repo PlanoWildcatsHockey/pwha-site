@@ -1,9 +1,10 @@
 ---
-title: "Scholastic beats Highland Park in a shootout, 1–0"
+title: "Plano Scholastic beats Highland Park in a shootout, 1–0"
 description: "Ayden Shobe stopped all 39 shots and Flynn Plate scored in the seventh round of the shootout."
 date: 2026-11-01
 tags: ['scholastic']
 recap: true
+oldTitles: ["Scholastic beats Highland Park in a shootout, 1–0"]
 ---
 
 *Nov. 1, 2026 · Gaglardi Rink, Farmers Branch*
