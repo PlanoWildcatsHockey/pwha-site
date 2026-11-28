@@ -80,6 +80,9 @@ hold until they say to start. Plan we agreed on:
 - A post's URL comes from its title. When retitling a published post, add
   the old title to `oldTitles: [...]` in its front matter so the old URLs
   redirect (handled in `src/posts/posts.11tydata.js`).
+- `_redirects` (from `src/common/_redirects.njk`): keep exact-path redirects
+  before the `/blog/*` wildcard. Cloudflare counts every rule after the first
+  wildcard as dynamic (max 100), and a deploy fails once that's exceeded.
 - Recap style: vary how the team is named (Plano, Plano Senior, the Wildcats,
   the scholastic team) and vary loss headlines; avoid "X falls to Y" every time.
   News cards already show a Varsity/Scholastic tag, so headlines don't need
