@@ -1,14 +1,15 @@
 ---
-title: "Scholastic falls to the Raiders, 6–1"
+title: "Raiders top Scholastic, 6–1"
 description: "Matthew McGee scored Plano’s goal late in the third in a 6–1 loss to the Raiders."
 date: 2026-11-15
 tags: ['scholastic']
 recap: true
+oldTitles: ["Scholastic falls to the Raiders, 6–1"]
 ---
 
 *Nov. 15, 2026 · World Rink, Plano*
 
-The Raiders beat the scholastic team 6–1.
+The Raiders beat Plano 6–1.
 
 The Raiders led 2–0 after one period and 3–0 after two, then scored three more in the third. Kai Scullin scored twice for the Raiders. [Matthew McGee](/players/matthew-mcgee/) scored Plano's goal with 1:24 left, assisted by [Mykhailo Paziuk](/players/mykhailo-paziuk/).
 
