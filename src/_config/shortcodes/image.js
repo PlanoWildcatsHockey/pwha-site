@@ -1,5 +1,24 @@
 import Image from '@11ty/eleventy-img';
 import path from 'node:path';
+import fs from 'node:fs/promises';
+
+// Resized images are written to .cache (kept between Cloudflare builds by
+// Workers build caching), so unchanged photos aren't re-encoded on every
+// build. eleventy-img skips any output file that already exists; the
+// content hash in the filename keeps a replaced photo from reusing a stale
+// copy. Files used by this build are copied into dist after the build.
+export const IMAGE_CACHE_DIR = './.cache/@11ty/img/';
+const IMAGE_OUTPUT_DIR = './dist/assets/images/';
+const usedImageFiles = new Set();
+
+export const copyCachedImages = async () => {
+  await fs.mkdir(IMAGE_OUTPUT_DIR, {recursive: true});
+  await Promise.all(
+    [...usedImageFiles].map(file =>
+      fs.copyFile(path.join(IMAGE_CACHE_DIR, file), path.join(IMAGE_OUTPUT_DIR, file))
+    )
+  );
+};
 
 const stringifyAttributes = attributeMap => {
   return Object.entries(attributeMap)
@@ -42,13 +61,17 @@ const processImage = async options => {
     widths: [...widths],
     formats: [...formats],
     urlPath: '/assets/images/',
-    outputDir: './dist/assets/images/',
+    outputDir: IMAGE_CACHE_DIR,
     filenameFormat: (id, src, width, format, options) => {
       const extension = path.extname(src);
       const name = path.basename(src, extension);
-      return `${name}-${width}w.${format}`;
+      return `${name}-${id}-${width}w.${format}`;
     }
   });
+
+  Object.values(metadata)
+    .flat()
+    .forEach(entry => usedImageFiles.add(entry.filename));
 
   // PNG fallback for callers that need transparency (e.g. logos) and pass
   // formats without jpeg.
