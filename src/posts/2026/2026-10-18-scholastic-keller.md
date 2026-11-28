@@ -1,10 +1,10 @@
 ---
-title: "Shobe stops 45, but Keller blanks Scholastic, 2–0"
+title: "Shobe stops 45, but Keller blanks Plano Scholastic, 2–0"
 description: "Ayden Shobe made 45 saves, but Keller won 2–0."
 date: 2026-10-18
 tags: ['scholastic']
 recap: true
-oldTitles: ["Scholastic falls to Keller, 2–0"]
+oldTitles: ["Scholastic falls to Keller, 2–0", "Shobe stops 45, but Keller blanks Scholastic, 2–0"]
 ---
 
 *Oct. 18, 2026 · US Rink, Plano*
