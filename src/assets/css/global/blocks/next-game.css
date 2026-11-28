@@ -72,8 +72,14 @@
   block-size: clamp(5.5rem, 20vw, 8rem);
 }
 
-.next-game__logo :is(picture, img) {
+.next-game__logo picture {
+  display: contents;
+}
+
+.next-game__logo img {
   display: block;
+  inline-size: auto;
+  block-size: auto;
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
