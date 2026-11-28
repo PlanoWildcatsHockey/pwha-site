@@ -1,5 +1,5 @@
 ---
-title: "Plano Scholastic rally falls short against Keller, 6–4"
+title: "Plano rally falls short against Keller, 6–4"
 description: "Down 6–0 after two periods, the Wildcats scored four times in the third before falling 6–4."
 date: 2026-10-04
 tags: ['scholastic']
@@ -7,7 +7,7 @@ image: '/assets/images/2026-10-04-scholastic-keller.jpg'
 alt: "Ayden Shobe reaches for a shot from Keller's Jackson Clay (#54)"
 credit: 'Photo: Jeff Yu'
 recap: true
-oldTitles: ["Scholastic rally falls short against Keller, 6–4"]
+oldTitles: ["Scholastic rally falls short against Keller, 6–4", "Plano Scholastic rally falls short against Keller, 6–4"]
 ---
 
 *Oct. 4, 2026 · World Rink, Plano*

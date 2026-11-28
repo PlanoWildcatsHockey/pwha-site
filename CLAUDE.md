@@ -82,6 +82,8 @@ hold until they say to start. Plan we agreed on:
   redirect (handled in `src/posts/posts.11tydata.js`).
 - Recap style: vary how the team is named (Plano, Plano Senior, the Wildcats,
   the scholastic team) and vary loss headlines; avoid "X falls to Y" every time.
+  News cards already show a Varsity/Scholastic tag, so headlines don't need
+  the team name; use "Plano Scholastic" only occasionally.
 - Goalies on TSHL score sheets aren't named; go by jersey number. Varsity:
   #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
   #18 Isaac Bywater.

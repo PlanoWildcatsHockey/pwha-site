@@ -1,10 +1,10 @@
 ---
-title: "Birdville pulls away from Plano Scholastic in the third, 7–1"
+title: "Birdville pulls away from the Wildcats in the third, 7–1"
 description: "Abel Peperis scored for Plano, but Birdville scored five times in the third period to win 7–1."
 date: 2026-11-08
 tags: ['scholastic']
 recap: true
-oldTitles: ["Scholastic falls to Birdville, 7–1", "Birdville pulls away from Scholastic in the third, 7–1"]
+oldTitles: ["Scholastic falls to Birdville, 7–1", "Birdville pulls away from Scholastic in the third, 7–1", "Birdville pulls away from Plano Scholastic in the third, 7–1"]
 ---
 
 *Nov. 8, 2026 · Lehtinen Rink, Euless*
