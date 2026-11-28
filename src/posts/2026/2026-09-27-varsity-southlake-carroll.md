@@ -1,5 +1,5 @@
 ---
-title: "Plano Senior falls to Southlake Carroll, 5–3"
+title: "Kai Hu hat trick not enough as Southlake Carroll wins, 5–3"
 description: "Kai Hu scored all three Plano goals in the varsity season opener, a 5–3 loss to Southlake Carroll."
 date: 2026-09-27
 tags: ['varsity']
@@ -7,6 +7,7 @@ image: '/assets/images/2026-09-27-varsity-southlake-carroll.jpg'
 alt: "Raudeen Roodgarmi covers the puck on the ice as Hudson Mun (#24) and Ain Rubio (#95) battle Southlake Carroll players at the net"
 credit: 'Photo: Jeff Yu'
 recap: true
+oldTitles: ["Plano Senior falls to Southlake Carroll, 5–3"]
 ---
 
 *Sept. 27, 2026 · NYTEX Sports Centre (West Rink)*

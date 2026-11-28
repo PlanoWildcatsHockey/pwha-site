@@ -77,6 +77,11 @@ hold until they say to start. Plan we agreed on:
 - Game recaps need `recap: true` in their front matter. Posts without an
   `image` get a default logo from `src/posts/posts.11tydata.js`: maroon
   (`default-logo-on-maroon.jpg`) for recaps, white for everything else.
+- A post's URL comes from its title. When retitling a published post, add
+  the old title to `oldTitles: [...]` in its front matter so the old URLs
+  redirect (handled in `src/posts/posts.11tydata.js`).
+- Recap style: vary how the team is named (Plano, Plano Senior, the Wildcats,
+  the scholastic team) and vary loss headlines; avoid "X falls to Y" every time.
 - Goalies on TSHL score sheets aren't named; go by jersey number. Varsity:
   #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
   #18 Isaac Bywater.
