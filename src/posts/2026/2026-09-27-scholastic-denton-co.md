@@ -6,6 +6,7 @@ tags: ['scholastic']
 image: '/assets/images/2026-09-27-scholastic-denton-co.jpg'
 alt: "Coach Garrett Johnson talks to scholastic players at the bench, including Miranda Reiff and Gram Gatewood (#96)"
 credit: 'Photo: Eric Wallace'
+recap: true
 ---
 
 *Sept. 27, 2026 · World Rink, Plano*

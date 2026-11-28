@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-11-01-varsity-mansfield.jpg'
 alt: "Kai Hu carries the puck past a reaching Mansfield defender"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Nov. 1, 2026 · US Rink, Plano*

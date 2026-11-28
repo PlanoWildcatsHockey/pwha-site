@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-11-08-varsity-shreveport.jpg'
 alt: "Hudson Mun (#24) raises his stick as he skates to the bench with Iverson Herr (#92), Braeden Ysasaga (#22), Carter Doyle (#2) and Ethan Barton"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Nov. 8, 2026 · Blue Rink, Richardson*

@@ -74,6 +74,9 @@ hold until they say to start. Plan we agreed on:
 - Player nicknames live in the last column of `sources/players.csv`
   (`nickname`, e.g. Hudson Mun = "No Mercy"). Use them now and then in
   recaps, not every time.
+- Game recaps need `recap: true` in their front matter. Posts without an
+  `image` get a default logo from `src/posts/posts.11tydata.js`: maroon
+  (`default-logo-on-maroon.jpg`) for recaps, white for everything else.
 - Goalies on TSHL score sheets aren't named; go by jersey number. Varsity:
   #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
   #18 Isaac Bywater.

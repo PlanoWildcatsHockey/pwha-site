@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-09-12-varsity-leveling-birdville.jpg'
 alt: "Hudson Mun (#24) and a teammate crash the Birdville net as the goaltender sprawls"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Sept. 12, 2026 · Blue Rink, Richardson*

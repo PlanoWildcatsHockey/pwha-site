@@ -3,6 +3,7 @@ title: "Scholastic falls to the Raiders, 6–1"
 description: "Matthew McGee scored Plano’s goal late in the third in a 6–1 loss to the Raiders."
 date: 2026-11-15
 tags: ['scholastic']
+recap: true
 ---
 
 *Nov. 15, 2026 · World Rink, Plano*

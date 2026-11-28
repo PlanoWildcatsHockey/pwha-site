@@ -1,8 +1,0 @@
-{
-  "layout": "post",
-  "tags": "posts",
-  "permalink": "/news/{{ page.date | formatDate('YYYY') }}/{{ title | slugify }}/index.html",
-  "eleventyComputed": {
-    "redirectFrom": ["/news/{{ title | slugify }}/"]
-  }
-}
