@@ -29,8 +29,10 @@ Design proposal with mockups: https://claude.ai/artifact/Dy8vBnNd8h2d17HShyr4HH
    Page embed is heavy and adds tracking.
 4. **Daily scheduled rebuild.** Needed so TSHL reschedules (the Next Games
    cards come from the league iCal feed) and the social feeds stay current.
-   Needs: how Cloudflare builds are triggered (Git integration vs. a deploy
-   hook URL), then a scheduled GitHub Action or Cloudflare cron to trigger it.
+   Builds are triggered by Cloudflare's Git integration (pushes); no deploy
+   hook exists yet (checked 2026-11-27). Needs: a deploy hook created in the
+   Worker's Settings, then a scheduled GitHub Action or Cloudflare cron to
+   call it.
 
 ### Game photo galleries (on hold, discussed 2026-11-27)
 
@@ -76,6 +78,11 @@ hold until they say to start. Plan we agreed on:
   #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
   #18 Isaac Bywater.
 - eleventy-fetch returns a Buffer on cache hits; wrap it with `String()`.
+- The `image`/`imageKeys` shortcode writes resized images to `.cache/@11ty/img/`
+  and copies the ones each build uses into `dist/assets/images/` after the
+  build. Cloudflare's build cache keeps `.cache` between builds, so unchanged
+  photos aren't re-encoded (cold build ~7 min, warm ~10 s). If images look
+  stale, clear the build cache in Cloudflare or delete `.cache` locally.
 - Async shortcodes (`imageKeys`) need `asyncEach`. An `{% include %}` of an
   async partial placed directly inside `{% if %}` renders empty, so put the
   `if` inside the partial.

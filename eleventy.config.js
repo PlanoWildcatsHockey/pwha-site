@@ -20,6 +20,7 @@ import events from './src/_config/events.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
+import {copyCachedImages} from './src/_config/shortcodes/image.js';
 
 export default async function (eleventyConfig) {
   // --------------------- Events: before build
@@ -100,6 +101,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
   // --------------------- Events: after build
+  // Copy the resized images this build used from .cache into dist.
+  eleventyConfig.on('eleventy.after', copyCachedImages);
+
   if (process.env.ELEVENTY_RUN_MODE === 'serve') {
     eleventyConfig.on('eleventy.after', events.svgToJpeg);
   }
