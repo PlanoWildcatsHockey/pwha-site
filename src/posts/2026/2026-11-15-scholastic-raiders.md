@@ -1,10 +1,10 @@
 ---
-title: "Raiders top Plano Scholastic, 6–1"
+title: "Raiders top Plano, 6–1"
 description: "Matthew McGee scored Plano’s goal late in the third in a 6–1 loss to the Raiders."
 date: 2026-11-15
 tags: ['scholastic']
 recap: true
-oldTitles: ["Scholastic falls to the Raiders, 6–1", "Raiders top Scholastic, 6–1"]
+oldTitles: ["Scholastic falls to the Raiders, 6–1", "Raiders top Scholastic, 6–1", "Raiders top Plano Scholastic, 6–1"]
 ---
 
 *Nov. 15, 2026 · World Rink, Plano*

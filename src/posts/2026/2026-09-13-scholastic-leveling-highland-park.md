@@ -1,5 +1,5 @@
 ---
-title: "Plano Scholastic beats Highland Park in leveling, 5–1"
+title: "Wildcats close leveling with a 5–1 win over Highland Park"
 description: "Carter Doyle and William Wallace each scored twice as Plano closed leveling with a 5–1 win."
 date: 2026-09-13
 tags: ['scholastic']
@@ -7,7 +7,7 @@ image: '/assets/images/2026-09-13-scholastic-leveling-highland-park.jpg'
 alt: "A Plano scholastic player in white carries the puck past a Highland Park defender"
 credit: 'Photo: Jeff Yu'
 recap: true
-oldTitles: ["Scholastic beats Highland Park in leveling, 5–1"]
+oldTitles: ["Scholastic beats Highland Park in leveling, 5–1", "Plano Scholastic beats Highland Park in leveling, 5–1"]
 ---
 
 *Sept. 13, 2026 · Gaglardi Rink, Farmers Branch*
