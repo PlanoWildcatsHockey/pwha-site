@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Order Plano Wildcats winter spirit wear: t-shirts, hoodies, puffer jackets and vests, pajama pants, a scarf, and a beanie. Deadline Friday, December 11, 2026.">
 <title>Plano Wildcats Winter Spirit Wear Order Form</title>
+<meta name="color-scheme" content="light dark">
+<script>
+  // Apply the theme chosen on the main site before the page paints.
+  try{
+    var t=localStorage.getItem('theme-preference');
+    if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}
+  }catch(e){}
+</script>
 <style>
   :root{
     --maroon:#641529;
@@ -17,8 +25,13 @@
     --border:#bbb;
     --maroon-ink:var(--maroon);
   }
+  /* Follow the theme chosen on the main site (data-theme, set from the
+     shared "theme-preference" setting); fall back to the system setting. */
+  :root{color-scheme:light dark;}
+  :root[data-theme="light"]{color-scheme:light;}
+  :root[data-theme="dark"]{color-scheme:dark;}
   @media (prefers-color-scheme: dark){
-    :root{
+    :root:not([data-theme="light"]){
       --light:#3a2a2d;
       --gray:#8a8a8a;
       --text:#eee6e6;
@@ -28,6 +41,38 @@
       --maroon-ink:#e38aa0;
     }
   }
+  :root[data-theme="dark"]{
+      --light:#3a2a2d;
+      --gray:#8a8a8a;
+      --text:#eee6e6;
+      --bg:#1b1414;
+      --card-bg:#241a1c;
+      --border:#5a4a4c;
+      --maroon-ink:#e38aa0;
+  }
+  .theme-switch{
+    max-width:760px;
+    margin:0 auto 10px;
+    display:flex;
+    justify-content:flex-end;
+    gap:6px;
+  }
+  .theme-switch button{
+    font:inherit;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    background:transparent;
+    color:var(--text);
+    border:2px solid var(--border);
+    cursor:pointer;
+  }
+  .theme-switch button[aria-pressed="true"]{
+    border-color:var(--maroon-ink);
+    color:var(--maroon-ink);
+  }
+  .theme-switch button:focus-visible{outline:3px solid var(--maroon-ink);outline-offset:2px;}
   *{box-sizing:border-box;}
   body{
     margin:0;
@@ -256,6 +301,10 @@
 </style>
 </head>
 <body>
+<div class="theme-switch" role="group" aria-label="Color theme">
+  <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+  <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+</div>
 
 <form class="card" id="orderForm">
   <header>
@@ -558,5 +607,24 @@
   }
 </script>
 
+<script>
+  // Light/dark switch, shared with the main site's "theme-preference" setting.
+  (function(){
+    var root=document.documentElement;
+    var buttons=document.querySelectorAll('[data-theme-choice]');
+    var mq=window.matchMedia('(prefers-color-scheme: dark)');
+    function current(){return root.getAttribute('data-theme')||(mq.matches?'dark':'light');}
+    function sync(){var c=current();buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.themeChoice===c));});}
+    buttons.forEach(function(b){
+      b.addEventListener('click',function(){
+        root.setAttribute('data-theme',b.dataset.themeChoice);
+        try{localStorage.setItem('theme-preference',b.dataset.themeChoice);}catch(e){}
+        sync();
+      });
+    });
+    mq.addEventListener('change',sync);
+    sync();
+  })();
+</script>
 </body>
 </html>
