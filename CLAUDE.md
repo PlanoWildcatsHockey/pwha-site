@@ -29,8 +29,10 @@ Design proposal with mockups: https://claude.ai/artifact/Dy8vBnNd8h2d17HShyr4HH
    Page embed is heavy and adds tracking.
 4. **Daily scheduled rebuild.** Needed so TSHL reschedules (the Next Games
    cards come from the league iCal feed) and the social feeds stay current.
-   Needs: how Cloudflare builds are triggered (Git integration vs. a deploy
-   hook URL), then a scheduled GitHub Action or Cloudflare cron to trigger it.
+   Builds are triggered by Cloudflare's Git integration (pushes); no deploy
+   hook exists yet (checked 2026-11-27). Needs: a deploy hook created in the
+   Worker's Settings, then a scheduled GitHub Action or Cloudflare cron to
+   call it.
 
 ### Game photo galleries (on hold, discussed 2026-11-27)
 
