@@ -12,6 +12,8 @@ Hey Wildcats,
 
 Al Torrico has finished editing the player and team pictures, and they're ready to view!
 
+{% image "./src/assets/images/2026-11-13-scholastic-team-photo.jpg", "Plano Senior High School Wildcats Hockey 2026-2027 scholastic team photo, with the players in maroon jerseys", "Scholastic team. Photo: Al Torrico" %}
+
 **Gallery:** [torricophotography.com](https://www.torricophotography.com/)<br>
 **Password:** [email the president](mailto:president@planowildcatshockey.com)
 
