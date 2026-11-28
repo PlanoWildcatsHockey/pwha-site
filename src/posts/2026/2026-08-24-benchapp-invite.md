@@ -3,6 +3,8 @@ title: 'Join Your Team on BenchApp'
 description: 'Invite codes and QR codes to join the Varsity and Scholastic teams on BenchApp.'
 date: 2026-08-24
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-08-24-benchapp.jpg'
+alt: 'BenchApp sports team management app icon and App Store listing'
 ---
 
 We use [BenchApp](https://www.benchapp.com/) for team schedules and communication. Everyone from last season should have rolled over automatically, but if you haven't joined yet — or aren't sure — use the invite code or QR code below for your team.
