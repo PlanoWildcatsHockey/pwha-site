@@ -3,6 +3,7 @@ title: "Scholastic falls to Mansfield, 5–4"
 description: "William Wallace scored twice in the third as Plano came back from 5–2 down, but Mansfield won 5–4."
 date: 2026-11-22
 tags: ['scholastic']
+recap: true
 ---
 
 *Nov. 22, 2026 · Morrow Rink, Mansfield*

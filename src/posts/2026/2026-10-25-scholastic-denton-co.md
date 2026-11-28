@@ -6,6 +6,7 @@ tags: ['scholastic']
 image: '/assets/images/2026-10-25-scholastic-denton-co.jpg'
 alt: "William Wallace (#5) carries the puck up the ice against Denton Co, with Flynn Plate (#29) trailing the play"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Oct. 25, 2026 · Gaglardi Rink, Farmers Branch*

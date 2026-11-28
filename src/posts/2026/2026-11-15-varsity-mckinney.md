@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-11-15-varsity-mckinney.jpg'
 alt: 'Hudson Mun (#24) skates in on a McKinney goaltender sprawled across the ice'
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Nov. 15, 2026 · US Rink, Plano*

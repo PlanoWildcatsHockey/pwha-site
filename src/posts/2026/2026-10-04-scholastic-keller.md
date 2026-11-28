@@ -6,6 +6,7 @@ tags: ['scholastic']
 image: '/assets/images/2026-10-04-scholastic-keller.jpg'
 alt: "Ayden Shobe reaches for a shot from Keller's Jackson Clay (#54)"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Oct. 4, 2026 · World Rink, Plano*

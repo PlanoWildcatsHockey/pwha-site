@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-10-25-varsity-birdville.jpg'
 alt: "Isiah Fowler (#36), still in uniform, celebrates with friends after the win over Birdville"
 credit: 'Photo: Eric Wallace'
+recap: true
 ---
 
 *Oct. 25, 2026 · US Rink, Plano*

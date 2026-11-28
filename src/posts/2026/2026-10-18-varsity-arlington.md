@@ -6,6 +6,7 @@ tags: ['varsity']
 image: '/assets/images/2026-10-18-varsity-arlington.jpg'
 alt: "Andrew Drake and Gavin Pace defend the net as Arlington's Milo Lazatin (#12) crashes in, with David Yu (#23) nearby"
 credit: 'Photo: Jeff Yu'
+recap: true
 ---
 
 *Oct. 18, 2026 · Morrow Rink, Mansfield*

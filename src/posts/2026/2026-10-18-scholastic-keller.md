@@ -3,6 +3,7 @@ title: "Scholastic falls to Keller, 2–0"
 description: "Ayden Shobe made 45 saves, but Keller won 2–0."
 date: 2026-10-18
 tags: ['scholastic']
+recap: true
 ---
 
 *Oct. 18, 2026 · US Rink, Plano*
