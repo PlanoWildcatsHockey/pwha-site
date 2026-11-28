@@ -3,6 +3,9 @@ title: 'Wildcats player and team photos are ready!'
 description: 'Al Torrico has finished the player and team pictures. View and download them in the online gallery.'
 date: 2026-11-13
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-11-13-varsity-team-photo.jpg'
+alt: 'Plano Senior High School Wildcats Hockey 2026-2027 varsity team photo, with the players in maroon jerseys'
+credit: 'Photo: Al Torrico'
 ---
 
 Hey Wildcats,
