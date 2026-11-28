@@ -5,6 +5,7 @@ date: 2026-09-13
 tags: ['varsity']
 image: '/assets/images/2026-09-13-varsity-leveling-mckinney.jpg'
 alt: "Kai Hu (#6) celebrates with a teammate after a goal against McKinney"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Sept. 13, 2026 · South Rink, McKinney*

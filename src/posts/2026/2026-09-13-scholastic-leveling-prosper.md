@@ -5,6 +5,7 @@ date: 2026-09-13
 tags: ['scholastic']
 image: '/assets/images/2026-09-13-scholastic-leveling-prosper.jpg'
 alt: "Isaac Bywater in goal for Plano in a maroon practice jersey"
+credit: 'Photo: Meghan Gatewood'
 ---
 
 *Sept. 13, 2026 · US Rink, Plano*

@@ -5,6 +5,7 @@ date: 2026-09-12
 tags: ['varsity']
 image: '/assets/images/2026-09-12-varsity-leveling-raiders.jpg'
 alt: "A Plano varsity player in maroon races up the ice with the puck ahead of Raiders players"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Sept. 12, 2026 · US Rink, Plano*

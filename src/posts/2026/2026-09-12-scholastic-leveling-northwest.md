@@ -5,6 +5,7 @@ date: 2026-09-12
 tags: ['scholastic']
 image: '/assets/images/2026-09-12-scholastic-leveling-northwest.jpg'
 alt: "Plano scholastic players in white battle Northwest for the puck"
+credit: 'Photo: Meghan Gatewood'
 ---
 
 *Sept. 12, 2026 · Montini Rink, Northlake*

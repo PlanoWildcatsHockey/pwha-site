@@ -5,6 +5,7 @@ date: 2026-09-13
 tags: ['scholastic']
 image: '/assets/images/2026-09-13-scholastic-leveling-highland-park.jpg'
 alt: "A Plano scholastic player in white carries the puck past a Highland Park defender"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Sept. 13, 2026 · Gaglardi Rink, Farmers Branch*
