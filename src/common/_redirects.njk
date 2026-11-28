@@ -3,8 +3,9 @@ permalink: /_redirects
 eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
-{#- Blog was renamed to News; catch the listing, its pagination, and every individual post. -#}
-/blog/*  /news/:splat  301
+{#- Static (exact-path) redirects must come before any wildcard rule: Cloudflare
+    counts every rule after the first wildcard as "dynamic", and those are
+    capped at 100 per file. -#}
 {%- for page in collections.all -%}
 {%- if page.url and page.data.redirectFrom -%}
 {%- for oldUrl in page.data.redirectFrom %}
@@ -12,3 +13,5 @@ excludeFromSitemap: true
 {%- endfor %}
 {%- endif -%}
 {%- endfor -%}
+{# Blog was renamed to News; catch the listing, its pagination, and every individual post. #}
+/blog/*  /news/:splat  301
