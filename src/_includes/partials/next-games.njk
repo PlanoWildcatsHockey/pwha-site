@@ -34,7 +34,8 @@
                       <span class="next-game__at"><span aria-hidden="true">@</span><span class="visually-hidden">at</span></span>
                     {% endif %}
                     <span class="next-game__crest">
-                      {# Logos are decorative: the team is named right under each one. #}
+                      {# Logos are decorative. The team name stays in the markup for screen
+                         readers, and is only shown when there's no logo to identify the team. #}
                       <span class="next-game__logo">
                         {% if side.us %}
                           <img src="/logos/planohockeylogo.svg" alt="" width="226" height="123" loading="lazy" decoding="async" eleventy:ignore />
@@ -43,8 +44,8 @@
                             imageKeys {
                               "src": side.logo,
                               "alt": "",
-                              "widths": [96, 192],
-                              "sizes": "96px",
+                              "widths": [160, 320],
+                              "sizes": "8rem",
                               "formats": ["avif", "webp", "png"]
                             }
                           %}
@@ -52,7 +53,7 @@
                           <span class="next-game__initials" aria-hidden="true">{{ side.initials }}</span>
                         {% endif %}
                       </span>
-                      <span class="next-game__name">{{ side.name }}</span>
+                      <span class="next-game__name{% if side.us or side.logo %} visually-hidden{% endif %}">{{ side.name }}</span>
                     </span>
                   {% endeach %}
                 </p>

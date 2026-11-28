@@ -59,23 +59,43 @@
   min-inline-size: 0;
 }
 
-/* Logos come in every color, so they sit on a light tile in both themes. */
+/* Logos sit straight on the card, no tile. They're transparent PNGs in every
+   color, so on dark backgrounds (dark theme, game day) a thin light outline
+   keeps mostly-black logos visible. */
 .next-game__logo {
+  --next-game-logo-outline: none;
+  --next-game-logo-size: clamp(5.5rem, 20vw, 8rem);
   display: grid;
   place-items: center;
-  inline-size: clamp(4rem, 18vw, 6rem);
-  aspect-ratio: 1;
-  padding: var(--space-2xs);
-  border: var(--stroke);
-  border-radius: var(--border-radius-small);
-  background: var(--color-light);
+  /* Fixed height, full column width: wide logos (like ours) get their full
+     size instead of shrinking into a square. */
+  inline-size: 100%;
+  block-size: var(--next-game-logo-size);
 }
 
-.next-game__logo :is(picture, img) {
+.next-game__logo picture {
+  display: contents;
+}
+
+.next-game__logo img {
   display: block;
+  inline-size: auto;
+  block-size: auto;
   max-inline-size: 100%;
-  max-block-size: 100%;
+  max-block-size: var(--next-game-logo-size);
   object-fit: contain;
+  filter: var(--next-game-logo-outline);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .next-game__logo {
+    --next-game-logo-outline: drop-shadow(0 0 1px var(--color-light)) drop-shadow(0 0 1px var(--color-light));
+  }
+}
+
+:root[data-theme='dark'] .next-game__logo,
+.next-game[data-gameday] .next-game__logo {
+  --next-game-logo-outline: drop-shadow(0 0 1px var(--color-light)) drop-shadow(0 0 1px var(--color-light));
 }
 
 .next-game__initials {
@@ -97,10 +117,8 @@
   text-wrap: balance;
 }
 
-/* Centered on the logo tiles, not on the whole crest */
 .next-game__at {
   align-self: center;
-  margin-block-end: var(--space-l);
   font-family: var(--font-condensed);
   font-size: var(--size-step-4);
   font-weight: var(--font-extra-bold);
@@ -140,7 +158,8 @@
   color: var(--color-light);
 }
 
-.next-game__where {
+.next-game__where,
+.next-game__link {
   text-align: center;
 }
 
@@ -170,10 +189,6 @@
   background: var(--color-light);
   border-color: var(--color-light);
   color: var(--color-primary-surface);
-}
-
-.next-game[data-gameday] .next-game__logo {
-  border-color: transparent;
 }
 
 .next-game[data-gameday] .next-game__countdown {
