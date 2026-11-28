@@ -3,6 +3,8 @@ title: "Scholastic falls to Northwest in leveling, 5–0"
 description: "The scholastic team opened its leveling weekend with a 5–0 loss to Northwest."
 date: 2026-09-12
 tags: ['scholastic']
+image: '/assets/images/2026-09-12-scholastic-leveling-northwest.jpg'
+alt: "Plano scholastic players in white battle Northwest for the puck"
 ---
 
 *Sept. 12, 2026 · Montini Rink, Northlake*

@@ -3,6 +3,8 @@ title: "Kai Hu scores four as Plano Senior beats McKinney in leveling, 5–3"
 description: "Kai Hu scored four times as varsity finished leveling 3–0 with a 5–3 win at McKinney."
 date: 2026-09-13
 tags: ['varsity']
+image: '/assets/images/2026-09-13-varsity-leveling-mckinney.jpg'
+alt: "Kai Hu (#6) celebrates with a teammate after a goal against McKinney"
 ---
 
 *Sept. 13, 2026 · South Rink, McKinney*

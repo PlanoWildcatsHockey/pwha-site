@@ -3,6 +3,8 @@ title: "Plano Senior beats Birdville in leveling, 4–2"
 description: "Kai Hu, Ethan Barton and Isiah Fowler scored after Hudson Mun opened the scoring in a 4–2 win."
 date: 2026-09-12
 tags: ['varsity']
+image: '/assets/images/2026-09-12-varsity-leveling-birdville.jpg'
+alt: "Hudson Mun (#24) and a teammate crash the Birdville net as the goaltender sprawls"
 ---
 
 *Sept. 12, 2026 · Blue Rink, Richardson*

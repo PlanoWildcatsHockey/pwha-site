@@ -3,6 +3,8 @@ title: "Scholastic falls to Prosper in leveling, 8–1"
 description: "Abel Peperis scored Plano’s goal in an 8–1 leveling loss to Prosper."
 date: 2026-09-13
 tags: ['scholastic']
+image: '/assets/images/2026-09-13-scholastic-leveling-prosper.jpg'
+alt: "Isaac Bywater in goal for Plano in a maroon practice jersey"
 ---
 
 *Sept. 13, 2026 · US Rink, Plano*
