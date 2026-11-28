@@ -66,8 +66,10 @@
   --next-game-logo-outline: none;
   display: grid;
   place-items: center;
-  inline-size: clamp(5.5rem, 24vw, 9rem);
-  aspect-ratio: 1;
+  /* Fixed height, full column width: wide logos (like ours) get their full
+     size instead of shrinking into a square. */
+  inline-size: 100%;
+  block-size: clamp(5.5rem, 20vw, 8rem);
 }
 
 .next-game__logo :is(picture, img) {
