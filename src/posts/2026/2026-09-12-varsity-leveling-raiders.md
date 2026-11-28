@@ -11,6 +11,6 @@ tags: ['varsity']
 
 [Kai Hu](/players/kai-hu/) and [Hudson Mun](/players/hudson-mun/) scored in the first period, Mun assisted by [Iverson Herr](/players/iverson-herr/), for a 2–0 lead after one. The Raiders tied it in the second with goals from Asher Vance and Jackson Clarke, each assisting the other. Fowler scored the winner unassisted late in the third.
 
-Plano outshot the Raiders 28–27, and Plano's goaltender made 25 saves.
+Plano outshot the Raiders 28–27, and [Andrew Drake](/players/andrew-drake/) made 25 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322328)

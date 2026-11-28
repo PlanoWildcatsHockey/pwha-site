@@ -11,6 +11,6 @@ tags: ['varsity']
 
 Hu scored twice in the first period, the second assisted by [Ethan Barton](/players/ethan-barton/), but McKinney answered both times through Viktor Chuprov and Jacob Gelinas, and it was 2–2 after one. Zaheer Siddiqui gave McKinney its only lead in the second. Barton tied it on a power play, assisted by Hu, and Hu put Plano ahead with 2:54 left in the period. He completed his four-goal game with an empty-net goal in the final 19 seconds.
 
-McKinney outshot Plano 30–25, and Plano's goaltender made 27 saves.
+McKinney outshot Plano 30–25, and [Andrew Drake](/players/andrew-drake/) made 27 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322358)

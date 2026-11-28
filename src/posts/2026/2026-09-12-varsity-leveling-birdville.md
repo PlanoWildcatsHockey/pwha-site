@@ -11,6 +11,6 @@ Varsity won its second game of the day, beating Birdville 4–2.
 
 [Hudson Mun](/players/hudson-mun/) opened the scoring in the first period, assisted by [Gavin Pace](/players/gavin-pace/), and Birdville's Jacob Duhan tied it before the intermission. Plano pulled ahead late in the second: [Kai Hu](/players/kai-hu/) scored with 1:40 left, and [Ethan Barton](/players/ethan-barton/) added a power-play goal with 15 seconds left, assisted by Mun. [Isiah Fowler](/players/isiah-fowler/) made it 4–1 late in the third, from [Ain Rubio](/players/ain-rubio/), and Cooper Leggett answered for Birdville seven seconds later.
 
-Birdville outshot Plano 25–24, and Plano's goaltender made 23 saves.
+Birdville outshot Plano 25–24, and [Raudeen Roodgarmi](/players/raudeen-roodgarmi/) made 23 saves in goal.
 
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322336)

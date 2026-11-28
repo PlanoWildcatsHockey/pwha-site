@@ -11,4 +11,6 @@ Prosper beat the scholastic team 8–1 in the first of two leveling games on Sun
 
 Prosper scored four times in the first period, including a shorthanded goal, and led 5–0 after two. Hayes Bradley and Riley Kistner each finished with a hat trick. [Abel Peperis](/players/abel-peperis/) scored Plano's goal in the third period.
 
+Prosper outshot Plano 35–3, and [Isaac Bywater](/players/isaac-bywater/) made 27 saves in goal.
+
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322384)

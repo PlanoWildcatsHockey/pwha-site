@@ -11,4 +11,6 @@ The scholastic team opened its leveling weekend, the games the league uses to se
 
 Northwest scored twice in 25 seconds late in the first period, through Hudson Carroll and Luke Foss. Colton Shelton and Hudson Lee added goals in the second, and Lee scored his second of the game in the third. Neither team took a penalty.
 
+Northwest outshot Plano 43–4, and [Ayden Shobe](/players/ayden-shobe/) made 38 saves in goal.
+
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322314)
