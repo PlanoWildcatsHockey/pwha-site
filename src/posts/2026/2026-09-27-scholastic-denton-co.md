@@ -4,7 +4,7 @@ description: "William Wallace scored a hat trick as the scholastic team opened i
 date: 2026-09-27
 tags: ['scholastic']
 image: '/assets/images/2026-09-27-scholastic-denton-co.jpg'
-alt: "A Plano coach talks to scholastic players at the bench, including Gram Gatewood (#96)"
+alt: "Coach Garrett Johnson talks to scholastic players at the bench, including Miranda Reiff and Gram Gatewood (#96)"
 credit: 'Photo: Eric Wallace'
 ---
 
