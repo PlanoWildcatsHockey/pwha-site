@@ -96,9 +96,11 @@ news:
             <p><em>No news posts yet — once real posts are published, they'll appear here.</em></p>
           {% endif %}
         </custom-masonry>
+        {# news.count matches the news page size (src/pages/news.njk), so page 2 of
+           the news list starts with the first post not shown here. Keep them equal. #}
         {% if collections.allPosts.length > news.count %}
           <div class="cluster mt-l" style="--cluster-horizontal-alignment: flex-end">
-            <a href="/news/" class="button" data-small-button data-button-variant="primary">More news <span aria-hidden="true">→</span></a>
+            <a href="/news/page-2/" class="button" data-small-button data-button-variant="primary">More news <span aria-hidden="true">→</span></a>
           </div>
         {% endif %}
       </div>
