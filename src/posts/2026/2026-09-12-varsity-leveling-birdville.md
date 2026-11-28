@@ -17,4 +17,8 @@ Varsity won its second game of the day, beating Birdville 4–2.
 
 Birdville outshot Plano 25–24, and [Raudeen Roodgarmi](/players/raudeen-roodgarmi/) made 23 saves in goal.
 
+Plano students love coming out to support the Wildcats. Hear why in "Fans of the Game":
+
+<custom-youtube slug="XYa8x9jZwIQ" label="Fans of the Game"></custom-youtube>
+
 [Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322336)
