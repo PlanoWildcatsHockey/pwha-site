@@ -76,6 +76,11 @@ hold until they say to start. Plan we agreed on:
   #1 Raudeen Roodgarmi, #35 Andrew Drake. Scholastic: #88 Ayden Shobe,
   #18 Isaac Bywater.
 - eleventy-fetch returns a Buffer on cache hits; wrap it with `String()`.
+- The `image`/`imageKeys` shortcode writes resized images to `.cache/@11ty/img/`
+  and copies the ones each build uses into `dist/assets/images/` after the
+  build. Cloudflare's build cache keeps `.cache` between builds, so unchanged
+  photos aren't re-encoded (cold build ~7 min, warm ~10 s). If images look
+  stale, clear the build cache in Cloudflare or delete `.cache` locally.
 - Async shortcodes (`imageKeys`) need `asyncEach`. An `{% include %}` of an
   async partial placed directly inside `{% if %}` renders empty, so put the
   `if` inside the partial.
