@@ -1,0 +1,14 @@
+---
+title: "Scholastic falls to Northwest in leveling, 5–0"
+description: "The scholastic team opened its leveling weekend with a 5–0 loss to Northwest."
+date: 2026-09-12
+tags: ['scholastic']
+---
+
+*Sept. 12, 2026 · Montini Rink, Northlake*
+
+The scholastic team opened its leveling weekend, the games the league uses to set divisions before the regular season, with a 5–0 loss to Northwest.
+
+Northwest scored twice in 25 seconds late in the first period, through Hudson Carroll and Luke Foss. Colton Shelton and Hudson Lee added goals in the second, and Lee scored his second of the game in the third. Neither team took a penalty.
+
+[Full score sheet](https://www.texasscholastichockeyleague.com/stats#/3964/game/1322314)
