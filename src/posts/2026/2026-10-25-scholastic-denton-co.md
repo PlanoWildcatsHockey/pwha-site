@@ -3,6 +3,9 @@ title: "Scholastic falls to Denton Co in overtime, 4–3"
 description: "William Wallace scored twice, but Denton Co won 4–3 in overtime."
 date: 2026-10-25
 tags: ['scholastic']
+image: '/assets/images/2026-10-25-scholastic-denton-co.jpg'
+alt: "William Wallace (#5) carries the puck up the ice against Denton Co, with Flynn Plate (#29) trailing the play"
+credit: 'Photo: Jeff Yu'
 ---
 
 *Oct. 25, 2026 · Gaglardi Rink, Farmers Branch*

@@ -6,6 +6,7 @@ description: 'The official site of the Plano Wildcats Hockey Association — sup
 news:
   title: 'Latest News'
   intro: 'Recent posts and announcements from PWHA.'
+  count: 8
 ---
 
 <div class="wrapper">
@@ -87,7 +88,7 @@ news:
         <custom-masonry layout="50-50">
           {% set itemList = collections.allPosts %}
           {% if itemList.length %}
-            {% asyncEach item in itemList.slice(0, 4) %}
+            {% asyncEach item in itemList.slice(0, news.count) %}
               {% set headingLevel = "h3" %}
               {% include "partials/card-blog.njk" %}
             {% endeach %}
