@@ -3,6 +3,8 @@ title: 'Winter Spirit Wear Order Form'
 description: 'Order Plano Wildcats winter spirit wear — t-shirts, hoodies, puffer jackets and vests, pajama pants, a scarf, and a beanie — before the December 11 deadline.'
 date: 2026-11-25
 tags: ['varsity','scholastic']
+image: '/assets/images/2026-11-25-winter-spirit-wear-cover.jpg'
+alt: 'Winter spirit wear: black and maroon Plano Hockey hoodies, a maroon roster t-shirt listing the 2026-2027 varsity and scholastic players, and logo pajama pants'
 ---
 
 Winter spirit wear ordering is open! T-shirts, hoodies, puffer jackets and vests, pajama pants, a team scarf, and an embroidered beanie — all in maroon and black.
